@@ -1,5 +1,5 @@
 #!bin/bash
-
+#Author: Ishaan L
 wget http://prof.ict.ac.cn/bdb_uploads/bdb_5/packages/BigDataBench_V5.0_BigData_MicroBenchmark.tar.gz
 
 tar -zxvf BigDataBench_V5.0_BigData_MicroBenchmark.tar.gz
