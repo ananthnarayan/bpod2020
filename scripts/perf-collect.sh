@@ -9,8 +9,8 @@ cd /home/ishaan/Desktop/BDB/BigDataBench_V5.0_BigData_MicroBenchmark/
 
 cd Hadoop/Sort
 
-perf stat -d -d -d ./genData-sort.sh 1 -x '\n' -o ../../../Results/hadoop-sort-gen.data
-
+#perf stat -d -d -d ./genData-sort.sh 1 -x '\n' -o ../../../Results/hadoop-sort-gen.data
+perf stat -d -d -d -I 1000 -x ';' -o ../../../Results/hadoop-sort-gen.data ./genData-sort.sh 1
 perf stat -d -d -d ./run-terasort.sh 1 -x '\n' -o ../../../Results/hadoop-sort.data
 
 cd ../Spark/Sort
