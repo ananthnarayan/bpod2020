@@ -5,7 +5,7 @@ declare -a events;
 #events=( "cpu-clock" "context-switches" "cpu-migrations" "page-faults" "cycles" "instructions" "branches" "branch-misses" 
 #	 "L1-dcache-loads" "L1-dcache-load-misses" "LLC-loads" "LLC-load-misses" "L1-icache-loads" "L1-icache-load-misses"
 #	 "dTLB-loads" "dTLB-load-misses" "iTLB-loads" "iTLB-load-misses" "L1-dcache-prefetches" "L1-dcache-prefetch-misses") #List of events that we want to extract from the files
-events=( "page-faults" "cycles" "instructions" "branches" "branch-misses" 
+events=( "cycles" "instructions" "branches" "branch-misses" 
 	 "L1-dcache-loads" "L1-dcache-load-misses" "LLC-loads" "LLC-load-misses" "L1-icache-loads" "L1-icache-load-misses"
 	 "dTLB-loads" "dTLB-load-misses" "iTLB-loads" "iTLB-load-misses" "L1-dcache-prefetches" "L1-dcache-prefetch-misses") #List of events that we want to extract from the files
 
@@ -30,13 +30,15 @@ tempfile="event_temp.perf"
 intermediate_csv="intermediate.csv"
 final_out="final_out.csv" 
 #rm $tempfile $intermediate_csv $final_out 
-touch $final_out
-touch $intermediate_csv
+
+rm *.txt
 
 count=${#perf_output_files[@]}
 echo "Processing a total of $count files"
 for ((i=0;i<$count;i++))
 do
+	touch $final_out
+	touch $intermediate_csv
 	file=${perf_output_files[$i]}
 	final_output_file=`basename $file .data`
 	final_output_file=${final_output_file}.csv
@@ -57,16 +59,19 @@ do
 		mv $final_out $intermediate_csv
 		paste -d ";" $intermediate_csv $event.txt > $final_out
 	done
+	echo "final_out.csv -> ${final_output_file}"
 	mv final_out.csv ${final_output_file}
-
+	sync
+	sleep 1
+	rm $intermediate_csv
+	rm $tempfile
 ## Merge the separate files into one
 ## Merge has to be column-wise, with comma as separator
 ## giving us a nice csv
 done
-
-rm $intermediate_csv
-rm $tempfile
-rm $final_out
+echo "Done"
+#rm $intermediate_csv
+#rm $tempfile
 
 ###
 # It is best that we run perf with the -x. Else, perf
