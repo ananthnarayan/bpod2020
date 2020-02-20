@@ -18,9 +18,9 @@ declare -a events;
 #0108 : DTLB misses
 #0185 : itlb miss
 
-events=('00C0' '02C0' '4f2e' '412e' '003c' '01c2' '0108' '0185' 'intel_cqm/llc_occupancy/' 'intel_cqm/total_bytes/' 'intel_cqm/local_bytes/' )
-eventNames=('Instructions' 'FPInstructions' 'LLCRef' 'LLCMiss' 'Cycles' 'Uops' 'DTLBMiss' 'ITLBMiss' 'LLCOcc' 'TotalBytes' 'LocalBytes')
-eventNamesString='Instructions,FPInstructions,LLCRef,LLCMiss,Cycles,Uops,DTLBMiss,ITLBMiss,LLCOcc,TotalBytes,LocalBytes'
+events=('r00C0' 'r02C0' 'r4f2e' 'r412e' 'r003c' 'r01c2' 'r0108' 'r0185' )
+eventNames=('Instructions' 'FPInstructions' 'LLCRef' 'LLCMiss' 'Cycles' 'Uops' 'DTLBMiss' 'ITLBMiss')
+eventNamesString='Instructions,FPInstructions,LLCRef,LLCMiss,Cycles,Uops,DTLBMiss,ITLBMiss'
 	 
 # List of input files, one for each benchmark that we run
 # Assume that all files are present in the same directory
@@ -38,12 +38,14 @@ intermediate_csv="intermediate.csv"
 final_out="final_out.csv" 
 #rm $tempfile $intermediate_csv $final_out 
 
+eventsCount=${#events[@]}
 rm *.txt
 #Get the number of files that we need to process. 
 count=${#perf_output_files[@]}
 echo "Processing a total of $count files"
 for ((i=0;i<$count;i++))
 do
+	echo $i
 	touch $final_out
 	touch $intermediate_csv
 	file=${perf_output_files[$i]}
@@ -56,17 +58,17 @@ do
 	cat $file | tr -s " " | sed "s/<not supported>/-1/g" | cut -d ";" -f 1-5 > $tempfile 
 ## Extract each event from the perf output and save it into separate files. 
 	#for event in "${events[@]}"
-	for((i=0;i<$count;i++))
+	for((j=0;j<$eventsCount;j++))
 	do
-		event=${events[$i]}
+		event=${events[$j]}
 		echo "Extracting $event from $tempfile"
 		# Print a header
-		echo -e "${eventNames[$i]}" > $event.txt
-		grep "$event" $tempfile  |  cut -d "," -f 2 >> $event.txt
+		echo -e "${eventNames[$j]}" > $event.txt
+		grep -i "$event" $tempfile  |  cut -d "," -f 2 >> $event.txt
 		mv $final_out $intermediate_csv
 		paste -d "," $intermediate_csv $event.txt > $final_out
 	done
-	echo "final_out.csv -> ${final_output_file}"
+	#echo "final_out.csv -> ${final_output_file}"
 	mv final_out.csv ${final_output_file}
 	sync
 	sleep 1
@@ -75,6 +77,7 @@ do
 ## Merge the separate files into one
 ## Merge has to be column-wise, with comma as separator
 ## giving us a nice csv
+	echo $i
 done
 echo "Done"
 #rm $intermediate_csv
