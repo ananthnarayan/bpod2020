@@ -29,15 +29,16 @@ delay=500
 
 
 #00C0 : instructions
-#02c0 : FP instructions
+#00c4 : branch instructions
+#00c5 : Mispredicted branch instructions
+#1eca : fp assists
 #4f2e : llc references
 #2e41 : llc misses
 #003c : cycles
-#01C2 : uops retired- all (Broadwell)
 #0108 : DTLB misses
 #0185 : itlb miss
 
-perf_command="perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r02C0 -e r4f2e -e r412e -e r003C -e r01C2 -e r0108 -e r0185 -I $delay -x ','"
+perf_command="perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5 -e r1eca -e r4f2e -e r412e -e r003C -e r0108 -e r0185 -I $delay -x ','"
 
 eval "$perf_command  -o apsp.perf $CRONOAPPBASE/apsp/apsp $NUMTHREADS 40000 96"
 

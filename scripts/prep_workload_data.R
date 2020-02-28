@@ -4,7 +4,7 @@ setwd(workspace)
 #files=commandArgs(trailingOnly=TRUE)
 files=c("apsp.csv","bc.csv","birch.csv","bfs.csv", "community.csv", "connected.csv", "tsp.csv", "pagerank.csv","sssp.csv","triangle.csv",
 "bayes.csv","hop.csv","kmeans_edge.csv","rsearch.csv","svm.csv" ,"eclat.csv","kmeans_color.csv")
-header="Instructions,FPInstructions,LLCRef,LLCMiss,Cycles,Uops,DTLBMiss,ITLBMiss,LLCocc,TotalBytes,LocalBytes"
+header="Instructions,BranchInst,BrancMispredicts,FPAssist,LLCRef,LLCMiss,Cycles,Uops,DTLBMiss,ITLBMiss,LLCocc,TotalBytes,LocalBytes"
 
 #do a loop here.
 for (i in 1:length(files))

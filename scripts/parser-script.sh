@@ -19,10 +19,10 @@ declare -a eventNamesString;
 #01C2 : uops retired- all (Broadwell)
 #0108 : DTLB misses
 #0185 : itlb miss
-events=('00C0' '02C0' '4f2e' '412e' '003c' '01c2' '0108' '0185' 'intel_cqm/llc_occupancy/' 'intel_cqm/total_bytes/' 'intel_cqm/local_bytes/' )
-eventNames=('Instructions' 'FPInstructions' 'LLCRef' 'LLCMiss' 'Cycles' 'Uops' 'DTLBMiss' 'ITLBMiss' 'LLCOcc' 'TotalBytes' 'LocalBytes')
+events=('00C0' '00C4' '00c5' '1eca' '4f2e' '412e' '003c' '01c2' '0108' '0185' 'intel_cqm/llc_occupancy/' 'intel_cqm/total_bytes/' 'intel_cqm/local_bytes/' )
+eventNames=('Instructions' 'BranchInstructions' 'BranchMispredicts' 'FPAssists' 'LLCRef' 'LLCMiss' 'Cycles' 'Uops' 'DTLBMiss' 'ITLBMiss' 'LLCOcc' 'TotalBytes' 'LocalBytes')
 #Turns out we didn't use this string at all. :) 
-eventNamesString='Instructions,FPInstructions,LLCRef,LLCMiss,Cycles,Uops,DTLBMiss,ITLBMiss,LLCOcc,TotalBytes,LocalBytes'
+eventNamesString='Instructions,BranchInst,BranchMispredicts,FPAssists,LLCRef,LLCMiss,Cycles,Uops,DTLBMiss,ITLBMiss,LLCOcc,TotalBytes,LocalBytes'
 
 # List of input files, one for each benchmark that we run
 # Assume that all files are present in the same directory

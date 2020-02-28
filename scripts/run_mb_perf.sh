@@ -6,7 +6,8 @@
 DMHOME=/home/ananth/MineBench/NU-MineBench-3.0.1
 export DMHOME=$DMHOME
 delay=500
-perf_command="perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r02C0 -e r4f2e -e r412e -e r003C -e r01C2 -e r0108 -e r0185 -I $delay -x ','"
+#perf_command="perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r02C0 -e r4f2e -e r412e -e r003C -e r01C2 -e r0108 -e r0185 -I $delay -x ','"
+perf_command="perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5 -e r1eca -e r4f2e -e r412e -e r003C -e r0108 -e r0185 -I $delay -x ','"
 
 echo -e "====\nBayes\n"
 eval "$perf_command -o bayes.perf $DMHOME/src/Bayesian/bayes/src/bci -F -wl -d $DMHOME/datasets/Bayesian/F26-A64-D250K_bayes.dom $DMHOME/datasets/Bayesian/F26-A64-D250K_bayes.tab $DMHOME/datasets/Bayesian/F26-A64-D250K_bayes.nbc"
