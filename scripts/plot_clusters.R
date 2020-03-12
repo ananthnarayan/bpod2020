@@ -1,4 +1,3 @@
-#Do kmeans plot
 #oldPar <- par()
 library('ggplot2')
 library('tidyverse')
@@ -19,9 +18,7 @@ plotGG<-function(withCluster, vlines, rows)
     ggp = ggplot(withCluster) + geom_point(aes(x=c(1:rows), y=Cluster, col=Cluster))
     for(j in 1:length(vlines))
     {
-        #    abline(v=vlines[j], lwd=2, lty=2, col=2)
-        ggp = ggp + geom_vline(xintercept = vlines[j], linetype="dotted", color="red", size=2)
-        
+       ggp = ggp + geom_vline(xintercept = vlines[j], linetype="dotted", color="red", size=2)
     }
     return (ggp);
 }
@@ -59,7 +56,7 @@ for(i in 1:length(files))
     rows = nrow(withCluster)
     ggp = plotGG(withCluster, vlines, rows)
     plot(ggp)
-    k# plot(x=c(1:nrow(withCluster)),withCluster[["Cluster"]],pch='+', col=4, ylim=c(0,6))
+    # plot(x=c(1:nrow(withCluster)),withCluster[["Cluster"]],pch='+', col=4, ylim=c(0,6))
     # for(j in 1:length(vlines))
     # {
     #     abline(v=vlines[j], lwd=1, lty=2, col=2)

@@ -4,25 +4,17 @@
 declare -a events;
 declare -a eventNames;
 declare -a eventNamesString;
-#events=( "cpu-clock" "context-switches" "cpu-migrations" "page-faults" "cycles" "instructions" "branches" "branch-misses" 
-#	 "L1-dcache-loads" "L1-dcache-load-misses" "LLC-loads" "LLC-load-misses" "L1-icache-loads" "L1-icache-load-misses"
-#	 "dTLB-loads" "dTLB-load-misses" "iTLB-loads" "iTLB-load-misses" "L1-dcache-prefetches" "L1-dcache-prefetch-misses") #List of events that we want to extract from the files
-#events=( "cycles" "instructions" "branches" "branch-misses" 
-#	 "L1-dcache-loads" "L1-dcache-load-misses" "LLC-loads" "LLC-load-misses" "L1-icache-loads" "L1-icache-load-misses"
-#	 "dTLB-loads" "dTLB-load-misses" "iTLB-loads" "iTLB-load-misses" "L1-dcache-prefetches" "L1-dcache-prefetch-misses") #List of events that we want to extract from the files
-
 #00C0 : instructions
-#02c0 : FP instructions
+#C4, C5 : branch inst, branch mispredicts
 #4f2e : llc references
-#2e41 : llc misses
+#412e : llc misses
 #003c : cycles
-#01C2 : uops retired- all (Broadwell)
 #0108 : DTLB misses
 #0185 : itlb miss
-events=('00C0' '00C4' '00c5' '1eca' '4f2e' '412e' '003c' '01c2' '0108' '0185' 'intel_cqm/llc_occupancy/' 'intel_cqm/total_bytes/' 'intel_cqm/local_bytes/' )
-eventNames=('Instructions' 'BranchInstructions' 'BranchMispredicts' 'FPAssists' 'LLCRef' 'LLCMiss' 'Cycles' 'Uops' 'DTLBMiss' 'ITLBMiss' 'LLCOcc' 'TotalBytes' 'LocalBytes')
+events=('00C0' '00C4' '00c5' '4f2e' '412e' '003c' '0108' '0185' 'intel_cqm/llc_occupancy/' 'intel_cqm/total_bytes/' 'intel_cqm/local_bytes/' )
+eventNames=('Instructions' 'BranchInstructions' 'BranchMispredicts' 'LLCRef' 'LLCMiss' 'Cycles' 'DTLBMiss' 'ITLBMiss' 'LLCOcc' 'TotalBytes' 'LocalBytes')
 #Turns out we didn't use this string at all. :) 
-eventNamesString='Instructions,BranchInst,BranchMispredicts,FPAssists,LLCRef,LLCMiss,Cycles,Uops,DTLBMiss,ITLBMiss,LLCOcc,TotalBytes,LocalBytes'
+eventNamesString='Instructions,BranchInst,BranchMispredicts,LLCRef,LLCMiss,Cycles,DTLBMiss,ITLBMiss,LLCOcc,TotalBytes,LocalBytes'
 
 # List of input files, one for each benchmark that we run
 # Assume that all files are present in the same directory
@@ -55,17 +47,20 @@ do
 	#There is a 'unit' header for some metrics such as cpu-clock.
 	#If any event is not supported then mark it with a -1. This has to 
 	#be ignored or handled as null/invalid data in subsequent processing.
-	cat $file | tr -s " " | sed "s/<not supported>/-1/g" | cut -d ";" -f 1-5 > $tempfile 
+	cat $file | tr -s " " | sed "s/<not supported>/-1/g" | sed "s/<not counted>/-1/g" | cut -d "," -f 1-5 > $tempfile 
 	## Extract each event from the perf output and save it into separate files. 
 	for((j=0;j<$eventsCount;j++))
 	do
 		event=${events[$j]}
+		eventn=`echo $event | sed 's/\//\./g'`
+		if [[ "$eventn" == *\. ]]; then
+                        eventn=${eventn::-1}
+                fi
 		echo -e "\tExtracting $event from $tempfile"
-		# Print a header
-		echo -e "${eventNames[$j]}" > $event.txt
-		grep -i "$event" $tempfile  |  cut -d "," -f 2 >> $event.txt
+		echo -e "${eventNames[$j]}" > $eventn.txt
+		grep -i "$event" $tempfile  |  cut -d "," -f 2 >> $eventn.txt
 		mv $final_out $intermediate_csv
-		paste -d "," $intermediate_csv $event.txt > $final_out
+		paste -d "," $intermediate_csv $eventn.txt > $final_out
 	done
 	mv final_out.csv ${final_output_file}
 	sync
