@@ -180,7 +180,6 @@ kill -s SIGINT $perfprocess
 echo "Starting sleep after run"
 sleep 10
 
-
 echo "==========================="
 perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5  -e r4f2e -e r412e -e r003C -e r0108 -e r0185 -p $vmpid -x "," -o sort_prep.perf -I 500 &
 perfprocess=$!
@@ -203,7 +202,7 @@ echo "==========================="
 perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5  -e r4f2e -e r412e -e r003C -e r0108 -e r0185 -p $vmpid -x "," -o wordcount_prep.perf -I 500 &
 perfprocess=$!
 echo "Perf process: $perfprocess"
-ssh user@192.168.122.39 -i ~/.ssh/id_rsa -C /home/user/bdb/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/wordcount/genData-wordcount.sh 1
+ssh user@192.168.122.39 -i ~/.ssh/id_rsa -C /home/user/bdb/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/wordcount/genData-wc.sh 1
 kill -s SIGINT $perfprocess
 echo "Starting sleep after prep"
 sleep 10
@@ -211,7 +210,7 @@ sleep 10
 perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5  -e r4f2e -e r412e -e r003C -e r0108 -e r0185 -p $vmpid -x "," -o wordcount_run.perf -I 500 &
 perfprocess=$!
 echo "Perf process: $perfprocess"
-ssh user@192.168.122.39 -i ~/.ssh/id_rsa -C /home/user/bdb/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/wordcount/run-wordcount.sh 1
+ssh user@192.168.122.39 -i ~/.ssh/id_rsa -C /home/user/bdb/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/wordcount/run-wc.sh 1
 kill -s SIGINT $perfprocess
 echo "Starting sleep after run"
 sleep 10
