@@ -6,6 +6,7 @@ source("filenames.R")
 prepareMetrics<-function(base_workspace, path, files, header)
 {
     workspace=paste(base_workspace, path, sep="/")
+    #print(workspace)
     setwd(workspace)
 
     for (i in 1:length(files))
