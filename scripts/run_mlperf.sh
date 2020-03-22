@@ -16,7 +16,7 @@ cd mlperf/training
 
 # Reinforcement
 
-cd ~mlperf/training/reinforcement/tensorflow/
+cd ~/mlperf/training/reinforcement/tensorflow/
 IMAGE=`sudo docker build . | tail -n 1 | awk '{print $3}'`
 SEED=1
 NOW=`date "+%F-%T"`
@@ -28,7 +28,7 @@ sudo docker run --runtime=nvidia -t -i $IMAGE "./run_and_time.sh" $SEED | tee be
 
 cd ~/mlperf/training/rnn_translator/
 
-bash download_dataset.sh
+sh download_dataset.sh
 
 cd pytorch
 sudo docker build . --rm -t gnmt:latest

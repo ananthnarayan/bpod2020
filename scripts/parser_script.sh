@@ -32,6 +32,9 @@ intermediate_csv="intermediate.csv"
 final_out="final_out.csv" 
 
 eventsCount=${#events[@]}
+
+cd ~/Results/HiBench
+
 rm *.txt
 #Get the number of files that we need to process. 
 count=${#perf_output_files[@]}

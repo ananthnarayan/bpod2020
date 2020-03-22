@@ -16,7 +16,7 @@ run_remote_workload() {
     vmpid=$1
     bench=$2
     action=$3
-    file=${bench}_${action}.perf
+    file=~/Results/HiBench/${bench}_${action}.perf
     remote_command=$4
     time_log=$5
     
@@ -49,42 +49,42 @@ echo "VM PID: $vmpid Profile:$profile"
 set_remote_hadoop_home 
 echo "Current Hadoop Home is: $HADOOP_HOME"
 
-run_remote_workload $vmpid "sort" "prep" "micro/sort/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"     "micro/sort/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinysort" "prep" "micro/sort/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinysort" "run"     "micro/sort/hadoop/run.sh"      $time_log
 cleanup "Sort"
 
-run_remote_workload $vmpid "sort" "prep" "micro/terasort/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "micro/terasort/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinyterasort" "prep" "micro/terasort/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinyterasort" "run"  "micro/terasort/hadoop/run.sh"      $time_log
 cleanup "Terasort"
 
-run_remote_workload $vmpid "sort" "prep" "micro/wordcount/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "micro/wordcount/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinywc" "prep" "micro/wordcount/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinywc" "run"  "micro/wordcount/hadoop/run.sh"      $time_log
 cleanup "Wordcount"
 
-run_remote_workload $vmpid "sort" "prep" "ml/bayes/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "ml/bayes/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinybayes" "prep" "ml/bayes/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinybayes" "run"  "ml/bayes/hadoop/run.sh"      $time_log
 cleanup "Bayes"
 
-run_remote_workload $vmpid "sort" "prep" "ml/kmeans/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "ml/kmeans/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinykmeans" "prep" "ml/kmeans/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinykmeans" "run"  "ml/kmeans/hadoop/run.sh"      $time_log
 cleanup "Kmeans"
 
-run_remote_workload $vmpid "sort" "prep" "sql/aggregation/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "sql/aggretation/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinyaggr" "prep" "sql/aggregation/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinyaggr" "run"  "sql/aggretation/hadoop/run.sh"      $time_log
 cleanup "Aggregation"
 
-run_remote_workload $vmpid "sort" "prep" "sql/join/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "sql/join/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinyjoin" "prep" "sql/join/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinyjoin" "run"  "sql/join/hadoop/run.sh"      $time_log
 cleanup "Join"
 
-run_remote_workload $vmpid "sort" "prep" "sql/scan/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "sql/scan/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinyscan" "prep" "sql/scan/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinyscan" "run"  "sql/scan/hadoop/run.sh"      $time_log
 cleanup "Scan"
 
-run_remote_workload $vmpid "sort" "prep" "websearch/nutchindexing/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"  "websearch/nutchindexing/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinynutch" "prep" "websearch/nutchindexing/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinynutch" "run"  "websearch/nutchindexing/hadoop/run.sh"      $time_log
 cleanup "Nutchindexing"
 
-run_remote_workload $vmpid "sort" "prep" "websearch/pagerank/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"   "websearch/pagerank/run.sh"      $time_log
+run_remote_workload $vmpid "tinypr" "prep" "websearch/pagerank/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinypr" "run"   "websearch/pagerank/run.sh"      $time_log
 cleanup "Pagerank"
