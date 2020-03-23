@@ -1,58 +1,14 @@
+#hibench, bdb, and crono
 currentDir=getwd()
 setwd("~/Ananth/Ananth-Research/research_code/scripts")
 source("filenames.R")
+source("functions.R")
 setwd(currentDir)
 
 library('tidyverse')
 library('ggplot2')
 
-plotBasic<-function(dataWithClusters, vlines, rows)
-{
-    ggp = ggplot(dataWithClusters) + geom_point(aes(x=c(1:rows), y=Cluster, col=Cluster))
-}
-
-plotWithVLines<-function(dataWithClusters, vlines, rows, title)
-{
-    ggp = ggplot(dataWithClusters) + geom_point(aes(x=c(1:rows), y=Cluster, col=Cluster))
-    #for(j in 1:length(vlines))
-    #{
-    #   ggp = ggp + geom_vline(xintercept = vlines[j], linetype="dotted", color="red", size=1)
-    #}
-    
-    ggp = ggp + ggtitle(title) + xlab("Time") + ylab("Cluster")
-    return (ggp);
-}
-
-countPhaseDistribution<-function(dataset, numclusters)
-{
-    phasecount = array(data=0, dim=6)
-    for (i in 1:numclusters)
-    {
-        phasecount[i] = nrow(subset(dataset, dataset$Cluster == i))
-    }
-    return (phasecount)
-    
-}
-
-plotHist<-function(phaseCountFrame, title)
-{
-    ggplot(phaseCountFrame, aes(x=phase)) + geom_histogram(binwidth=1)
-}
-
-plotDistribution<-function(phaseCountFrame, title)
-{
-    phaseCountFrame$counts = 100 * phaseCountFrame$counts/sum(phaseCountFrame$counts)
-    ggp = ggplot(phaseCountFrame, aes(x=phase, y=counts, fill=phase)) + geom_bar(stat="identity") 
-    ggp = ggp + ggtitle(title) + xlab("Phase #") + ylab("%") + ylim(0, 100)
-    return (ggp)
-}
-dokmeans<-function(metrics, numclusters)
-{
-    
-    km = kmeans(metrics, numclusters, iter.max=100, nstart=1, algorithm="Lloyd")
-    return(km)
-}
-    base_workspace="/home/meena/Ananth/Ananth-Research/research_code/results_workspace/"
+    base_workspace="/home/meena/Ananth/Ananth-Research/research_code/results_workspace/HiBenchAndBDB-18Mar2020/"
     setwd(base_workspace)
     
     all_files = c(
@@ -95,7 +51,7 @@ dokmeans<-function(metrics, numclusters)
         paste(substr(metrics_bdb_large_filelist,      9, nchar(metrics_bdb_large_filelist) - 4),      "_", prefix[[ "bdb_large" ]],     sep="")
 
         )
-        
+    numclusters = 6    
     count = 1
     vlines = array(0, length(all_files))
     fullData = data.frame()
@@ -104,7 +60,10 @@ dokmeans<-function(metrics, numclusters)
     {
         inputfile = all_files[i]
         newDataWithNA = read.csv(inputfile)
-        newDataWithNA = newDataWithNA[, c(2:ncol(newDataWithNA))]
+        
+        newDataWithNA[newDataWithNA < 0 ] <- NA
+        newDataWithNA[newDataWithNA == Inf] <- NA
+        newDataWithNA = newDataWithNA[, c(1:ncol(newDataWithNA))]
         newData <- na.omit(newDataWithNA)
         if(nrow(fullData) == 0)
         {
@@ -123,6 +82,18 @@ dokmeans<-function(metrics, numclusters)
         count=count + 1
     }
     fd <-fullData
+    for(i in 1:nrow(fd))
+    {
+        if (fd[i, 1] > 3 )
+            fd[i,1] = 3
+        if(fd[i, 2] > 1000 )
+            fd[i, 2] = 1000 
+        if(fd[i, 3] > 1000 )
+            fd[i, 3] = 1000
+        if(fd[i, 4] > 2 )
+            fd[i, 4] = 2    
+    }
+
     #fd=fd[, c(1,2,4,7)]
     kmeansObject = dokmeans(fd, 6)
     withCluster=cbind(fd, kmeansObject$cluster)
@@ -137,7 +108,7 @@ dokmeans<-function(metrics, numclusters)
         filename=out_filenames[j]
         #print( paste("File: " , filename , " Title: " , titles[j]))
         
-        p = plotWithVLines(withCluster[c(start:end), ], vlines, end - start + 1, titles[j])
+        p = plotWithVLines(withCluster[c(start:end), ], vlines, end - start + 1, titles[j], numclusters)
         ggsave(paste(filename, "png", sep="."), p)
         
         

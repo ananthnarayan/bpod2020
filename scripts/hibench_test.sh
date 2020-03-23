@@ -11,6 +11,13 @@ expunge () {
     ssh user@192.168.122.23 -C $HADOOP_HOME/bin/hdfs dfs -expunge 
 }
 
+check_hibench_conf () {
+    #hibench.scale.profile
+    ssh user@192.168.122.23 -C head -n 10 /disk2/user/HiBench/conf/hibench.conf 
+    #hibench.hadoop.home     /disk2/user/hadoops/hadoop-2.7.7
+    ssh user@192.168.122.23 -C head -n 10 /disk2/user/HiBench/conf/hadoop.conf 
+}
+
 
 run_remote_workload() {
     vmpid=$1
@@ -44,9 +51,11 @@ rm $time_log
 
 echo "================="
 profile="tiny"
+hadoop="hadoop2.7"
 echo "VM PID: $vmpid Profile:$profile" 
 
 set_remote_hadoop_home 
+check_hibench_conf
 echo "Current Hadoop Home is: $HADOOP_HOME"
 
 run_remote_workload $vmpid "sort" "prep" "micro/sort/prepare/prepare.sh" $time_log
@@ -88,3 +97,7 @@ cleanup "Nutchindexing"
 run_remote_workload $vmpid "sort" "prep" "websearch/pagerank/prepare/prepare.sh" $time_log
 run_remote_workload $vmpid "sort" "run"   "websearch/pagerank/run.sh"      $time_log
 cleanup "Pagerank"
+
+
+expunge
+mkdir -p $hadoop/$profile

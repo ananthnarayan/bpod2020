@@ -1,7 +1,7 @@
 library("hash")
 currentDir=getwd()
 setwd("~/Ananth/Ananth-Research/research_code/scripts")
-source("filenames2.R")
+source("filenames3.R")
 
 prepareMetrics<-function(base_workspace, path, files, header)
 {
@@ -12,7 +12,7 @@ prepareMetrics<-function(base_workspace, path, files, header)
     for (i in 1:length(files))
     {
         inputFile= files[i]
-        print (paste("Processing : ", files[i]))
+        print (paste("Processing : ", workspace, " " , files[i]))
         inputFileDF = read.csv(inputFile, header=TRUE)
         ipc = inputFileDF[['Instructions']]/inputFileDF[['Cycles']]
         cacheMPKI = 1000 * inputFileDF[['LLCMiss']]/inputFileDF[['Instructions']]
@@ -32,7 +32,7 @@ prepareMetrics<-function(base_workspace, path, files, header)
 }
 
 
-base_workspace="/home/meena/Ananth/Ananth-Research/research_code/results_workspace/"
+base_workspace="/home/meena/Ananth/Ananth-Research/research_code/results_workspace/HiBench-21March"
 header=c("IPC", "CacheMPKI", "BranchInstructionsRatio","BrancMispredictRatio","DTLBMPKI","ITLBMPKI","LLCocc","TotalBytes","LocalBytes")
 
 for(key in keys(paths))
