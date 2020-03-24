@@ -3,6 +3,8 @@
 
 setwd("~/Ananth/Ananth-Research/research_code/scripts")
 source("functions.R")
+setwd("~/Ananth/Ananth-Research/research_code/results_workspace/HiBench-24March/march-24/")
+
     all_files=c("hadoop2.7/tiny/metrics_sort_run.csv", "hadoop2.10/tiny/metrics_sort_run.csv", "hadoop3.2.1/tiny/metrics_sort_run.csv",
     "hadoop2.7/tiny/metrics_terasort_run.csv", "hadoop2.10/tiny/metrics_terasort_run.csv", "hadoop3.2.1/tiny/metrics_terasort_run.csv",
     "hadoop2.7/tiny/metrics_wordcount_run.csv", "hadoop2.10/tiny/metrics_wordcount_run.csv", "hadoop3.2.1/tiny/metrics_wordcount_run.csv",
@@ -46,8 +48,71 @@ source("functions.R")
     "hadoop2.7/large/metrics_join_run.csv", "hadoop2.10/large/metrics_join_run.csv"
     )
 
+    all_files=c(
+    
+    "hadoop-2.7.7/tiny/metrics_sort_run.csv", 
+    "hadoop-2.7.7/tiny/metrics_terasort_run.csv", 
+    "hadoop-2.7.7/tiny/metrics_wordcount_run.csv", 
+    "hadoop-2.7.7/tiny/metrics_aggregation_run.csv", 
+    #"hadoop-2.7.7/tiny/metrics_pagerank_run.csv", 
+    "hadoop-2.7.7/tiny/metrics_scan_run.csv", 
+    "hadoop-2.7.7/tiny/metrics_join_run.csv", 
+
+    "hadoop-2.7.7/small/metrics_sort_run.csv", 
+    "hadoop-2.7.7/small/metrics_terasort_run.csv", 
+    "hadoop-2.7.7/small/metrics_wordcount_run.csv", 
+    "hadoop-2.7.7/small/metrics_aggregation_run.csv", 
+  #  "hadoop-2.7.7/small/metrics_pagerank_run.csv", 
+    "hadoop-2.7.7/small/metrics_scan_run.csv", 
+    "hadoop-2.7.7/small/metrics_join_run.csv", 
+    
+    "hadoop-2.7.7/large/metrics_sort_run.csv", 
+    "hadoop-2.7.7/large/metrics_terasort_run.csv", 
+    "hadoop-2.7.7/large/metrics_wordcount_run.csv", 
+    "hadoop-2.7.7/large/metrics_aggregation_run.csv", 
+   # "hadoop-2.7.7/large/metrics_pagerank_run.csv", 
+    "hadoop-2.7.7/large/metrics_scan_run.csv", 
+    "hadoop-2.7.7/large/metrics_join_run.csv",
+    
+    "hadoop-2.10.0/large/metrics_sort_run.csv", 
+    "hadoop-2.10.0/large/metrics_terasort_run.csv", 
+    "hadoop-2.10.0/large/metrics_wordcount_run.csv", 
+    "hadoop-2.10.0/large/metrics_aggregation_run.csv", 
+    "hadoop-2.10.0/large/metrics_scan_run.csv", 
+    "hadoop-2.10.0/large/metrics_join_run.csv",
+   
+    "hadoop-2.10.0/small/metrics_sort_run.csv", 
+    "hadoop-2.10.0/small/metrics_terasort_run.csv", 
+    "hadoop-2.10.0/small/metrics_wordcount_run.csv", 
+    "hadoop-2.10.0/small/metrics_aggregation_run.csv", 
+    "hadoop-2.10.0/small/metrics_scan_run.csv", 
+    "hadoop-2.10.0/small/metrics_join_run.csv",
+   
+    "hadoop-2.10.0/tiny/metrics_sort_run.csv", 
+    "hadoop-2.10.0/tiny/metrics_terasort_run.csv", 
+    "hadoop-2.10.0/tiny/metrics_wordcount_run.csv", 
+    "hadoop-2.10.0/tiny/metrics_aggregation_run.csv", 
+    "hadoop-2.10.0/tiny/metrics_scan_run.csv", 
+    "hadoop-2.10.0/tiny/metrics_join_run.csv",
+    
+    "hadoop-3.2.1/large/metrics_sort_run.csv", 
+    "hadoop-3.2.1/large/metrics_terasort_run.csv", 
+    "hadoop-3.2.1/large/metrics_wordcount_run.csv", 
+   
+    "hadoop-3.2.1/small/metrics_sort_run.csv", 
+    "hadoop-3.2.1/small/metrics_terasort_run.csv", 
+    "hadoop-3.2.1/small/metrics_wordcount_run.csv", 
+
+   
+    "hadoop-3.2.1/tiny/metrics_sort_run.csv", 
+    "hadoop-3.2.1/tiny/metrics_terasort_run.csv", 
+    "hadoop-3.2.1/tiny/metrics_wordcount_run.csv"
+
+
+    )
+
     numclusters = 6
-    setwd("~/Ananth/Ananth-Research/research_code/results_workspace/HiBench-21March/")
+  
     fullData = data.frame()
     count = 1
     vlines = array(0, length(all_files))
