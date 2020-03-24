@@ -1,7 +1,7 @@
 #hibench with 3 versions of hadoop
 currentDir=getwd()
 setwd("~/Ananth/Ananth-Research/research_code/scripts")
-source("filenames.R")
+source("filenames2.R")
 source("functions.R")
 setwd(currentDir)
 
@@ -21,9 +21,9 @@ library('ggplot2')
         paste(paths[[ "hibench_210_small" ]], metrics_hibench_210_small_filelist, sep="/"), 
         paste(paths[[ "hibench_210_large" ]], metrics_hibench_210_large_filelist, sep="/")
 
-        #paste(paths[[ "hibench_321_tiny" ]] , metrics_hibench_321_tiny_filelist, sep="/")
-        #paste(paths[[ "hibench_321_small" ]], metrics_hibench_321_small_filelist, sep="/") 
-        #paste(paths[[ "hibench_321_large" ]], metrics_hibench_321_large_filelist, sep="/")
+        paste(paths[[ "hibench_321_tiny" ]] , metrics_hibench_321_tiny_filelist, sep="/")
+        paste(paths[[ "hibench_321_small" ]], metrics_hibench_321_small_filelist, sep="/") 
+        paste(paths[[ "hibench_321_large" ]], metrics_hibench_321_large_filelist, sep="/")
 
         )
     prefix<- hash()

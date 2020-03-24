@@ -1,5 +1,6 @@
-#This was developed to figure out why everything was falling into the same cluster. Turns out that
-#outliers were messing up with kmeans.
+#This was developed to figure out why everything was falling into the same cluster. 
+#SOmethingin the data about the 'small' data set is causing all the clustering to fall into one or two clusters only.
+
 setwd("~/Ananth/Ananth-Research/research_code/scripts")
 source("functions.R")
     all_files=c("hadoop2.7/tiny/metrics_sort_run.csv", "hadoop2.10/tiny/metrics_sort_run.csv", "hadoop3.2.1/tiny/metrics_sort_run.csv",
@@ -27,20 +28,23 @@ source("functions.R")
     "hadoop2.7/large/metrics_join_run.csv", "hadoop2.10/large/metrics_join_run.csv" )
     
     all_files = c("hadoop2.7/tiny/metrics_sort_run.csv", "hadoop2.10/tiny/metrics_sort_run.csv", "hadoop3.2.1/tiny/metrics_sort_run.csv",
+    "hadoop2.7/tiny/metrics_sort_prep.csv", "hadoop2.10/tiny/metrics_sort_prep.csv", "hadoop3.2.1/tiny/metrics_sort_prep.csv",
     "hadoop2.7/tiny/metrics_terasort_run.csv", "hadoop2.10/tiny/metrics_terasort_run.csv", "hadoop3.2.1/tiny/metrics_terasort_run.csv",
     "hadoop2.7/tiny/metrics_wordcount_run.csv", "hadoop2.10/tiny/metrics_wordcount_run.csv", "hadoop3.2.1/tiny/metrics_wordcount_run.csv",
     "hadoop2.7/tiny/metrics_aggregation_run.csv", "hadoop2.10/tiny/metrics_aggregation_run.csv", #, "hadoop3.2.1/tiny/metrics_bayes_run.csv")
     "hadoop2.7/tiny/metrics_pagerank_run.csv", "hadoop2.10/tiny/metrics_pagerank_run.csv",
     "hadoop2.7/tiny/metrics_scan_run.csv", "hadoop2.10/tiny/metrics_scan_run.csv",
-    "hadoop2.7/tiny/metrics_join_run.csv", "hadoop2.10/tiny/metrics_join_run.csv", 
+    "hadoop2.7/tiny/metrics_join_run.csv", "hadoop2.10/tiny/metrics_join_run.csv",
     
+   
     "hadoop2.7/large/metrics_sort_run.csv", "hadoop2.10/large/metrics_sort_run.csv", "hadoop3.2.1/large/metrics_sort_run.csv",
     "hadoop2.7/large/metrics_terasort_run.csv", "hadoop2.10/large/metrics_terasort_run.csv", "hadoop3.2.1/large/metrics_terasort_run.csv",
     "hadoop2.7/large/metrics_wordcount_run.csv", "hadoop2.10/large/metrics_wordcount_run.csv", "hadoop3.2.1/large/metrics_wordcount_run.csv",
     "hadoop2.7/large/metrics_aggregation_run.csv", "hadoop2.10/large/metrics_aggregation_run.csv", 
     "hadoop2.7/large/metrics_pagerank_run.csv", "hadoop2.10/large/metrics_pagerank_run.csv",
     "hadoop2.7/large/metrics_scan_run.csv", "hadoop2.10/large/metrics_scan_run.csv",
-    "hadoop2.7/large/metrics_join_run.csv", "hadoop2.10/large/metrics_join_run.csv")
+    "hadoop2.7/large/metrics_join_run.csv", "hadoop2.10/large/metrics_join_run.csv"
+    )
 
     numclusters = 6
     setwd("~/Ananth/Ananth-Research/research_code/results_workspace/HiBench-21March/")
@@ -112,4 +116,4 @@ source("functions.R")
 #        counts=phasecount
     }
 
-    ggplot(withCluster) + geom_point(aes(x=IPC,y=CacheMPKI,color=Cluster)) + ylim(0,numclusters)
+#    ggplot(withCluster) + geom_point(aes(x=IPC,y=CacheMPKI,color=Cluster)) + ylim(0,numclusters)

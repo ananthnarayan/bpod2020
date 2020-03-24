@@ -12,7 +12,6 @@ countPhaseDistribution<-function(dataset, numclusters)
     return (phasecount)
     
 }
-
 plotHist<-function(phaseCountFrame, title)
 {
     ggplot(phaseCountFrame, aes(x=phase)) + geom_histogram(binwidth=1)
@@ -40,7 +39,7 @@ plotBasic<-function(dataWithClusters, vlines, rows)
 plotWithVLines<-function(dataWithClusters, vlines, rows, title, numclusters)
 {
     ggp = ggplot(dataWithClusters) + geom_point(aes(x=c(1:rows), y=Cluster, col=Cluster)) + ylim(0, numclusters)
-    ggp = ggp + ggtitle(title) + xlab("Time") + ylab("Cluster")  + ylim(0, numclusters)
+    ggp = ggp + ggtitle(title) + xlab("Time") + ylab("Cluster")
     return (ggp);
 }
 
