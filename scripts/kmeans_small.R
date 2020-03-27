@@ -170,9 +170,9 @@ setwd("~/Ananth/Ananth-Research/research_code/results_workspace/HiBench-24March/
         #filename=out_filenames[j]
         #print( paste("File: " , filename , " Title: " , titles[j]))
         
-        p = plotWithVLines(withCluster[c(start:end), ], vlines, end - start + 1, all_files[j], numclusters)
+        #p = plotWithVLines(withCluster[c(start:end), ], vlines, end - start + 1, all_files[j], numclusters)
         #plot(p)
-        ggsave(paste(index, "png", sep="."), p)
+        #ggsave(paste(index, "png", sep="."), p)
         
         index=index + 1
 #        phasecount=countPhaseDistribution(withCluster[c(start:end),],  6)
@@ -181,4 +181,4 @@ setwd("~/Ananth/Ananth-Research/research_code/results_workspace/HiBench-24March/
 #        counts=phasecount
     }
 
-#    ggplot(withCluster) + geom_point(aes(x=IPC,y=CacheMPKI,color=Cluster)) + ylim(0,numclusters)
+    ggplot(withCluster) + geom_point(aes(x=IPC,y=BranchInstructionsRatio,color=Cluster))
