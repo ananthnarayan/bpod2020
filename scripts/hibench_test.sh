@@ -25,7 +25,7 @@ run_remote_workload() {
     vmpid=$1
     bench=$2
     action=$3
-    file=${bench}_${action}.perf
+    file=~/Results/HiBench/${bench}_${action}.perf
     remote_command=$4
     time_log=$5
     
@@ -62,8 +62,8 @@ set_remote_hadoop_home
 echo "Current Hadoop Home is: $HADOOP_HOME"
 #check_hibench_conf
 
-run_remote_workload $vmpid "sort" "prep" "micro/sort/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "sort" "run"     "micro/sort/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "tinysort" "prep" "micro/sort/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "tinysort" "run"     "micro/sort/hadoop/run.sh"      $time_log
 cleanup "Sort"
 
 run_remote_workload $vmpid "terasort" "prep" "micro/terasort/prepare/prepare.sh" $time_log
@@ -95,4 +95,5 @@ run_remote_workload $vmpid "scan" "run"  "sql/scan/hadoop/run.sh"      $time_log
 cleanup "Scan"
 
 expunge
+
 
