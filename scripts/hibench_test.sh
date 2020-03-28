@@ -7,9 +7,18 @@ set_remote_hadoop_home()
 cleanup (){
 	ssh user@192.168.122.23 -C $HADOOP_HOME/bin/hdfs dfs -rm -r /HiBench/$1 
 }
+
 expunge () {
     ssh user@192.168.122.23 -C $HADOOP_HOME/bin/hdfs dfs -expunge 
 }
+
+check_hibench_conf () {
+    #hibench.scale.profile
+    ssh user@192.168.122.23 -C head -n 10 /disk2/user/HiBench/conf/hibench.conf 
+    #hibench.hadoop.home     /disk2/user/hadoops/hadoop-2.7.7
+    ssh user@192.168.122.23 -C head -n 10 /disk2/user/HiBench/conf/hadoop.conf 
+}
+
 
 
 run_remote_workload() {
@@ -29,8 +38,8 @@ run_remote_workload() {
     eval $command
     time=`cat timeout` 
     kill -s SIGINT $perfprocess
-    bench='sort'
-    action="prep"
+    bench=$bench
+    action=$action
     echo -e "$bench,$action,$time" >> $time_log
     
     echo "Start sleep after $action"
@@ -38,53 +47,53 @@ run_remote_workload() {
 
 }
 
+
+### == end function definitions == ###
+
 vmpid=`ps -elf | grep BUS_2 | grep qemu | tr -s " " | cut -d " " -f 4`
-time_log='hibench_time.log'
+time_log='benchmarks_time.log'
 rm $time_log
 
 echo "================="
 profile="tiny"
+hadoop="hadoop2.7"
 echo "VM PID: $vmpid Profile:$profile" 
-
 set_remote_hadoop_home 
 echo "Current Hadoop Home is: $HADOOP_HOME"
+#check_hibench_conf
 
 run_remote_workload $vmpid "tinysort" "prep" "micro/sort/prepare/prepare.sh" $time_log
 run_remote_workload $vmpid "tinysort" "run"     "micro/sort/hadoop/run.sh"      $time_log
 cleanup "Sort"
 
-run_remote_workload $vmpid "tinyterasort" "prep" "micro/terasort/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinyterasort" "run"  "micro/terasort/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "terasort" "prep" "micro/terasort/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "terasort" "run"  "micro/terasort/hadoop/run.sh"      $time_log
 cleanup "Terasort"
 
-run_remote_workload $vmpid "tinywc" "prep" "micro/wordcount/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinywc" "run"  "micro/wordcount/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "wordcount" "prep" "micro/wordcount/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "wordcount" "run"  "micro/wordcount/hadoop/run.sh"      $time_log
 cleanup "Wordcount"
 
-run_remote_workload $vmpid "tinybayes" "prep" "ml/bayes/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinybayes" "run"  "ml/bayes/hadoop/run.sh"      $time_log
-cleanup "Bayes"
+#run_remote_workload $vmpid "sort" "prep" "ml/bayes/prepare/prepare.sh" $time_log
+#run_remote_workload $vmpid "sort" "run"  "ml/bayes/hadoop/run.sh"      $time_log
+#cleanup "Bayes"
 
-run_remote_workload $vmpid "tinykmeans" "prep" "ml/kmeans/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinykmeans" "run"  "ml/kmeans/hadoop/run.sh"      $time_log
-cleanup "Kmeans"
+#run_remote_workload $vmpid "sort" "prep" "ml/kmeans/prepare/prepare.sh" $time_log
+#run_remote_workload $vmpid "sort" "run"  "ml/kmeans/hadoop/run.sh"      $time_log
+#cleanup "Kmeans"
 
-run_remote_workload $vmpid "tinyaggr" "prep" "sql/aggregation/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinyaggr" "run"  "sql/aggretation/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "aggregation" "prep" "sql/aggregation/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "aggregation" "run"  "sql/aggretation/hadoop/run.sh"      $time_log
 cleanup "Aggregation"
 
-run_remote_workload $vmpid "tinyjoin" "prep" "sql/join/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinyjoin" "run"  "sql/join/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "join" "prep" "sql/join/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "join" "run"  "sql/join/hadoop/run.sh"      $time_log
 cleanup "Join"
 
-run_remote_workload $vmpid "tinyscan" "prep" "sql/scan/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinyscan" "run"  "sql/scan/hadoop/run.sh"      $time_log
+run_remote_workload $vmpid "scan" "prep" "sql/scan/prepare/prepare.sh" $time_log
+run_remote_workload $vmpid "scan" "run"  "sql/scan/hadoop/run.sh"      $time_log
 cleanup "Scan"
 
-run_remote_workload $vmpid "tinynutch" "prep" "websearch/nutchindexing/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinynutch" "run"  "websearch/nutchindexing/hadoop/run.sh"      $time_log
-cleanup "Nutchindexing"
+expunge
 
-run_remote_workload $vmpid "tinypr" "prep" "websearch/pagerank/prepare/prepare.sh" $time_log
-run_remote_workload $vmpid "tinypr" "run"   "websearch/pagerank/run.sh"      $time_log
-cleanup "Pagerank"
+
