@@ -1,46 +1,92 @@
 # Author: Ishaan L
 
+cd
+
+cd CRONO/apps
+
+rm -r /home/ananth/Results
+
+mkdir /home/ananth/Results
+
 apsp/make
-perf stat -d -d -d --output ~/Results/apsp-small.data -x ';' -I 1000 ./apsp/apsp 2 100000 2 > apsp.txt
-perf stat -d -d -d --output ~/Results/apsp-big.data -x ';' -I 1000 ./apsp/apsp 2 100000 99999 > apsp.txt
+{ time ./apsp/apsp 32 12000 2; }  2> ~/Results/apsp.txt
+wait
+{ time ./apsp/apsp 32 30000 800; } 2> ~/Results/apsp.txt
+wait
+{ time ./apsp/apsp 32 60000 9000; } 2> ~/Results/apsp.txt
+wait
 
 bc/make
-perf stat -d -d -d --output ~/Results/bc-small.data -x ';' -I 1000 ./bc/bc 2 100000 2 > bc.txt
-perf stat -d -d -d --output ~/Results/bc-big.data -x ';' -I 1000 ./bc/bc 2 100000 99999 > bc.txt
+{ time ./bc/bc 32 1000 2; } 2> ~/Results/bc.txt
+wait
+{ time ./bc/bc 32 3000 500; } 2> ~/Results/bc.txt
+wait
+{ time ./bc/bc 32 6000 5900; } 2> ~/Results/bc.txt
+wait
 
 bfs/make
-perf stat -d -d -d --output ~/Results/bfs-small.data -x ';' -I 1000 ./bfs/bfs 0 2 100000 2 > bfs.txt
-perf stat -d -d -d --output ~/Results/bfs-big.data -x ';' -I 1000 ./bfs/bfs 0 2 100000 99999 > bfs.txt
+{ time ./bfs/bfs 0 32 1000 2; } 2> ~/Results/bfs.txt
+wait
+{ time ./apsp/apsp 32 8000 800; } 2> ~/Results/bfs.txt
+wait
+{ time ./bfs/bfs 0 32 90000 9000; } 2> ~/Results/bfs.txt
+wait
 
 community/make
-perf stat -d -d -d --output ~/Results/community-small.data -x ';' -I 1000 ./community/community_lock 0 2 100 100000 2 > community_lock.txt
-perf stat -d -d -d --output ~/Results/community-big.data -x ';' -I 1000 ./community/community_lock 0 2 100 100000 99999 > community_lock.txt
+{ time ./community/community_lock 0 32 1000 40 20; } 2> ~/Results/comm.txt
+wait
+{ time ./community/community_lock 0 32 5000 50 4000; } 2> ~/Results/comm.txt
+wait
+{ time ./community/community_lock 0 32 10000 50 9999 ; } 2> ~/Results/comm.txt
+wait
 
 connected_components/make
-perf stat -d -d -d --output ~/Results/connected_components-small.data -x ';' -I 1000 ./connected_components/connected_components_lock 0 2 100000 2 > connected_components_lock.txt
-perf stat -d -d -d --output ~/Results/connected_components-big.data -x ';' -I 1000 ./connected_components/connected_components_lock 0 2 100000 99999 > connected_components_lock.txt
+{ time ./connected_components/connected_components_lock 0 32 1000 200; } 2> ~/Results/conn.txt
+wait
+{ time ./connected_components/connected_components_lock 0 32 10000 900; } 2> ~/Results/conn.txt
+wait
+{ time ./connected_components/connected_components_lock 0 32 50000 1000; } 2> ~/Results/conn.txt
+wait
 
 
 dfs/make
-perf stat -d -d -d --output ~/Results/dfs-small.data -x ';' -I 1000 ./dfs/dfs 0 100000 2 > dfs.txt
-perf stat -d -d -d --output ~/Results/dfs-big.data -x ';' -I 1000 ./dfs/dfs 0 100000 99999 > dfs.txt
+{ time ./dfs/dfs 0 10000 32; } 2> ~/Results/dfs.txt
+wait
+{ time ./dfs/dfs 0 500000 32; } 2> ~/Results/dfs.txt
+wait
+{ time ./dfs/dfs 0 1000000 32; } 2> ~/Results/dfs.txt
+wait
 
 
 pagerank/make
-perf stat -d -d -d --output ~/Results/pagerank-small.data -x ';' -I 1000 ./pagerank/pagerank 0 2 100000 2 > pagerank.txt
-perf stat -d -d -d --output ~/Results/pagerank-big.data -x ';' -I 1000 ./pagerank/pagerank 0 2 100000 99999 > pagerank.txt
+{ time ./pagerank/pagerank 0 32 10000 5000; } 2> ~/Results/pagerank.txt
+wait
+{ time ./pagerank/pagerank 0 32 50000 8000; } 2> ~/Results/pagerank.txt
+wait
+{ time ./pagerank/pagerank 0 32 100000 9000; } 2> ~/Results/pagerank.txt
+wait
 
 
 sssp/make
-perf stat -d -d -d --output ~/Results/sssp-small.data -x ';' -I 1000 ./sssp/sssp 0 2 100000 2 > sssp.txt
-perf stat -d -d -d --output ~/Results/sssp-big.data -x ';' -I 1000 ./sssp/sssp 0 2 100000 99999 > sssp.txt
-
+{ time ./sssp/sssp 0 32 10000 4000; } 2> ~/Results/sssp.txt
+wait
+{ time ./sssp/sssp 0 32 50000 8000; } 2> ~/Results/sssp.txt
+wait
+{ time ./sssp/sssp 0 32 100000 9000; } 2> ~/Results/sssp.txt
+wait
 
 triangle_counting/make
-perf stat -d -d -d --output ~/Results/triangle_counting-small.data -x ';' -I 1000 ./triangle_counting/triangle_counting_lock 0 2 100000 2 > triangle_counting.txt
-perf stat -d -d -d --output ~/Results/triangle_counting-big.data -x ';' -I 1000 ./triangle_counting/triangle_counting_lock 0 2 100000 99999 > triangle_counting.txt
+{ time ./triangle_counting/triangle_counting_lock 0 32 1000 800; } 2> ~/Results/triangle_counting.txt
+wait
+{ time ./triangle_counting/triangle_counting_lock 0 32 5000 2000; } 2> ~/Results/triangle_counting.txt
+wait
+{ time ./triangle_counting/triangle_counting_lock 0 32 100000 9999; } 2> ~/Results/triangle_counting.txt
+wait
 
 
 tsp/make
-perf stat -d -d -d --output ~/Results/tsp-small.data -x ';' -I 1000 ./tsp/tsp 2 100000 > tsp.txt
-perf stat -d -d -d --output ~/Results/tsp-big.data -x ';' -I 1000 ./tsp/tsp 2 100000 > tsp.txt
+{ time ./tsp/tsp 32 10; } 2> ~/Results/tsp.txt
+wait
+{ time ./tsp/tsp 32 40; } 2> ~/Results/tsp.txt
+wait
+{ time ./tsp/tsp 32 50; } 2> ~/Results/tsp.txt
