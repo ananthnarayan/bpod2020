@@ -1,6 +1,6 @@
 set_remote_hadoop_home()
 {
-    HADOOP_HOME=/disk2/user/hadoops/
+    HADOOP_HOME=/disk2/user/hadoops/hadoop-2.10.0
 }
 
 
@@ -63,7 +63,7 @@ case $profile in
     ;;
     "small")
         cc=15
-        fft_dim=100
+        fft_dim=8192
         fft_sparsity=0.5
         matmult_dim=1000
         matmult_sparsity=0.5
@@ -72,7 +72,7 @@ case $profile in
     ;;
     "large")
         cc=18
-        fft_dim=100
+        fft_dim=8192
         fft_sparsity=0.5
         matmult_dim=10000
         matmult_sparsity=0.5
