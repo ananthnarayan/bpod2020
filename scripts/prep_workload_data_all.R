@@ -1,7 +1,7 @@
 library("hash")
 currentDir=getwd()
 setwd("~/Ananth/Ananth-Research/research_code/scripts")
-source("filenames.R")
+source("filenames_preprun.R")
 
 prepareMetrics<-function(base_workspace, path, files, header)
 {
