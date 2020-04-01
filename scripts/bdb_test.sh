@@ -1,6 +1,6 @@
 set_remote_hadoop_home()
 {
-    HADOOP_HOME=/disk2/user/hadoops/
+    HADOOP_HOME=/disk2/user/hadoops/hadoop-2.10.0
 }
 
 
@@ -54,7 +54,7 @@ profile="tiny"
 case $profile in 
     "tiny")
         cc=8
-        fft_dim=100
+        fft_dim=8192
         fft_sparsity=0.5
         matmult_dim=100
         matmult_sparsity=0.5
@@ -63,18 +63,18 @@ case $profile in
     ;;
     "small")
         cc=15
-        fft_dim=100
+        fft_dim=8192
         fft_sparsity=0.5
-        matmult_dim=100
+        matmult_dim=1000
         matmult_sparsity=0.5
         md5=5
         randsample=5
     ;;
     "large")
         cc=18
-        fft_dim=100
+        fft_dim=8192
         fft_sparsity=0.5
-        matmult_dim=100
+        matmult_dim=10000
         matmult_sparsity=0.5
         md5=10
         randsample=10
@@ -118,9 +118,11 @@ mkdir -p $hadoop/$profile
 mv *.perf $hadoop/$profile
 mv $time_log $hadoop/$profile
 
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
+
 
 # From BDB Paper: 
-# 
+# Large is set to use all RAM. The other two are scaled down from that value.
 # for matrix: 100, 1k, 10k 
 # for FFT, 16kx16k, 32kx32k, 64kx64k
 # for sparsity dependency for fft, 2 16384×16384 matrices, with 0.1 and 0.9 sparsity.
