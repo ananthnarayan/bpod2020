@@ -1,0 +1,92 @@
+
+===== cc : prep ======
+Start sleep after prep
+===== cc : run ======
+Deleted concmpt_curbm
+
+-----===[PEGASUS: A Peta-Scale Graph Mining System]===-----
+
+[PEGASUS] Computing connected component. Edge path = /hadoop/cc/Google_genGraph_8.txt, Newbm = new, Reducers = 24
+Generating initial component vector for 8 nodes creating bitmask generation cmd for node 0 ~ 8
+........
+ done
+Hop 1 : changed = 57, unchanged = 173
+Hop 2 : changed = 99, unchanged = 131
+Hop 3 : changed = 110, unchanged = 120
+Hop 4 : changed = 51, unchanged = 179
+Hop 5 : changed = 14, unchanged = 216
+Hop 6 : changed = 4, unchanged = 226
+Hop 7 : changed = 1, unchanged = 229
+Hop 8 : changed = 1, unchanged = 229
+Hop 9 : changed = 0, unchanged = 230
+All the component ids converged. Finishing...
+Summarizing connected components information...
+hadoop cc end
+Start sleep after run
+Deleted /hadoop/cc
+===== fft0_5 : prep ======
+1024
+Start sleep after prep
+===== fft0_5 : run ======
+10
+running fft
+hadoop fft end
+Start sleep after run
+Deleted /hadoop/fft
+===== grep : prep ======
+:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
+Start sleep after prep
+===== grep : run ======
+running hadoop grep
+hadop grep end
+Start sleep after run
+Deleted /hadoop/grep
+===== matmult0_5 : prep ======
+Start sleep after prep
+===== matmult0_5 : run ======
+running matMult
+Running on hadoop, using /disk2/user/hadoops/hadoop-2.10.0/bin/hadoop and HADOOP_CONF_DIR=
+MAHOUT-JOB: /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/apache-mahout-0.10.2-compile/examples/target/mahout-examples-0.10.2-job.jar
+Running on hadoop, using /disk2/user/hadoops/hadoop-2.10.0/bin/hadoop and HADOOP_CONF_DIR=
+MAHOUT-JOB: /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/apache-mahout-0.10.2-compile/examples/target/mahout-examples-0.10.2-job.jar
+Running on hadoop, using /disk2/user/hadoops/hadoop-2.10.0/bin/hadoop and HADOOP_CONF_DIR=
+MAHOUT-JOB: /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/apache-mahout-0.10.2-compile/examples/target/mahout-examples-0.10.2-job.jar
+hadoop matrix mulitiply end
+Start sleep after run
+Deleted /hadoop/matMult
+===== md5 : prep ======
+Thu 02 Apr 2020 08:42:51 AM UTC
+Thu 02 Apr 2020 08:44:06 AM UTC
+Start sleep after prep
+===== md5 : run ======
+hadoop md5 end
+Start sleep after run
+Deleted /hadoop/md5
+===== randsample : prep ======
+:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
+Start sleep after prep
+===== randsample : run ======
+running randsample
+hadoop rand sampling end
+Start sleep after run
+Deleted /hadoop/randsample
+===== sort : prep ======
+Start sleep after prep
+===== sort : run ======
+Spent 152ms computing base-splits.
+Spent 4ms computing TeraScheduler splits.
+Computing input splits took 157ms
+Sampling 8 splits of 8
+Making 1 from 100000 sampled records
+Computing parititions took 630ms
+Spent 790ms computing partitions.
+terasort end, kill monitor script
+Start sleep after run
+Deleted /hadoop/terasort
+===== wc : prep ======
+Start sleep after prep
+===== wc : run ======
+running wordcount
+hadoop wordcount end
+Start sleep after run
+Deleted /hadoop/wd
