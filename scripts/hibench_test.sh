@@ -25,7 +25,7 @@ run_remote_workload() {
     vmpid=$1
     bench=$2
     action=$3
-    file=~/Results/HiBench/${bench}_${action}.perf
+    file=${bench}_${action}.perf
     remote_command=$4
     time_log=$5
     
