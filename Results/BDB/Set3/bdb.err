@@ -1,0 +1,3572 @@
+rm: cannot remove 'benchmarks_time.log': No such file or directory
+sar: no process found
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/cc/Google_genGraph_8.txt': No such file or directory
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+bdb_test_2.sh: line 68: kill: (42572) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42571 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `concmpt_tempbm': No such file or directory
+rmr: `concmpt_nextbm': No such file or directory
+rmr: `concmpt_output': No such file or directory
+20/04/02 11:10:42 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:10:42 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:10:42 INFO mapred.FileInputFormat: Total input files to process : 2
+20/04/02 11:10:43 INFO mapreduce.JobSubmitter: number of splits:2
+20/04/02 11:10:43 INFO Configuration.deprecation: mapred.line.input.format.linespermap is deprecated. Instead, use mapreduce.input.lineinputformat.linespermap
+20/04/02 11:10:43 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:10:43 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0090
+20/04/02 11:10:43 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:10:43 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:10:43 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:10:43 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:10:43 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0090
+20/04/02 11:10:44 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0090/
+20/04/02 11:10:44 INFO mapreduce.Job: Running job: job_1585804685385_0090
+20/04/02 11:10:52 INFO mapreduce.Job: Job job_1585804685385_0090 running in uber mode : false
+20/04/02 11:10:52 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:10:58 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:10:59 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:11:04 INFO mapreduce.Job:  map 100% reduce 4%
+20/04/02 11:11:06 INFO mapreduce.Job:  map 100% reduce 8%
+20/04/02 11:11:07 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:11:08 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:11:09 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:11:10 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:11:11 INFO mapreduce.Job:  map 100% reduce 33%
+20/04/02 11:11:12 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:11:13 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:11:14 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:11:15 INFO mapreduce.Job:  map 100% reduce 54%
+20/04/02 11:11:16 INFO mapreduce.Job:  map 100% reduce 58%
+20/04/02 11:11:17 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:11:19 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:11:20 INFO mapreduce.Job:  map 100% reduce 79%
+20/04/02 11:11:21 INFO mapreduce.Job:  map 100% reduce 83%
+20/04/02 11:11:22 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:11:23 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:11:25 INFO mapreduce.Job: Job job_1585804685385_0090 completed successfully
+20/04/02 11:11:26 INFO mapreduce.Job: Counters: 51
+	File System Counters
+		FILE: Number of bytes read=8800
+		FILE: Number of bytes written=5368862
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3409
+		HDFS: Number of bytes written=8452
+		HDFS: Number of read operations=78
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed map tasks=1
+		Killed reduce tasks=1
+		Launched map tasks=2
+		Launched reduce tasks=24
+		Other local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=7728
+		Total time spent by all reduces in occupied slots (ms)=91738
+		Total time spent by all map tasks (ms)=7728
+		Total time spent by all reduce tasks (ms)=91738
+		Total vcore-milliseconds taken by all map tasks=7728
+		Total vcore-milliseconds taken by all reduce tasks=91738
+		Total megabyte-milliseconds taken by all map tasks=7913472
+		Total megabyte-milliseconds taken by all reduce tasks=93939712
+	Map-Reduce Framework
+		Map input records=472
+		Map output records=929
+		Map output bytes=6798
+		Map output materialized bytes=8944
+		Input split bytes=226
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=230
+		Reduce shuffle bytes=8944
+		Reduce input records=929
+		Reduce output records=1136
+		Spilled Records=1858
+		Shuffled Maps =48
+		Failed Shuffles=0
+		Merged Map outputs=48
+		GC time elapsed (ms)=4746
+		CPU time spent (ms)=24730
+		Physical memory (bytes) snapshot=5506691072
+		Virtual memory (bytes) snapshot=52248526848
+		Total committed heap usage (bytes)=3854565376
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=3183
+	File Output Format Counters 
+		Bytes Written=8452
+20/04/02 11:11:26 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:11:26 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:11:26 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:11:26 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:11:26 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:11:26 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0091
+20/04/02 11:11:26 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0091
+20/04/02 11:11:26 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0091/
+20/04/02 11:11:26 INFO mapreduce.Job: Running job: job_1585804685385_0091
+20/04/02 11:11:38 INFO mapreduce.Job: Job job_1585804685385_0091 running in uber mode : false
+20/04/02 11:11:38 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:11:44 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:11:45 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:11:46 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:11:47 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:11:48 INFO mapreduce.Job:  map 25% reduce 0%
+20/04/02 11:11:50 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:11:51 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:11:52 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:11:55 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:11:57 INFO mapreduce.Job:  map 58% reduce 0%
+20/04/02 11:11:58 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:12:00 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:12:02 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:12:04 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:12:06 INFO mapreduce.Job:  map 88% reduce 1%
+20/04/02 11:12:08 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:12:10 INFO mapreduce.Job:  map 100% reduce 5%
+20/04/02 11:12:11 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:12:12 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:12:15 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:12:16 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:12:17 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:12:19 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:12:21 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:12:22 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:12:23 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:12:24 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:12:25 INFO mapreduce.Job:  map 100% reduce 83%
+20/04/02 11:12:26 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:12:27 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:12:29 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:12:31 INFO mapreduce.Job: Job job_1585804685385_0091 completed successfully
+20/04/02 11:12:31 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=3354
+		FILE: Number of bytes written=9907432
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=11068
+		HDFS: Number of bytes written=2131
+		HDFS: Number of read operations=144
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=24
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=85643
+		Total time spent by all reduces in occupied slots (ms)=132137
+		Total time spent by all map tasks (ms)=85643
+		Total time spent by all reduce tasks (ms)=132137
+		Total vcore-milliseconds taken by all map tasks=85643
+		Total vcore-milliseconds taken by all reduce tasks=132137
+		Total megabyte-milliseconds taken by all map tasks=87698432
+		Total megabyte-milliseconds taken by all reduce tasks=135308288
+	Map-Reduce Framework
+		Map input records=1136
+		Map output records=1136
+		Map output bytes=9188
+		Map output materialized bytes=6666
+		Input split bytes=2616
+		Combine input records=1136
+		Combine output records=312
+		Reduce input groups=230
+		Reduce shuffle bytes=6666
+		Reduce input records=312
+		Reduce output records=230
+		Spilled Records=624
+		Shuffled Maps =576
+		Failed Shuffles=0
+		Merged Map outputs=576
+		GC time elapsed (ms)=8815
+		CPU time spent (ms)=49820
+		Physical memory (bytes) snapshot=12257013760
+		Virtual memory (bytes) snapshot=96301334528
+		Total committed heap usage (bytes)=8306819072
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=8452
+	File Output Format Counters 
+		Bytes Written=2131
+20/04/02 11:12:31 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:12:31 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:12:31 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:12:31 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:12:31 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:12:32 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0092
+20/04/02 11:12:32 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0092
+20/04/02 11:12:32 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0092/
+20/04/02 11:12:32 INFO mapreduce.Job: Running job: job_1585804685385_0092
+20/04/02 11:12:44 INFO mapreduce.Job: Job job_1585804685385_0092 running in uber mode : false
+20/04/02 11:12:44 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:12:50 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:12:51 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:12:52 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:12:54 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:12:55 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:12:56 INFO mapreduce.Job:  map 38% reduce 0%
+20/04/02 11:12:57 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:12:58 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:13:00 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:13:01 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:13:02 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:13:04 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:13:05 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:13:06 INFO mapreduce.Job:  map 92% reduce 0%
+20/04/02 11:13:08 INFO mapreduce.Job:  map 96% reduce 0%
+20/04/02 11:13:09 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:13:10 INFO mapreduce.Job:  map 100% reduce 32%
+20/04/02 11:13:11 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:13:11 INFO mapreduce.Job: Job job_1585804685385_0092 completed successfully
+20/04/02 11:13:11 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=294
+		FILE: Number of bytes written=5142085
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4747
+		HDFS: Number of bytes written=11
+		HDFS: Number of read operations=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=24
+		Launched reduce tasks=1
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83934
+		Total time spent by all reduces in occupied slots (ms)=15903
+		Total time spent by all map tasks (ms)=83934
+		Total time spent by all reduce tasks (ms)=15903
+		Total vcore-milliseconds taken by all map tasks=83934
+		Total vcore-milliseconds taken by all reduce tasks=15903
+		Total megabyte-milliseconds taken by all map tasks=85948416
+		Total megabyte-milliseconds taken by all reduce tasks=16284672
+	Map-Reduce Framework
+		Map input records=230
+		Map output records=230
+		Map output bytes=920
+		Map output materialized bytes=432
+		Input split bytes=2616
+		Combine input records=230
+		Combine output records=48
+		Reduce input groups=2
+		Reduce shuffle bytes=432
+		Reduce input records=48
+		Reduce output records=2
+		Spilled Records=96
+		Shuffled Maps =24
+		Failed Shuffles=0
+		Merged Map outputs=24
+		GC time elapsed (ms)=4772
+		CPU time spent (ms)=20830
+		Physical memory (bytes) snapshot=7591161856
+		Virtual memory (bytes) snapshot=50077323264
+		Total committed heap usage (bytes)=4974444544
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=2131
+	File Output Format Counters 
+		Bytes Written=11
+20/04/02 11:13:11 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:13:11 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:13:12 INFO mapred.FileInputFormat: Total input files to process : 25
+20/04/02 11:13:12 INFO mapreduce.JobSubmitter: number of splits:25
+20/04/02 11:13:12 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:13:12 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0093
+20/04/02 11:13:12 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0093
+20/04/02 11:13:12 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0093/
+20/04/02 11:13:12 INFO mapreduce.Job: Running job: job_1585804685385_0093
+20/04/02 11:13:25 INFO mapreduce.Job: Job job_1585804685385_0093 running in uber mode : false
+20/04/02 11:13:25 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:13:31 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:13:33 INFO mapreduce.Job:  map 16% reduce 0%
+20/04/02 11:13:34 INFO mapreduce.Job:  map 20% reduce 0%
+20/04/02 11:13:35 INFO mapreduce.Job:  map 24% reduce 0%
+20/04/02 11:13:36 INFO mapreduce.Job:  map 32% reduce 0%
+20/04/02 11:13:37 INFO mapreduce.Job:  map 36% reduce 0%
+20/04/02 11:13:38 INFO mapreduce.Job:  map 40% reduce 0%
+20/04/02 11:13:39 INFO mapreduce.Job:  map 44% reduce 0%
+20/04/02 11:13:40 INFO mapreduce.Job:  map 52% reduce 0%
+20/04/02 11:13:42 INFO mapreduce.Job:  map 56% reduce 0%
+20/04/02 11:13:43 INFO mapreduce.Job:  map 60% reduce 0%
+20/04/02 11:13:44 INFO mapreduce.Job:  map 68% reduce 0%
+20/04/02 11:13:47 INFO mapreduce.Job:  map 72% reduce 0%
+20/04/02 11:13:48 INFO mapreduce.Job:  map 80% reduce 0%
+20/04/02 11:13:51 INFO mapreduce.Job:  map 84% reduce 0%
+20/04/02 11:13:52 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:13:55 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:13:56 INFO mapreduce.Job:  map 100% reduce 2%
+20/04/02 11:13:57 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:13:59 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:14:00 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:14:01 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:14:02 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:14:04 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:14:07 INFO mapreduce.Job:  map 100% reduce 54%
+20/04/02 11:14:08 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:14:10 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:14:12 INFO mapreduce.Job:  map 100% reduce 79%
+20/04/02 11:14:13 INFO mapreduce.Job:  map 100% reduce 83%
+20/04/02 11:14:14 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:14:15 INFO mapreduce.Job:  map 100% reduce 92%
+20/04/02 11:14:16 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:14:17 INFO mapreduce.Job: Job job_1585804685385_0093 completed successfully
+20/04/02 11:14:17 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11410
+		FILE: Number of bytes written=10124014
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=7878
+		HDFS: Number of bytes written=10224
+		HDFS: Number of read operations=147
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=25
+		Launched reduce tasks=24
+		Other local map tasks=25
+		Total time spent by all maps in occupied slots (ms)=86898
+		Total time spent by all reduces in occupied slots (ms)=131511
+		Total time spent by all map tasks (ms)=86898
+		Total time spent by all reduce tasks (ms)=131511
+		Total vcore-milliseconds taken by all map tasks=86898
+		Total vcore-milliseconds taken by all reduce tasks=131511
+		Total megabyte-milliseconds taken by all map tasks=88983552
+		Total megabyte-milliseconds taken by all reduce tasks=134667264
+	Map-Reduce Framework
+		Map input records=692
+		Map output records=1151
+		Map output bytes=8964
+		Map output materialized bytes=14866
+		Input split bytes=2697
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=230
+		Reduce shuffle bytes=14866
+		Reduce input records=1151
+		Reduce output records=1136
+		Spilled Records=2302
+		Shuffled Maps =600
+		Failed Shuffles=0
+		Merged Map outputs=600
+		GC time elapsed (ms)=8689
+		CPU time spent (ms)=46160
+		Physical memory (bytes) snapshot=12552048640
+		Virtual memory (bytes) snapshot=98360561664
+		Total committed heap usage (bytes)=8505524224
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5181
+	File Output Format Counters 
+		Bytes Written=10224
+20/04/02 11:14:17 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:14:17 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:14:17 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:14:17 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:14:17 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:14:17 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0094
+20/04/02 11:14:17 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0094
+20/04/02 11:14:17 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0094/
+20/04/02 11:14:17 INFO mapreduce.Job: Running job: job_1585804685385_0094
+20/04/02 11:14:29 INFO mapreduce.Job: Job job_1585804685385_0094 running in uber mode : false
+20/04/02 11:14:29 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:14:36 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:14:37 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:14:38 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:14:39 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:14:40 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:14:41 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:14:42 INFO mapreduce.Job:  map 38% reduce 0%
+20/04/02 11:14:44 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:14:46 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:14:47 INFO mapreduce.Job:  map 58% reduce 0%
+20/04/02 11:14:51 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:14:55 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:14:56 INFO mapreduce.Job:  map 83% reduce 1%
+20/04/02 11:14:58 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:14:59 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:15:03 INFO mapreduce.Job:  map 100% reduce 4%
+20/04/02 11:15:04 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:15:05 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:15:06 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:15:07 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:15:09 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:15:10 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:15:11 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:15:12 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:15:14 INFO mapreduce.Job:  map 100% reduce 58%
+20/04/02 11:15:15 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:15:16 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:15:17 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:15:19 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:15:20 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:15:22 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:15:22 INFO mapreduce.Job: Job job_1585804685385_0094 completed successfully
+20/04/02 11:15:22 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=6109
+		FILE: Number of bytes written=9912942
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12840
+		HDFS: Number of bytes written=2064
+		HDFS: Number of read operations=144
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=24
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=84170
+		Total time spent by all reduces in occupied slots (ms)=138413
+		Total time spent by all map tasks (ms)=84170
+		Total time spent by all reduce tasks (ms)=138413
+		Total vcore-milliseconds taken by all map tasks=84170
+		Total vcore-milliseconds taken by all reduce tasks=138413
+		Total megabyte-milliseconds taken by all map tasks=86190080
+		Total megabyte-milliseconds taken by all reduce tasks=141734912
+	Map-Reduce Framework
+		Map input records=1136
+		Map output records=1136
+		Map output bytes=10960
+		Map output materialized bytes=9421
+		Input split bytes=2616
+		Combine input records=1136
+		Combine output records=527
+		Reduce input groups=230
+		Reduce shuffle bytes=9421
+		Reduce input records=527
+		Reduce output records=230
+		Spilled Records=1054
+		Shuffled Maps =576
+		Failed Shuffles=0
+		Merged Map outputs=576
+		GC time elapsed (ms)=8720
+		CPU time spent (ms)=45170
+		Physical memory (bytes) snapshot=12308189184
+		Virtual memory (bytes) snapshot=96347627520
+		Total committed heap usage (bytes)=8283750400
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=10224
+	File Output Format Counters 
+		Bytes Written=2064
+20/04/02 11:15:22 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:15:22 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:15:22 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:15:23 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:15:23 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:15:23 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0095
+20/04/02 11:15:23 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0095
+20/04/02 11:15:23 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0095/
+20/04/02 11:15:23 INFO mapreduce.Job: Running job: job_1585804685385_0095
+20/04/02 11:15:36 INFO mapreduce.Job: Job job_1585804685385_0095 running in uber mode : false
+20/04/02 11:15:36 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:15:42 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:15:43 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:15:44 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:15:45 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:15:46 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:15:47 INFO mapreduce.Job:  map 38% reduce 0%
+20/04/02 11:15:48 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:15:49 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:15:51 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:15:52 INFO mapreduce.Job:  map 58% reduce 0%
+20/04/02 11:15:53 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:15:56 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:15:57 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:15:58 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:15:59 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:16:00 INFO mapreduce.Job:  map 96% reduce 0%
+20/04/02 11:16:01 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:16:03 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:16:03 INFO mapreduce.Job: Job job_1585804685385_0095 completed successfully
+20/04/02 11:16:04 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=294
+		FILE: Number of bytes written=5142085
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4680
+		HDFS: Number of bytes written=11
+		HDFS: Number of read operations=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=1
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83724
+		Total time spent by all reduces in occupied slots (ms)=15067
+		Total time spent by all map tasks (ms)=83724
+		Total time spent by all reduce tasks (ms)=15067
+		Total vcore-milliseconds taken by all map tasks=83724
+		Total vcore-milliseconds taken by all reduce tasks=15067
+		Total megabyte-milliseconds taken by all map tasks=85733376
+		Total megabyte-milliseconds taken by all reduce tasks=15428608
+	Map-Reduce Framework
+		Map input records=230
+		Map output records=230
+		Map output bytes=920
+		Map output materialized bytes=432
+		Input split bytes=2616
+		Combine input records=230
+		Combine output records=48
+		Reduce input groups=2
+		Reduce shuffle bytes=432
+		Reduce input records=48
+		Reduce output records=2
+		Spilled Records=96
+		Shuffled Maps =24
+		Failed Shuffles=0
+		Merged Map outputs=24
+		GC time elapsed (ms)=4257
+		CPU time spent (ms)=18400
+		Physical memory (bytes) snapshot=7555874816
+		Virtual memory (bytes) snapshot=50078474240
+		Total committed heap usage (bytes)=4974968832
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=2064
+	File Output Format Counters 
+		Bytes Written=11
+20/04/02 11:16:04 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:16:04 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:16:04 INFO mapred.FileInputFormat: Total input files to process : 25
+20/04/02 11:16:04 INFO mapreduce.JobSubmitter: number of splits:25
+20/04/02 11:16:04 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:16:04 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0096
+20/04/02 11:16:04 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0096
+20/04/02 11:16:04 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0096/
+20/04/02 11:16:04 INFO mapreduce.Job: Running job: job_1585804685385_0096
+20/04/02 11:16:17 INFO mapreduce.Job: Job job_1585804685385_0096 running in uber mode : false
+20/04/02 11:16:17 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:16:22 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:16:23 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:16:24 INFO mapreduce.Job:  map 12% reduce 0%
+20/04/02 11:16:25 INFO mapreduce.Job:  map 16% reduce 0%
+20/04/02 11:16:26 INFO mapreduce.Job:  map 24% reduce 0%
+20/04/02 11:16:27 INFO mapreduce.Job:  map 28% reduce 0%
+20/04/02 11:16:28 INFO mapreduce.Job:  map 36% reduce 0%
+20/04/02 11:16:30 INFO mapreduce.Job:  map 44% reduce 0%
+20/04/02 11:16:32 INFO mapreduce.Job:  map 52% reduce 0%
+20/04/02 11:16:34 INFO mapreduce.Job:  map 56% reduce 0%
+20/04/02 11:16:35 INFO mapreduce.Job:  map 60% reduce 0%
+20/04/02 11:16:36 INFO mapreduce.Job:  map 68% reduce 0%
+20/04/02 11:16:39 INFO mapreduce.Job:  map 72% reduce 0%
+20/04/02 11:16:40 INFO mapreduce.Job:  map 76% reduce 0%
+20/04/02 11:16:41 INFO mapreduce.Job:  map 80% reduce 0%
+20/04/02 11:16:43 INFO mapreduce.Job:  map 84% reduce 0%
+20/04/02 11:16:44 INFO mapreduce.Job:  map 84% reduce 1%
+20/04/02 11:16:45 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:16:46 INFO mapreduce.Job:  map 92% reduce 2%
+20/04/02 11:16:47 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:16:49 INFO mapreduce.Job:  map 100% reduce 2%
+20/04/02 11:16:50 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:16:51 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:16:53 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:16:55 INFO mapreduce.Job:  map 100% reduce 33%
+20/04/02 11:16:56 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:16:57 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:16:59 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:17:00 INFO mapreduce.Job:  map 100% reduce 58%
+20/04/02 11:17:01 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:17:03 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:17:05 INFO mapreduce.Job:  map 100% reduce 83%
+20/04/02 11:17:06 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:17:07 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:17:08 INFO mapreduce.Job: Job job_1585804685385_0096 completed successfully
+20/04/02 11:17:08 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11343
+		FILE: Number of bytes written=10123880
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=7811
+		HDFS: Number of bytes written=9878
+		HDFS: Number of read operations=147
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=25
+		Launched reduce tasks=24
+		Other local map tasks=25
+		Total time spent by all maps in occupied slots (ms)=86818
+		Total time spent by all reduces in occupied slots (ms)=134800
+		Total time spent by all map tasks (ms)=86818
+		Total time spent by all reduce tasks (ms)=134800
+		Total vcore-milliseconds taken by all map tasks=86818
+		Total vcore-milliseconds taken by all reduce tasks=134800
+		Total megabyte-milliseconds taken by all map tasks=88901632
+		Total megabyte-milliseconds taken by all reduce tasks=138035200
+	Map-Reduce Framework
+		Map input records=692
+		Map output records=1151
+		Map output bytes=8897
+		Map output materialized bytes=14799
+		Input split bytes=2697
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=230
+		Reduce shuffle bytes=14799
+		Reduce input records=1151
+		Reduce output records=1136
+		Spilled Records=2302
+		Shuffled Maps =600
+		Failed Shuffles=0
+		Merged Map outputs=600
+		GC time elapsed (ms)=9078
+		CPU time spent (ms)=45600
+		Physical memory (bytes) snapshot=12655243264
+		Virtual memory (bytes) snapshot=98374512640
+		Total committed heap usage (bytes)=8495562752
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5114
+	File Output Format Counters 
+		Bytes Written=9878
+20/04/02 11:17:08 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:17:08 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:17:08 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:17:08 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:17:08 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:17:09 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0097
+20/04/02 11:17:09 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0097
+20/04/02 11:17:09 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0097/
+20/04/02 11:17:09 INFO mapreduce.Job: Running job: job_1585804685385_0097
+20/04/02 11:17:21 INFO mapreduce.Job: Job job_1585804685385_0097 running in uber mode : false
+20/04/02 11:17:21 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:17:27 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:17:28 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:17:29 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:17:30 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:17:31 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:17:32 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:17:33 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:17:34 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:17:36 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:17:37 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:17:38 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:17:41 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:17:42 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:17:43 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:17:46 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:17:47 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:17:48 INFO mapreduce.Job:  map 88% reduce 1%
+20/04/02 11:17:50 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:17:51 INFO mapreduce.Job:  map 100% reduce 2%
+20/04/02 11:17:52 INFO mapreduce.Job:  map 100% reduce 9%
+20/04/02 11:17:53 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:17:54 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:17:55 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:17:57 INFO mapreduce.Job:  map 100% reduce 33%
+20/04/02 11:17:58 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:17:59 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:18:00 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:18:02 INFO mapreduce.Job:  map 100% reduce 58%
+20/04/02 11:18:03 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:18:04 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:18:05 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:18:07 INFO mapreduce.Job:  map 100% reduce 83%
+20/04/02 11:18:08 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:18:09 INFO mapreduce.Job:  map 100% reduce 92%
+20/04/02 11:18:10 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:18:11 INFO mapreduce.Job: Job job_1585804685385_0097 completed successfully
+20/04/02 11:18:11 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=8825
+		FILE: Number of bytes written=9918374
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12494
+		HDFS: Number of bytes written=2014
+		HDFS: Number of read operations=144
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=24
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83704
+		Total time spent by all reduces in occupied slots (ms)=129522
+		Total time spent by all map tasks (ms)=83704
+		Total time spent by all reduce tasks (ms)=129522
+		Total vcore-milliseconds taken by all map tasks=83704
+		Total vcore-milliseconds taken by all reduce tasks=129522
+		Total megabyte-milliseconds taken by all map tasks=85712896
+		Total megabyte-milliseconds taken by all reduce tasks=132630528
+	Map-Reduce Framework
+		Map input records=1136
+		Map output records=1136
+		Map output bytes=10614
+		Map output materialized bytes=12137
+		Input split bytes=2616
+		Combine input records=1136
+		Combine output records=780
+		Reduce input groups=230
+		Reduce shuffle bytes=12137
+		Reduce input records=780
+		Reduce output records=230
+		Spilled Records=1560
+		Shuffled Maps =576
+		Failed Shuffles=0
+		Merged Map outputs=576
+		GC time elapsed (ms)=8918
+		CPU time spent (ms)=45290
+		Physical memory (bytes) snapshot=12298702848
+		Virtual memory (bytes) snapshot=96342974464
+		Total committed heap usage (bytes)=8302100480
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=9878
+	File Output Format Counters 
+		Bytes Written=2014
+20/04/02 11:18:12 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:18:12 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:18:12 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:18:12 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:18:12 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:18:12 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0098
+20/04/02 11:18:12 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0098
+20/04/02 11:18:12 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0098/
+20/04/02 11:18:12 INFO mapreduce.Job: Running job: job_1585804685385_0098
+20/04/02 11:18:25 INFO mapreduce.Job: Job job_1585804685385_0098 running in uber mode : false
+20/04/02 11:18:25 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:18:31 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:18:32 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:18:33 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:18:34 INFO mapreduce.Job:  map 25% reduce 0%
+20/04/02 11:18:35 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:18:36 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:18:37 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:18:39 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:18:41 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:18:44 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:18:45 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:18:46 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:18:49 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:18:50 INFO mapreduce.Job:  map 100% reduce 29%
+20/04/02 11:18:51 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:18:51 INFO mapreduce.Job: Job job_1585804685385_0098 completed successfully
+20/04/02 11:18:51 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=294
+		FILE: Number of bytes written=5142085
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4630
+		HDFS: Number of bytes written=12
+		HDFS: Number of read operations=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=24
+		Launched reduce tasks=1
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83959
+		Total time spent by all reduces in occupied slots (ms)=15814
+		Total time spent by all map tasks (ms)=83959
+		Total time spent by all reduce tasks (ms)=15814
+		Total vcore-milliseconds taken by all map tasks=83959
+		Total vcore-milliseconds taken by all reduce tasks=15814
+		Total megabyte-milliseconds taken by all map tasks=85974016
+		Total megabyte-milliseconds taken by all reduce tasks=16193536
+	Map-Reduce Framework
+		Map input records=230
+		Map output records=230
+		Map output bytes=920
+		Map output materialized bytes=432
+		Input split bytes=2616
+		Combine input records=230
+		Combine output records=48
+		Reduce input groups=2
+		Reduce shuffle bytes=432
+		Reduce input records=48
+		Reduce output records=2
+		Spilled Records=96
+		Shuffled Maps =24
+		Failed Shuffles=0
+		Merged Map outputs=24
+		GC time elapsed (ms)=4784
+		CPU time spent (ms)=22290
+		Physical memory (bytes) snapshot=7597916160
+		Virtual memory (bytes) snapshot=50063441920
+		Total committed heap usage (bytes)=4974968832
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=2014
+	File Output Format Counters 
+		Bytes Written=12
+20/04/02 11:18:52 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:18:52 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:18:52 INFO mapred.FileInputFormat: Total input files to process : 25
+20/04/02 11:18:52 INFO mapreduce.JobSubmitter: number of splits:25
+20/04/02 11:18:52 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:18:52 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0099
+20/04/02 11:18:53 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0099
+20/04/02 11:18:53 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0099/
+20/04/02 11:18:53 INFO mapreduce.Job: Running job: job_1585804685385_0099
+20/04/02 11:19:04 INFO mapreduce.Job: Job job_1585804685385_0099 running in uber mode : false
+20/04/02 11:19:04 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:19:10 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:19:11 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:19:12 INFO mapreduce.Job:  map 12% reduce 0%
+20/04/02 11:19:13 INFO mapreduce.Job:  map 16% reduce 0%
+20/04/02 11:19:14 INFO mapreduce.Job:  map 20% reduce 0%
+20/04/02 11:19:15 INFO mapreduce.Job:  map 28% reduce 0%
+20/04/02 11:19:16 INFO mapreduce.Job:  map 36% reduce 0%
+20/04/02 11:19:17 INFO mapreduce.Job:  map 40% reduce 0%
+20/04/02 11:19:18 INFO mapreduce.Job:  map 44% reduce 0%
+20/04/02 11:19:20 INFO mapreduce.Job:  map 48% reduce 0%
+20/04/02 11:19:21 INFO mapreduce.Job:  map 60% reduce 0%
+20/04/02 11:19:25 INFO mapreduce.Job:  map 72% reduce 0%
+20/04/02 11:19:26 INFO mapreduce.Job:  map 76% reduce 0%
+20/04/02 11:19:29 INFO mapreduce.Job:  map 84% reduce 0%
+20/04/02 11:19:30 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:19:31 INFO mapreduce.Job:  map 88% reduce 1%
+20/04/02 11:19:33 INFO mapreduce.Job:  map 88% reduce 2%
+20/04/02 11:19:34 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:19:35 INFO mapreduce.Job:  map 100% reduce 2%
+20/04/02 11:19:36 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:19:38 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:19:39 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:19:41 INFO mapreduce.Job:  map 100% reduce 29%
+20/04/02 11:19:42 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:19:43 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:19:44 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:19:46 INFO mapreduce.Job:  map 100% reduce 58%
+20/04/02 11:19:47 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:19:48 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:19:49 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:19:51 INFO mapreduce.Job:  map 100% reduce 83%
+20/04/02 11:19:52 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:19:53 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:19:54 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:19:55 INFO mapreduce.Job: Job job_1585804685385_0099 completed successfully
+20/04/02 11:19:55 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11293
+		FILE: Number of bytes written=10123780
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=7761
+		HDFS: Number of bytes written=9660
+		HDFS: Number of read operations=147
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=25
+		Launched reduce tasks=24
+		Other local map tasks=25
+		Total time spent by all maps in occupied slots (ms)=87208
+		Total time spent by all reduces in occupied slots (ms)=131146
+		Total time spent by all map tasks (ms)=87208
+		Total time spent by all reduce tasks (ms)=131146
+		Total vcore-milliseconds taken by all map tasks=87208
+		Total vcore-milliseconds taken by all reduce tasks=131146
+		Total megabyte-milliseconds taken by all map tasks=89300992
+		Total megabyte-milliseconds taken by all reduce tasks=134293504
+	Map-Reduce Framework
+		Map input records=692
+		Map output records=1151
+		Map output bytes=8847
+		Map output materialized bytes=14749
+		Input split bytes=2697
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=230
+		Reduce shuffle bytes=14749
+		Reduce input records=1151
+		Reduce output records=1136
+		Spilled Records=2302
+		Shuffled Maps =600
+		Failed Shuffles=0
+		Merged Map outputs=600
+		GC time elapsed (ms)=9366
+		CPU time spent (ms)=49560
+		Physical memory (bytes) snapshot=12590333952
+		Virtual memory (bytes) snapshot=98325098496
+		Total committed heap usage (bytes)=8536457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5064
+	File Output Format Counters 
+		Bytes Written=9660
+20/04/02 11:19:56 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:19:56 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:19:56 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:19:56 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:19:56 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:19:56 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0100
+20/04/02 11:19:56 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0100
+20/04/02 11:19:56 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0100/
+20/04/02 11:19:56 INFO mapreduce.Job: Running job: job_1585804685385_0100
+20/04/02 11:20:08 INFO mapreduce.Job: Job job_1585804685385_0100 running in uber mode : false
+20/04/02 11:20:08 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:20:14 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:20:15 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:20:16 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:20:17 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:20:18 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:20:19 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:20:20 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:20:21 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:20:22 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:20:23 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:20:25 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:20:27 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:20:31 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:20:33 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:20:35 INFO mapreduce.Job:  map 88% reduce 1%
+20/04/02 11:20:36 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:20:39 INFO mapreduce.Job:  map 100% reduce 2%
+20/04/02 11:20:40 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:20:41 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:20:43 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:20:45 INFO mapreduce.Job:  map 100% reduce 33%
+20/04/02 11:20:46 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:20:48 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:20:50 INFO mapreduce.Job:  map 100% reduce 54%
+20/04/02 11:20:51 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:20:53 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:20:55 INFO mapreduce.Job:  map 100% reduce 83%
+20/04/02 11:20:56 INFO mapreduce.Job:  map 100% reduce 92%
+20/04/02 11:20:58 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:20:59 INFO mapreduce.Job: Job job_1585804685385_0100 completed successfully
+20/04/02 11:20:59 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=10392
+		FILE: Number of bytes written=9921508
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12276
+		HDFS: Number of bytes written=1988
+		HDFS: Number of read operations=144
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=24
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83297
+		Total time spent by all reduces in occupied slots (ms)=131718
+		Total time spent by all map tasks (ms)=83297
+		Total time spent by all reduce tasks (ms)=131718
+		Total vcore-milliseconds taken by all map tasks=83297
+		Total vcore-milliseconds taken by all reduce tasks=131718
+		Total megabyte-milliseconds taken by all map tasks=85296128
+		Total megabyte-milliseconds taken by all reduce tasks=134879232
+	Map-Reduce Framework
+		Map input records=1136
+		Map output records=1136
+		Map output bytes=10396
+		Map output materialized bytes=13704
+		Input split bytes=2616
+		Combine input records=1136
+		Combine output records=927
+		Reduce input groups=230
+		Reduce shuffle bytes=13704
+		Reduce input records=927
+		Reduce output records=230
+		Spilled Records=1854
+		Shuffled Maps =576
+		Failed Shuffles=0
+		Merged Map outputs=576
+		GC time elapsed (ms)=9074
+		CPU time spent (ms)=49300
+		Physical memory (bytes) snapshot=12307349504
+		Virtual memory (bytes) snapshot=96371736576
+		Total committed heap usage (bytes)=8305770496
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=9660
+	File Output Format Counters 
+		Bytes Written=1988
+20/04/02 11:20:59 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:20:59 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:20:59 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:20:59 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:20:59 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:20:59 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0101
+20/04/02 11:20:59 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0101
+20/04/02 11:20:59 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0101/
+20/04/02 11:20:59 INFO mapreduce.Job: Running job: job_1585804685385_0101
+20/04/02 11:21:12 INFO mapreduce.Job: Job job_1585804685385_0101 running in uber mode : false
+20/04/02 11:21:12 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:21:18 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:21:19 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:21:20 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:21:21 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:21:22 INFO mapreduce.Job:  map 25% reduce 0%
+20/04/02 11:21:23 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:21:24 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:21:25 INFO mapreduce.Job:  map 38% reduce 0%
+20/04/02 11:21:26 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:21:27 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:21:28 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:21:29 INFO mapreduce.Job:  map 58% reduce 0%
+20/04/02 11:21:30 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:21:32 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:21:33 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:21:34 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:21:35 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:21:36 INFO mapreduce.Job:  map 92% reduce 0%
+20/04/02 11:21:37 INFO mapreduce.Job:  map 96% reduce 0%
+20/04/02 11:21:38 INFO mapreduce.Job:  map 100% reduce 32%
+20/04/02 11:21:39 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:21:40 INFO mapreduce.Job: Job job_1585804685385_0101 completed successfully
+20/04/02 11:21:40 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=277
+		FILE: Number of bytes written=5142051
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4604
+		HDFS: Number of bytes written=11
+		HDFS: Number of read operations=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=24
+		Launched reduce tasks=1
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83787
+		Total time spent by all reduces in occupied slots (ms)=15876
+		Total time spent by all map tasks (ms)=83787
+		Total time spent by all reduce tasks (ms)=15876
+		Total vcore-milliseconds taken by all map tasks=83787
+		Total vcore-milliseconds taken by all reduce tasks=15876
+		Total megabyte-milliseconds taken by all map tasks=85797888
+		Total megabyte-milliseconds taken by all reduce tasks=16257024
+	Map-Reduce Framework
+		Map input records=230
+		Map output records=230
+		Map output bytes=920
+		Map output materialized bytes=415
+		Input split bytes=2616
+		Combine input records=230
+		Combine output records=45
+		Reduce input groups=2
+		Reduce shuffle bytes=415
+		Reduce input records=45
+		Reduce output records=2
+		Spilled Records=90
+		Shuffled Maps =24
+		Failed Shuffles=0
+		Merged Map outputs=24
+		GC time elapsed (ms)=4415
+		CPU time spent (ms)=21940
+		Physical memory (bytes) snapshot=7611457536
+		Virtual memory (bytes) snapshot=50080333824
+		Total committed heap usage (bytes)=4973395968
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1988
+	File Output Format Counters 
+		Bytes Written=11
+20/04/02 11:21:40 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:21:40 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:21:40 INFO mapred.FileInputFormat: Total input files to process : 25
+20/04/02 11:21:41 INFO mapreduce.JobSubmitter: number of splits:25
+20/04/02 11:21:41 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:21:41 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0102
+20/04/02 11:21:41 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0102
+20/04/02 11:21:41 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0102/
+20/04/02 11:21:41 INFO mapreduce.Job: Running job: job_1585804685385_0102
+20/04/02 11:21:54 INFO mapreduce.Job: Job job_1585804685385_0102 running in uber mode : false
+20/04/02 11:21:54 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:21:59 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:22:00 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:22:01 INFO mapreduce.Job:  map 12% reduce 0%
+20/04/02 11:22:02 INFO mapreduce.Job:  map 16% reduce 0%
+20/04/02 11:22:03 INFO mapreduce.Job:  map 20% reduce 0%
+20/04/02 11:22:04 INFO mapreduce.Job:  map 32% reduce 0%
+20/04/02 11:22:05 INFO mapreduce.Job:  map 36% reduce 0%
+20/04/02 11:22:06 INFO mapreduce.Job:  map 40% reduce 0%
+20/04/02 11:22:07 INFO mapreduce.Job:  map 44% reduce 0%
+20/04/02 11:22:08 INFO mapreduce.Job:  map 52% reduce 0%
+20/04/02 11:22:09 INFO mapreduce.Job:  map 56% reduce 0%
+20/04/02 11:22:10 INFO mapreduce.Job:  map 60% reduce 0%
+20/04/02 11:22:12 INFO mapreduce.Job:  map 68% reduce 0%
+20/04/02 11:22:14 INFO mapreduce.Job:  map 72% reduce 0%
+20/04/02 11:22:16 INFO mapreduce.Job:  map 80% reduce 0%
+20/04/02 11:22:18 INFO mapreduce.Job:  map 84% reduce 0%
+20/04/02 11:22:20 INFO mapreduce.Job:  map 92% reduce 0%
+20/04/02 11:22:21 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:22:22 INFO mapreduce.Job:  map 96% reduce 1%
+20/04/02 11:22:23 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:22:24 INFO mapreduce.Job:  map 100% reduce 7%
+20/04/02 11:22:25 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:22:26 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:22:28 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:22:29 INFO mapreduce.Job:  map 100% reduce 29%
+20/04/02 11:22:30 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:22:31 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:22:33 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:22:34 INFO mapreduce.Job:  map 100% reduce 54%
+20/04/02 11:22:35 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:22:36 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:22:38 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:22:39 INFO mapreduce.Job:  map 100% reduce 79%
+20/04/02 11:22:40 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:22:41 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:22:43 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:22:44 INFO mapreduce.Job: Job job_1585804685385_0102 completed successfully
+20/04/02 11:22:44 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11267
+		FILE: Number of bytes written=10123728
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=7735
+		HDFS: Number of bytes written=9551
+		HDFS: Number of read operations=147
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=25
+		Launched reduce tasks=24
+		Other local map tasks=25
+		Total time spent by all maps in occupied slots (ms)=86595
+		Total time spent by all reduces in occupied slots (ms)=130656
+		Total time spent by all map tasks (ms)=86595
+		Total time spent by all reduce tasks (ms)=130656
+		Total vcore-milliseconds taken by all map tasks=86595
+		Total vcore-milliseconds taken by all reduce tasks=130656
+		Total megabyte-milliseconds taken by all map tasks=88673280
+		Total megabyte-milliseconds taken by all reduce tasks=133791744
+	Map-Reduce Framework
+		Map input records=692
+		Map output records=1151
+		Map output bytes=8821
+		Map output materialized bytes=14723
+		Input split bytes=2697
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=230
+		Reduce shuffle bytes=14723
+		Reduce input records=1151
+		Reduce output records=1136
+		Spilled Records=2302
+		Shuffled Maps =600
+		Failed Shuffles=0
+		Merged Map outputs=600
+		GC time elapsed (ms)=8711
+		CPU time spent (ms)=45360
+		Physical memory (bytes) snapshot=12589305856
+		Virtual memory (bytes) snapshot=98298249216
+		Total committed heap usage (bytes)=8492417024
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5038
+	File Output Format Counters 
+		Bytes Written=9551
+20/04/02 11:22:44 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:22:44 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:22:44 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:22:45 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:22:45 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:22:45 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0103
+20/04/02 11:22:45 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0103
+20/04/02 11:22:45 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0103/
+20/04/02 11:22:45 INFO mapreduce.Job: Running job: job_1585804685385_0103
+20/04/02 11:22:58 INFO mapreduce.Job: Job job_1585804685385_0103 running in uber mode : false
+20/04/02 11:22:58 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:23:03 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:23:04 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:23:05 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:23:06 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:23:07 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:23:08 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:23:09 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:23:10 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:23:13 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:23:14 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:23:15 INFO mapreduce.Job:  map 58% reduce 0%
+20/04/02 11:23:18 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:23:19 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:23:22 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:23:23 INFO mapreduce.Job:  map 83% reduce 1%
+20/04/02 11:23:26 INFO mapreduce.Job:  map 92% reduce 2%
+20/04/02 11:23:27 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:23:30 INFO mapreduce.Job:  map 100% reduce 4%
+20/04/02 11:23:31 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:23:32 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:23:33 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:23:34 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:23:36 INFO mapreduce.Job:  map 100% reduce 29%
+20/04/02 11:23:37 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:23:39 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:23:42 INFO mapreduce.Job:  map 100% reduce 58%
+20/04/02 11:23:43 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:23:45 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:23:47 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:23:48 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:23:50 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:23:51 INFO mapreduce.Job: Job job_1585804685385_0103 completed successfully
+20/04/02 11:23:51 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11202
+		FILE: Number of bytes written=9923128
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12167
+		HDFS: Number of bytes written=1979
+		HDFS: Number of read operations=144
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=24
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83401
+		Total time spent by all reduces in occupied slots (ms)=141313
+		Total time spent by all map tasks (ms)=83401
+		Total time spent by all reduce tasks (ms)=141313
+		Total vcore-milliseconds taken by all map tasks=83401
+		Total vcore-milliseconds taken by all reduce tasks=141313
+		Total megabyte-milliseconds taken by all map tasks=85402624
+		Total megabyte-milliseconds taken by all reduce tasks=144704512
+	Map-Reduce Framework
+		Map input records=1136
+		Map output records=1136
+		Map output bytes=10287
+		Map output materialized bytes=14514
+		Input split bytes=2616
+		Combine input records=1136
+		Combine output records=1003
+		Reduce input groups=230
+		Reduce shuffle bytes=14514
+		Reduce input records=1003
+		Reduce output records=230
+		Spilled Records=2006
+		Shuffled Maps =576
+		Failed Shuffles=0
+		Merged Map outputs=576
+		GC time elapsed (ms)=8713
+		CPU time spent (ms)=45480
+		Physical memory (bytes) snapshot=12288131072
+		Virtual memory (bytes) snapshot=96322236416
+		Total committed heap usage (bytes)=8284274688
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=9551
+	File Output Format Counters 
+		Bytes Written=1979
+20/04/02 11:23:51 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:23:51 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:23:51 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:23:51 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:23:51 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:23:51 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0104
+20/04/02 11:23:51 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0104
+20/04/02 11:23:51 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0104/
+20/04/02 11:23:51 INFO mapreduce.Job: Running job: job_1585804685385_0104
+20/04/02 11:24:03 INFO mapreduce.Job: Job job_1585804685385_0104 running in uber mode : false
+20/04/02 11:24:03 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:24:09 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:24:10 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:24:12 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:24:13 INFO mapreduce.Job:  map 25% reduce 0%
+20/04/02 11:24:14 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:24:15 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:24:16 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:24:17 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:24:18 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:24:19 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:24:21 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:24:22 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:24:23 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:24:26 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:24:27 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:24:28 INFO mapreduce.Job:  map 96% reduce 0%
+20/04/02 11:24:29 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:24:30 INFO mapreduce.Job:  map 100% reduce 32%
+20/04/02 11:24:31 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:24:31 INFO mapreduce.Job: Job job_1585804685385_0104 completed successfully
+20/04/02 11:24:31 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=241
+		FILE: Number of bytes written=5141979
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4595
+		HDFS: Number of bytes written=11
+		HDFS: Number of read operations=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=1
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=84349
+		Total time spent by all reduces in occupied slots (ms)=15900
+		Total time spent by all map tasks (ms)=84349
+		Total time spent by all reduce tasks (ms)=15900
+		Total vcore-milliseconds taken by all map tasks=84349
+		Total vcore-milliseconds taken by all reduce tasks=15900
+		Total megabyte-milliseconds taken by all map tasks=86373376
+		Total megabyte-milliseconds taken by all reduce tasks=16281600
+	Map-Reduce Framework
+		Map input records=230
+		Map output records=230
+		Map output bytes=920
+		Map output materialized bytes=379
+		Input split bytes=2616
+		Combine input records=230
+		Combine output records=38
+		Reduce input groups=2
+		Reduce shuffle bytes=379
+		Reduce input records=38
+		Reduce output records=2
+		Spilled Records=76
+		Shuffled Maps =24
+		Failed Shuffles=0
+		Merged Map outputs=24
+		GC time elapsed (ms)=4586
+		CPU time spent (ms)=18580
+		Physical memory (bytes) snapshot=7572930560
+		Virtual memory (bytes) snapshot=50076999680
+		Total committed heap usage (bytes)=4973395968
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1979
+	File Output Format Counters 
+		Bytes Written=11
+20/04/02 11:24:31 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:24:31 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:24:31 INFO mapred.FileInputFormat: Total input files to process : 25
+20/04/02 11:24:32 INFO mapreduce.JobSubmitter: number of splits:25
+20/04/02 11:24:32 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:24:32 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0105
+20/04/02 11:24:32 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0105
+20/04/02 11:24:32 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0105/
+20/04/02 11:24:32 INFO mapreduce.Job: Running job: job_1585804685385_0105
+20/04/02 11:24:44 INFO mapreduce.Job: Job job_1585804685385_0105 running in uber mode : false
+20/04/02 11:24:44 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:24:50 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:24:52 INFO mapreduce.Job:  map 12% reduce 0%
+20/04/02 11:24:53 INFO mapreduce.Job:  map 16% reduce 0%
+20/04/02 11:24:54 INFO mapreduce.Job:  map 20% reduce 0%
+20/04/02 11:24:55 INFO mapreduce.Job:  map 28% reduce 0%
+20/04/02 11:24:56 INFO mapreduce.Job:  map 36% reduce 0%
+20/04/02 11:24:57 INFO mapreduce.Job:  map 40% reduce 0%
+20/04/02 11:24:58 INFO mapreduce.Job:  map 44% reduce 0%
+20/04/02 11:24:59 INFO mapreduce.Job:  map 48% reduce 0%
+20/04/02 11:25:00 INFO mapreduce.Job:  map 56% reduce 0%
+20/04/02 11:25:01 INFO mapreduce.Job:  map 60% reduce 0%
+20/04/02 11:25:03 INFO mapreduce.Job:  map 64% reduce 0%
+20/04/02 11:25:04 INFO mapreduce.Job:  map 72% reduce 0%
+20/04/02 11:25:05 INFO mapreduce.Job:  map 76% reduce 0%
+20/04/02 11:25:08 INFO mapreduce.Job:  map 84% reduce 0%
+20/04/02 11:25:09 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:25:11 INFO mapreduce.Job:  map 88% reduce 1%
+20/04/02 11:25:12 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:25:14 INFO mapreduce.Job:  map 100% reduce 1%
+20/04/02 11:25:15 INFO mapreduce.Job:  map 100% reduce 3%
+20/04/02 11:25:16 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:25:17 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:25:18 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:25:20 INFO mapreduce.Job:  map 100% reduce 29%
+20/04/02 11:25:21 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:25:23 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:25:26 INFO mapreduce.Job:  map 100% reduce 58%
+20/04/02 11:25:27 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:25:29 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:25:30 INFO mapreduce.Job:  map 100% reduce 79%
+20/04/02 11:25:31 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:25:32 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:25:34 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:25:34 INFO mapreduce.Job: Job job_1585804685385_0105 completed successfully
+20/04/02 11:25:34 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11258
+		FILE: Number of bytes written=10123710
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=7726
+		HDFS: Number of bytes written=9528
+		HDFS: Number of read operations=147
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=25
+		Launched reduce tasks=24
+		Other local map tasks=25
+		Total time spent by all maps in occupied slots (ms)=87099
+		Total time spent by all reduces in occupied slots (ms)=122683
+		Total time spent by all map tasks (ms)=87099
+		Total time spent by all reduce tasks (ms)=122683
+		Total vcore-milliseconds taken by all map tasks=87099
+		Total vcore-milliseconds taken by all reduce tasks=122683
+		Total megabyte-milliseconds taken by all map tasks=89189376
+		Total megabyte-milliseconds taken by all reduce tasks=125627392
+	Map-Reduce Framework
+		Map input records=692
+		Map output records=1151
+		Map output bytes=8812
+		Map output materialized bytes=14714
+		Input split bytes=2697
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=230
+		Reduce shuffle bytes=14714
+		Reduce input records=1151
+		Reduce output records=1136
+		Spilled Records=2302
+		Shuffled Maps =600
+		Failed Shuffles=0
+		Merged Map outputs=600
+		GC time elapsed (ms)=8824
+		CPU time spent (ms)=44650
+		Physical memory (bytes) snapshot=12590141440
+		Virtual memory (bytes) snapshot=98329501696
+		Total committed heap usage (bytes)=8536981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5029
+	File Output Format Counters 
+		Bytes Written=9528
+20/04/02 11:25:34 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:25:34 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:25:34 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:25:35 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:25:35 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:25:35 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0106
+20/04/02 11:25:35 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0106
+20/04/02 11:25:35 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0106/
+20/04/02 11:25:35 INFO mapreduce.Job: Running job: job_1585804685385_0106
+20/04/02 11:25:48 INFO mapreduce.Job: Job job_1585804685385_0106 running in uber mode : false
+20/04/02 11:25:48 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:25:53 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:25:54 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:25:55 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:25:56 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:25:57 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:25:58 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:25:59 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:26:00 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:26:01 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:26:02 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:26:03 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:26:05 INFO mapreduce.Job:  map 58% reduce 0%
+20/04/02 11:26:06 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:26:07 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:26:10 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:26:11 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:26:14 INFO mapreduce.Job:  map 88% reduce 1%
+20/04/02 11:26:15 INFO mapreduce.Job:  map 96% reduce 1%
+20/04/02 11:26:16 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:26:18 INFO mapreduce.Job:  map 100% reduce 2%
+20/04/02 11:26:19 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:26:20 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:26:21 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:26:22 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:26:25 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:26:26 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:26:27 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:26:29 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:26:30 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:26:31 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:26:32 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:26:34 INFO mapreduce.Job:  map 100% reduce 79%
+20/04/02 11:26:35 INFO mapreduce.Job:  map 100% reduce 92%
+20/04/02 11:26:36 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:26:37 INFO mapreduce.Job: Job job_1585804685385_0106 completed successfully
+20/04/02 11:26:37 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11314
+		FILE: Number of bytes written=9923352
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12144
+		HDFS: Number of bytes written=1976
+		HDFS: Number of read operations=144
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=24
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83087
+		Total time spent by all reduces in occupied slots (ms)=132996
+		Total time spent by all map tasks (ms)=83087
+		Total time spent by all reduce tasks (ms)=132996
+		Total vcore-milliseconds taken by all map tasks=83087
+		Total vcore-milliseconds taken by all reduce tasks=132996
+		Total megabyte-milliseconds taken by all map tasks=85081088
+		Total megabyte-milliseconds taken by all reduce tasks=136187904
+	Map-Reduce Framework
+		Map input records=1136
+		Map output records=1136
+		Map output bytes=10264
+		Map output materialized bytes=14626
+		Input split bytes=2616
+		Combine input records=1136
+		Combine output records=1014
+		Reduce input groups=230
+		Reduce shuffle bytes=14626
+		Reduce input records=1014
+		Reduce output records=230
+		Spilled Records=2028
+		Shuffled Maps =576
+		Failed Shuffles=0
+		Merged Map outputs=576
+		GC time elapsed (ms)=8587
+		CPU time spent (ms)=44310
+		Physical memory (bytes) snapshot=12317102080
+		Virtual memory (bytes) snapshot=96400494592
+		Total committed heap usage (bytes)=8295809024
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=9528
+	File Output Format Counters 
+		Bytes Written=1976
+20/04/02 11:26:38 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:26:38 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:26:38 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:26:38 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:26:38 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:26:38 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0107
+20/04/02 11:26:38 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0107
+20/04/02 11:26:38 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0107/
+20/04/02 11:26:38 INFO mapreduce.Job: Running job: job_1585804685385_0107
+20/04/02 11:26:50 INFO mapreduce.Job: Job job_1585804685385_0107 running in uber mode : false
+20/04/02 11:26:50 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:26:56 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:26:57 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:26:59 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:27:00 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:27:01 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:27:02 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:27:03 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:27:04 INFO mapreduce.Job:  map 38% reduce 0%
+20/04/02 11:27:05 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:27:07 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:27:08 INFO mapreduce.Job:  map 58% reduce 0%
+20/04/02 11:27:10 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:27:11 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:27:12 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:27:14 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:27:15 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:27:16 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:27:17 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:27:17 INFO mapreduce.Job: Job job_1585804685385_0107 completed successfully
+20/04/02 11:27:17 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=184
+		FILE: Number of bytes written=5141865
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4592
+		HDFS: Number of bytes written=10
+		HDFS: Number of read operations=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=1
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=83893
+		Total time spent by all reduces in occupied slots (ms)=14791
+		Total time spent by all map tasks (ms)=83893
+		Total time spent by all reduce tasks (ms)=14791
+		Total vcore-milliseconds taken by all map tasks=83893
+		Total vcore-milliseconds taken by all reduce tasks=14791
+		Total megabyte-milliseconds taken by all map tasks=85906432
+		Total megabyte-milliseconds taken by all reduce tasks=15145984
+	Map-Reduce Framework
+		Map input records=230
+		Map output records=230
+		Map output bytes=920
+		Map output materialized bytes=322
+		Input split bytes=2616
+		Combine input records=230
+		Combine output records=28
+		Reduce input groups=2
+		Reduce shuffle bytes=322
+		Reduce input records=28
+		Reduce output records=2
+		Spilled Records=56
+		Shuffled Maps =24
+		Failed Shuffles=0
+		Merged Map outputs=24
+		GC time elapsed (ms)=4423
+		CPU time spent (ms)=22410
+		Physical memory (bytes) snapshot=7584546816
+		Virtual memory (bytes) snapshot=50089500672
+		Total committed heap usage (bytes)=4979687424
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1976
+	File Output Format Counters 
+		Bytes Written=10
+20/04/02 11:27:17 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:27:17 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:27:17 INFO mapred.FileInputFormat: Total input files to process : 25
+20/04/02 11:27:17 INFO mapreduce.JobSubmitter: number of splits:25
+20/04/02 11:27:17 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:27:17 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0108
+20/04/02 11:27:17 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0108
+20/04/02 11:27:17 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0108/
+20/04/02 11:27:17 INFO mapreduce.Job: Running job: job_1585804685385_0108
+20/04/02 11:27:30 INFO mapreduce.Job: Job job_1585804685385_0108 running in uber mode : false
+20/04/02 11:27:30 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:27:35 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:27:37 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:27:38 INFO mapreduce.Job:  map 12% reduce 0%
+20/04/02 11:27:39 INFO mapreduce.Job:  map 16% reduce 0%
+20/04/02 11:27:40 INFO mapreduce.Job:  map 20% reduce 0%
+20/04/02 11:27:41 INFO mapreduce.Job:  map 28% reduce 0%
+20/04/02 11:27:42 INFO mapreduce.Job:  map 36% reduce 0%
+20/04/02 11:27:43 INFO mapreduce.Job:  map 40% reduce 0%
+20/04/02 11:27:44 INFO mapreduce.Job:  map 44% reduce 0%
+20/04/02 11:27:45 INFO mapreduce.Job:  map 48% reduce 0%
+20/04/02 11:27:46 INFO mapreduce.Job:  map 52% reduce 0%
+20/04/02 11:27:47 INFO mapreduce.Job:  map 60% reduce 0%
+20/04/02 11:27:49 INFO mapreduce.Job:  map 64% reduce 0%
+20/04/02 11:27:51 INFO mapreduce.Job:  map 72% reduce 0%
+20/04/02 11:27:54 INFO mapreduce.Job:  map 76% reduce 0%
+20/04/02 11:27:55 INFO mapreduce.Job:  map 84% reduce 0%
+20/04/02 11:27:58 INFO mapreduce.Job:  map 84% reduce 1%
+20/04/02 11:27:59 INFO mapreduce.Job:  map 96% reduce 1%
+20/04/02 11:28:00 INFO mapreduce.Job:  map 96% reduce 2%
+20/04/02 11:28:03 INFO mapreduce.Job:  map 100% reduce 4%
+20/04/02 11:28:04 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:28:05 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:28:06 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:28:08 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:28:09 INFO mapreduce.Job:  map 100% reduce 38%
+20/04/02 11:28:10 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:28:11 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:28:12 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:28:14 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:28:15 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:28:16 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:28:17 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:28:19 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:28:20 INFO mapreduce.Job:  map 100% reduce 92%
+20/04/02 11:28:21 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:28:22 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:28:23 INFO mapreduce.Job: Job job_1585804685385_0108 completed successfully
+20/04/02 11:28:23 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11255
+		FILE: Number of bytes written=10123704
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=7723
+		HDFS: Number of bytes written=9522
+		HDFS: Number of read operations=147
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=25
+		Launched reduce tasks=24
+		Other local map tasks=25
+		Total time spent by all maps in occupied slots (ms)=87084
+		Total time spent by all reduces in occupied slots (ms)=136682
+		Total time spent by all map tasks (ms)=87084
+		Total time spent by all reduce tasks (ms)=136682
+		Total vcore-milliseconds taken by all map tasks=87084
+		Total vcore-milliseconds taken by all reduce tasks=136682
+		Total megabyte-milliseconds taken by all map tasks=89174016
+		Total megabyte-milliseconds taken by all reduce tasks=139962368
+	Map-Reduce Framework
+		Map input records=692
+		Map output records=1151
+		Map output bytes=8809
+		Map output materialized bytes=14711
+		Input split bytes=2697
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=230
+		Reduce shuffle bytes=14711
+		Reduce input records=1151
+		Reduce output records=1136
+		Spilled Records=2302
+		Shuffled Maps =600
+		Failed Shuffles=0
+		Merged Map outputs=600
+		GC time elapsed (ms)=8906
+		CPU time spent (ms)=50840
+		Physical memory (bytes) snapshot=12554534912
+		Virtual memory (bytes) snapshot=98359242752
+		Total committed heap usage (bytes)=8522301440
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=5026
+	File Output Format Counters 
+		Bytes Written=9522
+20/04/02 11:28:23 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:28:23 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:28:23 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:28:23 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:28:23 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:28:24 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0109
+20/04/02 11:28:24 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0109
+20/04/02 11:28:24 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0109/
+20/04/02 11:28:24 INFO mapreduce.Job: Running job: job_1585804685385_0109
+20/04/02 11:28:36 INFO mapreduce.Job: Job job_1585804685385_0109 running in uber mode : false
+20/04/02 11:28:36 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:28:42 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:28:43 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:28:44 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:28:45 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:28:46 INFO mapreduce.Job:  map 21% reduce 0%
+20/04/02 11:28:47 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:28:48 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:28:49 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:28:52 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:28:53 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:28:57 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:28:58 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:29:01 INFO mapreduce.Job:  map 79% reduce 0%
+20/04/02 11:29:02 INFO mapreduce.Job:  map 88% reduce 1%
+20/04/02 11:29:05 INFO mapreduce.Job:  map 92% reduce 1%
+20/04/02 11:29:06 INFO mapreduce.Job:  map 96% reduce 1%
+20/04/02 11:29:07 INFO mapreduce.Job:  map 100% reduce 2%
+20/04/02 11:29:08 INFO mapreduce.Job:  map 100% reduce 13%
+20/04/02 11:29:09 INFO mapreduce.Job:  map 100% reduce 17%
+20/04/02 11:29:10 INFO mapreduce.Job:  map 100% reduce 21%
+20/04/02 11:29:12 INFO mapreduce.Job:  map 100% reduce 25%
+20/04/02 11:29:13 INFO mapreduce.Job:  map 100% reduce 42%
+20/04/02 11:29:15 INFO mapreduce.Job:  map 100% reduce 46%
+20/04/02 11:29:16 INFO mapreduce.Job:  map 100% reduce 50%
+20/04/02 11:29:18 INFO mapreduce.Job:  map 100% reduce 63%
+20/04/02 11:29:19 INFO mapreduce.Job:  map 100% reduce 67%
+20/04/02 11:29:20 INFO mapreduce.Job:  map 100% reduce 71%
+20/04/02 11:29:21 INFO mapreduce.Job:  map 100% reduce 75%
+20/04/02 11:29:23 INFO mapreduce.Job:  map 100% reduce 88%
+20/04/02 11:29:24 INFO mapreduce.Job:  map 100% reduce 92%
+20/04/02 11:29:25 INFO mapreduce.Job:  map 100% reduce 96%
+20/04/02 11:29:26 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:29:27 INFO mapreduce.Job: Job job_1585804685385_0109 completed successfully
+20/04/02 11:29:28 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=11344
+		FILE: Number of bytes written=9923412
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12138
+		HDFS: Number of bytes written=1976
+		HDFS: Number of read operations=144
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=48
+	Job Counters 
+		Killed reduce tasks=1
+		Launched map tasks=24
+		Launched reduce tasks=24
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=84271
+		Total time spent by all reduces in occupied slots (ms)=132936
+		Total time spent by all map tasks (ms)=84271
+		Total time spent by all reduce tasks (ms)=132936
+		Total vcore-milliseconds taken by all map tasks=84271
+		Total vcore-milliseconds taken by all reduce tasks=132936
+		Total megabyte-milliseconds taken by all map tasks=86293504
+		Total megabyte-milliseconds taken by all reduce tasks=136126464
+	Map-Reduce Framework
+		Map input records=1136
+		Map output records=1136
+		Map output bytes=10258
+		Map output materialized bytes=14656
+		Input split bytes=2616
+		Combine input records=1136
+		Combine output records=1017
+		Reduce input groups=230
+		Reduce shuffle bytes=14656
+		Reduce input records=1017
+		Reduce output records=230
+		Spilled Records=2034
+		Shuffled Maps =576
+		Failed Shuffles=0
+		Merged Map outputs=576
+		GC time elapsed (ms)=8810
+		CPU time spent (ms)=50150
+		Physical memory (bytes) snapshot=12258979840
+		Virtual memory (bytes) snapshot=96347492352
+		Total committed heap usage (bytes)=8272216064
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=9522
+	File Output Format Counters 
+		Bytes Written=1976
+20/04/02 11:29:28 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:29:28 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:29:28 INFO mapred.FileInputFormat: Total input files to process : 24
+20/04/02 11:29:28 INFO mapreduce.JobSubmitter: number of splits:24
+20/04/02 11:29:28 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:29:28 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0110
+20/04/02 11:29:28 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0110
+20/04/02 11:29:28 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0110/
+20/04/02 11:29:28 INFO mapreduce.Job: Running job: job_1585804685385_0110
+20/04/02 11:29:40 INFO mapreduce.Job: Job job_1585804685385_0110 running in uber mode : false
+20/04/02 11:29:40 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:29:46 INFO mapreduce.Job:  map 4% reduce 0%
+20/04/02 11:29:47 INFO mapreduce.Job:  map 8% reduce 0%
+20/04/02 11:29:48 INFO mapreduce.Job:  map 13% reduce 0%
+20/04/02 11:29:49 INFO mapreduce.Job:  map 17% reduce 0%
+20/04/02 11:29:50 INFO mapreduce.Job:  map 25% reduce 0%
+20/04/02 11:29:51 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:29:52 INFO mapreduce.Job:  map 33% reduce 0%
+20/04/02 11:29:53 INFO mapreduce.Job:  map 42% reduce 0%
+20/04/02 11:29:54 INFO mapreduce.Job:  map 46% reduce 0%
+20/04/02 11:29:55 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:29:56 INFO mapreduce.Job:  map 54% reduce 0%
+20/04/02 11:29:57 INFO mapreduce.Job:  map 63% reduce 0%
+20/04/02 11:29:58 INFO mapreduce.Job:  map 67% reduce 0%
+20/04/02 11:29:59 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:30:00 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:30:01 INFO mapreduce.Job:  map 83% reduce 0%
+20/04/02 11:30:02 INFO mapreduce.Job:  map 92% reduce 0%
+20/04/02 11:30:04 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:30:05 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:30:05 INFO mapreduce.Job: Job job_1585804685385_0110 completed successfully
+20/04/02 11:30:05 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=162
+		FILE: Number of bytes written=5141821
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=4592
+		HDFS: Number of bytes written=6
+		HDFS: Number of read operations=75
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=24
+		Launched reduce tasks=1
+		Other local map tasks=24
+		Total time spent by all maps in occupied slots (ms)=79443
+		Total time spent by all reduces in occupied slots (ms)=13632
+		Total time spent by all map tasks (ms)=79443
+		Total time spent by all reduce tasks (ms)=13632
+		Total vcore-milliseconds taken by all map tasks=79443
+		Total vcore-milliseconds taken by all reduce tasks=13632
+		Total megabyte-milliseconds taken by all map tasks=81349632
+		Total megabyte-milliseconds taken by all reduce tasks=13959168
+	Map-Reduce Framework
+		Map input records=230
+		Map output records=230
+		Map output bytes=920
+		Map output materialized bytes=300
+		Input split bytes=2616
+		Combine input records=230
+		Combine output records=24
+		Reduce input groups=1
+		Reduce shuffle bytes=300
+		Reduce input records=24
+		Reduce output records=1
+		Spilled Records=48
+		Shuffled Maps =24
+		Failed Shuffles=0
+		Merged Map outputs=24
+		GC time elapsed (ms)=4264
+		CPU time spent (ms)=20110
+		Physical memory (bytes) snapshot=7570305024
+		Virtual memory (bytes) snapshot=50082365440
+		Total committed heap usage (bytes)=4985978880
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1976
+	File Output Format Counters 
+		Bytes Written=6
+20/04/02 11:30:05 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:30:05 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+Exception in thread "main" org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory hdfs://localhost:9000/user/user/concmpt_summaryout already exists
+	at org.apache.hadoop.mapred.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:131)
+	at org.apache.hadoop.mapreduce.JobSubmitter.checkSpecs(JobSubmitter.java:281)
+	at org.apache.hadoop.mapreduce.JobSubmitter.submitJobInternal(JobSubmitter.java:145)
+	at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1570)
+	at org.apache.hadoop.mapreduce.Job$11.run(Job.java:1567)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1893)
+	at org.apache.hadoop.mapreduce.Job.submit(Job.java:1567)
+	at org.apache.hadoop.mapred.JobClient$1.run(JobClient.java:576)
+	at org.apache.hadoop.mapred.JobClient$1.run(JobClient.java:571)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1893)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:571)
+	at org.apache.hadoop.mapred.JobClient.submitJob(JobClient.java:562)
+	at org.apache.hadoop.mapred.JobClient.runJob(JobClient.java:871)
+	at pegasus.ConCmpt.run(ConCmpt.java:443)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:76)
+	at pegasus.ConCmpt.main(ConCmpt.java:339)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:244)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:158)
+bdb_test_2.sh: line 66: kill: (42572) - No such process
+bdb_test_2.sh: line 68: kill: (42593) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42592 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/fft/': No such file or directory
+bdb_test_2.sh: line 66: kill: (42593) - No such process
+bdb_test_2.sh: line 68: kill: (42659) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42658 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/fft/fft-result*': No such file or directory
+20/04/02 11:30:43 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:30:43 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/04/02 11:30:44 INFO input.FileInputFormat: Total input files to process : 1
+20/04/02 11:30:44 INFO mapreduce.JobSubmitter: number of splits:1
+20/04/02 11:30:44 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:30:45 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0111
+20/04/02 11:30:45 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:30:45 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:30:45 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:30:45 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:30:45 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0111
+20/04/02 11:30:45 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0111/
+20/04/02 11:30:45 INFO mapreduce.Job: Running job: job_1585804685385_0111
+20/04/02 11:30:52 INFO mapreduce.Job: Job job_1585804685385_0111 running in uber mode : false
+20/04/02 11:30:52 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:30:58 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:31:11 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:31:12 INFO mapreduce.Job: Job job_1585804685385_0111 completed successfully
+20/04/02 11:31:13 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=39707252
+		FILE: Number of bytes written=79825773
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=39678689
+		HDFS: Number of bytes written=66170478
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=3774
+		Total time spent by all reduces in occupied slots (ms)=10140
+		Total time spent by all map tasks (ms)=3774
+		Total time spent by all reduce tasks (ms)=10140
+		Total vcore-milliseconds taken by all map tasks=3774
+		Total vcore-milliseconds taken by all reduce tasks=10140
+		Total megabyte-milliseconds taken by all map tasks=3864576
+		Total megabyte-milliseconds taken by all reduce tasks=10383360
+	Map-Reduce Framework
+		Map input records=2048
+		Map output records=2048
+		Map output bytes=39699054
+		Map output materialized bytes=39707252
+		Input split bytes=115
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=2048
+		Reduce shuffle bytes=39707252
+		Reduce input records=2048
+		Reduce output records=2097152
+		Spilled Records=4096
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=1088
+		CPU time spent (ms)=20060
+		Physical memory (bytes) snapshot=545316864
+		Virtual memory (bytes) snapshot=4016934912
+		Total committed heap usage (bytes)=352845824
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=39678574
+	File Output Format Counters 
+		Bytes Written=66170478
+20/04/02 11:31:13 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:31:13 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/04/02 11:31:13 INFO input.FileInputFormat: Total input files to process : 1
+20/04/02 11:31:13 INFO mapreduce.JobSubmitter: number of splits:1
+20/04/02 11:31:13 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0112
+20/04/02 11:31:13 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0112
+20/04/02 11:31:13 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0112/
+20/04/02 11:31:13 INFO mapreduce.Job: Running job: job_1585804685385_0112
+20/04/02 11:31:25 INFO mapreduce.Job: Job job_1585804685385_0112 running in uber mode : false
+20/04/02 11:31:25 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:31:40 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:31:58 INFO mapreduce.Job:  map 100% reduce 98%
+20/04/02 11:31:59 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:31:59 INFO mapreduce.Job: Job job_1585804685385_0112 completed successfully
+20/04/02 11:31:59 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=154850542
+		FILE: Number of bytes written=232687019
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=66170600
+		HDFS: Number of bytes written=105909003
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=12109
+		Total time spent by all reduces in occupied slots (ms)=15476
+		Total time spent by all map tasks (ms)=12109
+		Total time spent by all reduce tasks (ms)=15476
+		Total vcore-milliseconds taken by all map tasks=12109
+		Total vcore-milliseconds taken by all reduce tasks=15476
+		Total megabyte-milliseconds taken by all map tasks=12399616
+		Total megabyte-milliseconds taken by all reduce tasks=15847424
+	Map-Reduce Framework
+		Map input records=2097152
+		Map output records=2097152
+		Map output bytes=73230958
+		Map output materialized bytes=77425268
+		Input split bytes=122
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=2048
+		Reduce shuffle bytes=77425268
+		Reduce input records=2097152
+		Reduce output records=2097152
+		Spilled Records=6291456
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=2303
+		CPU time spent (ms)=48950
+		Physical memory (bytes) snapshot=546136064
+		Virtual memory (bytes) snapshot=4030480384
+		Total committed heap usage (bytes)=360710144
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=66170478
+	File Output Format Counters 
+		Bytes Written=105909003
+bdb_test_2.sh: line 66: kill: (42659) - No such process
+bdb_test_2.sh: line 68: kill: (42679) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42678 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/grep/1GB-grepHP': No such file or directory
+bdb_test_2.sh: line 66: kill: (42679) - No such process
+bdb_test_2.sh: line 68: kill: (42694) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42693 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/grep/grepHP-result': No such file or directory
+20/04/02 11:32:42 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:32:53 INFO input.FileInputFormat: Total input files to process : 2
+20/04/02 11:32:54 INFO mapreduce.JobSubmitter: number of splits:8
+20/04/02 11:32:54 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:32:54 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0113
+20/04/02 11:32:54 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:32:54 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:32:54 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:32:54 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:32:54 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0113
+20/04/02 11:32:54 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0113/
+20/04/02 11:32:54 INFO mapreduce.Job: Running job: job_1585804685385_0113
+20/04/02 11:33:03 INFO mapreduce.Job: Job job_1585804685385_0113 running in uber mode : false
+20/04/02 11:33:03 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:33:13 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:33:19 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:33:20 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:33:21 INFO mapreduce.Job: Job job_1585804685385_0113 completed successfully
+20/04/02 11:33:21 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=6
+		FILE: Number of bytes written=1853675
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1050993117
+		HDFS: Number of bytes written=86
+		HDFS: Number of read operations=27
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=8
+		Launched reduce tasks=1
+		Data-local map tasks=8
+		Total time spent by all maps in occupied slots (ms)=56124
+		Total time spent by all reduces in occupied slots (ms)=5315
+		Total time spent by all map tasks (ms)=56124
+		Total time spent by all reduce tasks (ms)=5315
+		Total vcore-milliseconds taken by all map tasks=56124
+		Total vcore-milliseconds taken by all reduce tasks=5315
+		Total megabyte-milliseconds taken by all map tasks=57470976
+		Total megabyte-milliseconds taken by all reduce tasks=5442560
+	Map-Reduce Framework
+		Map input records=16016
+		Map output records=0
+		Map output bytes=0
+		Map output materialized bytes=48
+		Input split bytes=976
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=0
+		Reduce shuffle bytes=48
+		Reduce input records=0
+		Reduce output records=0
+		Spilled Records=0
+		Shuffled Maps =8
+		Failed Shuffles=0
+		Merged Map outputs=8
+		GC time elapsed (ms)=3638
+		CPU time spent (ms)=43700
+		Physical memory (bytes) snapshot=2686603264
+		Virtual memory (bytes) snapshot=18039181312
+		Total committed heap usage (bytes)=1735917568
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1050992141
+	File Output Format Counters 
+		Bytes Written=86
+20/04/02 11:33:21 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:33:21 INFO input.FileInputFormat: Total input files to process : 1
+20/04/02 11:33:21 INFO mapreduce.JobSubmitter: number of splits:1
+20/04/02 11:33:22 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0114
+20/04/02 11:33:22 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0114
+20/04/02 11:33:22 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0114/
+20/04/02 11:33:22 INFO mapreduce.Job: Running job: job_1585804685385_0114
+20/04/02 11:33:34 INFO mapreduce.Job: Job job_1585804685385_0114 running in uber mode : false
+20/04/02 11:33:34 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:33:40 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:33:45 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:33:46 INFO mapreduce.Job: Job job_1585804685385_0114 completed successfully
+20/04/02 11:33:46 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=6
+		FILE: Number of bytes written=410691
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=215
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=3243
+		Total time spent by all reduces in occupied slots (ms)=3085
+		Total time spent by all map tasks (ms)=3243
+		Total time spent by all reduce tasks (ms)=3085
+		Total vcore-milliseconds taken by all map tasks=3243
+		Total vcore-milliseconds taken by all reduce tasks=3085
+		Total megabyte-milliseconds taken by all map tasks=3320832
+		Total megabyte-milliseconds taken by all reduce tasks=3159040
+	Map-Reduce Framework
+		Map input records=0
+		Map output records=0
+		Map output bytes=0
+		Map output materialized bytes=6
+		Input split bytes=129
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=0
+		Reduce shuffle bytes=6
+		Reduce input records=0
+		Reduce output records=0
+		Spilled Records=0
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=259
+		CPU time spent (ms)=1450
+		Physical memory (bytes) snapshot=511377408
+		Virtual memory (bytes) snapshot=4019322880
+		Total committed heap usage (bytes)=340787200
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=86
+	File Output Format Counters 
+		Bytes Written=0
+bdb_test_2.sh: line 66: kill: (42694) - No such process
+bdb_test_2.sh: line 68: kill: (42710) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42709 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/matMult/': No such file or directory
+bdb_test_2.sh: line 66: kill: (42710) - No such process
+bdb_test_2.sh: line 68: kill: (42731) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42730 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/matMult/mat*-seq': No such file or directory
+rmr: `/hadoop/matMult/mat-out': No such file or directory
+20/04/02 11:34:28 INFO AbstractJob: Command line arguments: {--charset=[UTF-8], --chunkSize=[64], --endPhase=[2147483647], --fileFilterClass=[org.apache.mahout.text.PrefixAdditionFilter], --input=[/hadoop/matMult/mat1], --keyPrefix=[], --method=[mapreduce], --output=[/hadoop/matMult/mat1-seq], --startPhase=[0], --tempDir=[temp]}
+20/04/02 11:34:28 INFO deprecation: mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+20/04/02 11:34:28 INFO deprecation: mapred.compress.map.output is deprecated. Instead, use mapreduce.map.output.compress
+20/04/02 11:34:28 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+20/04/02 11:34:29 INFO RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:34:30 INFO FileInputFormat: Total input files to process : 1
+20/04/02 11:34:30 INFO CombineFileInputFormat: DEBUG: Terminated node allocation with : CompletedNodes: 1, size left: 25347
+20/04/02 11:34:30 INFO JobSubmitter: number of splits:1
+20/04/02 11:34:30 INFO deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:34:31 INFO JobSubmitter: Submitting tokens for job: job_1585804685385_0115
+20/04/02 11:34:31 INFO Configuration: resource-types.xml not found
+20/04/02 11:34:31 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:34:31 INFO ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:34:31 INFO ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:34:31 INFO YarnClientImpl: Submitted application application_1585804685385_0115
+20/04/02 11:34:31 INFO Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0115/
+20/04/02 11:34:31 INFO Job: Running job: job_1585804685385_0115
+20/04/02 11:34:40 INFO Job: Job job_1585804685385_0115 running in uber mode : false
+20/04/02 11:34:40 INFO Job:  map 0% reduce 0%
+20/04/02 11:34:46 INFO Job:  map 100% reduce 0%
+20/04/02 11:34:47 INFO Job: Job job_1585804685385_0115 completed successfully
+20/04/02 11:34:48 INFO Job: Counters: 30
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=206116
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=25480
+		HDFS: Number of bytes written=8098
+		HDFS: Number of read operations=8
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Other local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=3337
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=3337
+		Total vcore-milliseconds taken by all map tasks=3337
+		Total megabyte-milliseconds taken by all map tasks=3417088
+	Map-Reduce Framework
+		Map input records=1
+		Map output records=1
+		Input split bytes=133
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=137
+		CPU time spent (ms)=720
+		Physical memory (bytes) snapshot=207818752
+		Virtual memory (bytes) snapshot=2008608768
+		Total committed heap usage (bytes)=136839168
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=8098
+20/04/02 11:34:48 INFO MahoutDriver: Program took 19581 ms (Minutes: 0.32635)
+20/04/02 11:34:55 INFO AbstractJob: Command line arguments: {--charset=[UTF-8], --chunkSize=[64], --endPhase=[2147483647], --fileFilterClass=[org.apache.mahout.text.PrefixAdditionFilter], --input=[/hadoop/matMult/mat2], --keyPrefix=[], --method=[mapreduce], --output=[/hadoop/matMult/mat2-seq], --startPhase=[0], --tempDir=[temp]}
+20/04/02 11:34:55 INFO deprecation: mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+20/04/02 11:34:55 INFO deprecation: mapred.compress.map.output is deprecated. Instead, use mapreduce.map.output.compress
+20/04/02 11:34:55 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+20/04/02 11:34:56 INFO RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:34:57 INFO FileInputFormat: Total input files to process : 1
+20/04/02 11:34:57 INFO CombineFileInputFormat: DEBUG: Terminated node allocation with : CompletedNodes: 1, size left: 25347
+20/04/02 11:34:57 INFO JobSubmitter: number of splits:1
+20/04/02 11:34:57 INFO deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:34:57 INFO JobSubmitter: Submitting tokens for job: job_1585804685385_0116
+20/04/02 11:34:57 INFO Configuration: resource-types.xml not found
+20/04/02 11:34:57 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:34:57 INFO ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:34:57 INFO ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:34:57 INFO YarnClientImpl: Submitted application application_1585804685385_0116
+20/04/02 11:34:57 INFO Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0116/
+20/04/02 11:34:57 INFO Job: Running job: job_1585804685385_0116
+20/04/02 11:35:05 INFO Job: Job job_1585804685385_0116 running in uber mode : false
+20/04/02 11:35:05 INFO Job:  map 0% reduce 0%
+20/04/02 11:35:11 INFO Job:  map 100% reduce 0%
+20/04/02 11:35:12 INFO Job: Job job_1585804685385_0116 completed successfully
+20/04/02 11:35:12 INFO Job: Counters: 30
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=206116
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=25480
+		HDFS: Number of bytes written=8098
+		HDFS: Number of read operations=8
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Other local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=4000
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=4000
+		Total vcore-milliseconds taken by all map tasks=4000
+		Total megabyte-milliseconds taken by all map tasks=4096000
+	Map-Reduce Framework
+		Map input records=1
+		Map output records=1
+		Input split bytes=133
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=143
+		CPU time spent (ms)=980
+		Physical memory (bytes) snapshot=212152320
+		Virtual memory (bytes) snapshot=2009251840
+		Total committed heap usage (bytes)=134217728
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=8098
+20/04/02 11:35:12 INFO MahoutDriver: Program took 17323 ms (Minutes: 0.2887166666666667)
+20/04/02 11:35:19 INFO AbstractJob: Command line arguments: {--endPhase=[2147483647], --inputPathA=[/hadoop/matMult/mat1-seq], --inputPathB=[/hadoop/matMult/mat2-seq], --numColsA=[100], --numColsB=[100], --numRowsA=[100], --numRowsB=[100], --outputPath=[/hadoop/matMult/mat-out], --startPhase=[0], --tempDir=[temp]}
+20/04/02 11:35:20 INFO deprecation: mapred.join.expr is deprecated. Instead, use mapreduce.join.expr
+20/04/02 11:35:20 INFO RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:35:20 INFO RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:35:21 INFO deprecation: mapred.join.keycomparator is deprecated. Instead, use mapreduce.join.keycomparator
+20/04/02 11:35:21 INFO deprecation: mapred.min.split.size is deprecated. Instead, use mapreduce.input.fileinputformat.split.minsize
+20/04/02 11:35:21 INFO FileInputFormat: Total input files to process : 1
+20/04/02 11:35:21 INFO FileInputFormat: Total input files to process : 1
+20/04/02 11:35:21 INFO JobSubmitter: number of splits:1
+20/04/02 11:35:21 INFO deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:35:21 INFO JobSubmitter: Submitting tokens for job: job_1585804685385_0117
+20/04/02 11:35:22 INFO Configuration: resource-types.xml not found
+20/04/02 11:35:22 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:35:22 INFO ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:35:22 INFO ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:35:22 INFO YarnClientImpl: Submitted application application_1585804685385_0117
+20/04/02 11:35:22 INFO Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0117/
+20/04/02 11:35:22 INFO Job: Running job: job_1585804685385_0117
+20/04/02 11:35:29 INFO Job: Job job_1585804685385_0117 running in uber mode : false
+20/04/02 11:35:29 INFO Job:  map 0% reduce 0%
+20/04/02 11:35:35 INFO Job:  map 100% reduce 0%
+20/04/02 11:35:42 INFO Job:  map 100% reduce 100%
+20/04/02 11:35:43 INFO Job: Job job_1585804685385_0117 completed successfully
+20/04/02 11:35:43 INFO Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=6
+		FILE: Number of bytes written=413179
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=16467
+		HDFS: Number of bytes written=97
+		HDFS: Number of read operations=9
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=3835
+		Total time spent by all reduces in occupied slots (ms)=4062
+		Total time spent by all map tasks (ms)=3835
+		Total time spent by all reduce tasks (ms)=4062
+		Total vcore-milliseconds taken by all map tasks=3835
+		Total vcore-milliseconds taken by all reduce tasks=4062
+		Total megabyte-milliseconds taken by all map tasks=3927040
+		Total megabyte-milliseconds taken by all reduce tasks=4159488
+	Map-Reduce Framework
+		Map input records=0
+		Map output records=0
+		Map output bytes=0
+		Map output materialized bytes=6
+		Input split bytes=271
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=0
+		Reduce shuffle bytes=6
+		Reduce input records=0
+		Reduce output records=0
+		Spilled Records=0
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=356
+		CPU time spent (ms)=1840
+		Physical memory (bytes) snapshot=528982016
+		Virtual memory (bytes) snapshot=4022865920
+		Total committed heap usage (bytes)=338165760
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=97
+20/04/02 11:35:43 INFO MahoutDriver: Program took 24753 ms (Minutes: 0.41255)
+bdb_test_2.sh: line 66: kill: (42731) - No such process
+bdb_test_2.sh: line 68: kill: (42745) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42744 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/md5/1GB-md5HP': No such file or directory
+bdb_test_2.sh: line 66: kill: (42745) - No such process
+bdb_test_2.sh: line 68: kill: (42764) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42763 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/md5/md5HP-result': No such file or directory
+20/04/02 11:37:39 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:37:42 INFO input.FileInputFormat: Total input files to process : 2
+20/04/02 11:37:43 INFO mapreduce.JobSubmitter: number of splits:8
+20/04/02 11:37:44 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:37:45 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0118
+20/04/02 11:37:45 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:37:45 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:37:45 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:37:45 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:37:46 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0118
+20/04/02 11:37:46 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0118/
+20/04/02 11:37:46 INFO mapreduce.Job: Running job: job_1585804685385_0118
+20/04/02 11:37:54 INFO mapreduce.Job: Job job_1585804685385_0118 running in uber mode : false
+20/04/02 11:37:54 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:38:06 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:38:11 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:38:12 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:38:12 INFO mapreduce.Job: Job job_1585804685385_0118 completed successfully
+20/04/02 11:38:12 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=1639520
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1051332824
+		HDFS: Number of bytes written=528528
+		HDFS: Number of read operations=40
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=16
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=8
+		Data-local map tasks=8
+		Total time spent by all maps in occupied slots (ms)=44082
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=44082
+		Total vcore-milliseconds taken by all map tasks=44082
+		Total megabyte-milliseconds taken by all map tasks=45139968
+	Map-Reduce Framework
+		Map input records=16016
+		Map output records=16016
+		Input split bytes=960
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1897
+		CPU time spent (ms)=25830
+		Physical memory (bytes) snapshot=1702334464
+		Virtual memory (bytes) snapshot=16043683840
+		Total committed heap usage (bytes)=1153957888
+	File Input Format Counters 
+		Bytes Read=1051331864
+	File Output Format Counters 
+		Bytes Written=528528
+bdb_test_2.sh: line 66: kill: (42764) - No such process
+bdb_test_2.sh: line 68: kill: (42778) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42777 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/randsample/1GB-randsampleHP': No such file or directory
+bdb_test_2.sh: line 66: kill: (42778) - No such process
+bdb_test_2.sh: line 68: kill: (42799) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42798 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/randsample/randsampleHP-result': No such file or directory
+20/04/02 11:38:55 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:38:56 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+20/04/02 11:38:56 INFO input.FileInputFormat: Total input files to process : 2
+20/04/02 11:38:56 INFO mapreduce.JobSubmitter: number of splits:8
+20/04/02 11:38:56 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:38:57 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0119
+20/04/02 11:38:57 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:38:57 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:38:57 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:38:57 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:38:57 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0119
+20/04/02 11:38:57 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0119/
+20/04/02 11:38:57 INFO mapreduce.Job: Running job: job_1585804685385_0119
+20/04/02 11:39:05 INFO mapreduce.Job: Job job_1585804685385_0119 running in uber mode : false
+20/04/02 11:39:05 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:39:17 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:39:24 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:39:25 INFO mapreduce.Job: Job job_1585804685385_0119 completed successfully
+20/04/02 11:39:25 INFO mapreduce.Job: Counters: 30
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=1642512
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1050126508
+		HDFS: Number of bytes written=527371568
+		HDFS: Number of read operations=40
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=16
+	Job Counters 
+		Launched map tasks=8
+		Data-local map tasks=8
+		Total time spent by all maps in occupied slots (ms)=71620
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=71620
+		Total vcore-milliseconds taken by all map tasks=71620
+		Total megabyte-milliseconds taken by all map tasks=73338880
+	Map-Reduce Framework
+		Map input records=16016
+		Map output records=8046
+		Input split bytes=1072
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=2317
+		CPU time spent (ms)=31840
+		Physical memory (bytes) snapshot=1658789888
+		Virtual memory (bytes) snapshot=16052477952
+		Total committed heap usage (bytes)=1093140480
+	File Input Format Counters 
+		Bytes Read=1050125436
+	File Output Format Counters 
+		Bytes Written=527371568
+bdb_test_2.sh: line 66: kill: (42799) - No such process
+bdb_test_2.sh: line 68: kill: (42814) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42813 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/terasort/terasort-1G': No such file or directory
+20/04/02 11:39:45 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:39:46 INFO terasort.TeraGen: Generating 10000000 using 2
+20/04/02 11:39:46 INFO mapreduce.JobSubmitter: number of splits:2
+20/04/02 11:39:46 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:39:46 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0120
+20/04/02 11:39:46 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:39:46 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:39:46 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:39:46 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:39:46 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0120
+20/04/02 11:39:46 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0120/
+20/04/02 11:39:46 INFO mapreduce.Job: Running job: job_1585804685385_0120
+20/04/02 11:39:54 INFO mapreduce.Job: Job job_1585804685385_0120 running in uber mode : false
+20/04/02 11:39:54 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:40:07 INFO mapreduce.Job:  map 50% reduce 0%
+20/04/02 11:40:08 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:40:08 INFO mapreduce.Job: Job job_1585804685385_0120 completed successfully
+20/04/02 11:40:08 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=410376
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=167
+		HDFS: Number of bytes written=1000000000
+		HDFS: Number of read operations=8
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=4
+	Job Counters 
+		Launched map tasks=2
+		Other local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=21444
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=21444
+		Total vcore-milliseconds taken by all map tasks=21444
+		Total megabyte-milliseconds taken by all map tasks=21958656
+	Map-Reduce Framework
+		Map input records=10000000
+		Map output records=10000000
+		Input split bytes=167
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1049
+		CPU time spent (ms)=33400
+		Physical memory (bytes) snapshot=471535616
+		Virtual memory (bytes) snapshot=4057198592
+		Total committed heap usage (bytes)=288358400
+	org.apache.hadoop.examples.terasort.TeraGen$Counters
+		CHECKSUM=21472776955442690
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=1000000000
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+copyToLocal: `/hadoop/terasort/terasort-': No such file or directory
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+copyFromLocal: `terasort-1G': No such file or directory
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/terasort/terasort-out': No such file or directory
+bdb_test_2.sh: line 66: kill: (42814) - No such process
+bdb_test_2.sh: line 68: kill: (42832) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42831 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+20/04/02 11:40:27 INFO terasort.TeraSort: starting
+20/04/02 11:40:29 INFO input.FileInputFormat: Total input files to process : 2
+20/04/02 11:40:37 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:40:38 INFO mapreduce.JobSubmitter: number of splits:8
+20/04/02 11:40:38 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:40:38 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0121
+20/04/02 11:40:38 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:40:38 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:40:38 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:40:38 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:40:39 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0121
+20/04/02 11:40:39 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0121/
+20/04/02 11:40:39 INFO mapreduce.Job: Running job: job_1585804685385_0121
+20/04/02 11:40:46 INFO mapreduce.Job: Job job_1585804685385_0121 running in uber mode : false
+20/04/02 11:40:46 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:41:01 INFO mapreduce.Job:  map 25% reduce 0%
+20/04/02 11:41:02 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:41:11 INFO mapreduce.Job:  map 88% reduce 0%
+20/04/02 11:41:12 INFO mapreduce.Job:  map 100% reduce 0%
+20/04/02 11:41:18 INFO mapreduce.Job:  map 100% reduce 29%
+20/04/02 11:41:24 INFO mapreduce.Job:  map 100% reduce 73%
+20/04/02 11:41:30 INFO mapreduce.Job:  map 100% reduce 87%
+20/04/02 11:41:36 INFO mapreduce.Job:  map 100% reduce 99%
+20/04/02 11:41:37 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:41:37 INFO mapreduce.Job: Job job_1585804685385_0121 completed successfully
+20/04/02 11:41:38 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=2080000144
+		FILE: Number of bytes written=3121859645
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1000001016
+		HDFS: Number of bytes written=1000000000
+		HDFS: Number of read operations=27
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=9
+		Launched reduce tasks=1
+		Data-local map tasks=9
+		Total time spent by all maps in occupied slots (ms)=97885
+		Total time spent by all reduces in occupied slots (ms)=34010
+		Total time spent by all map tasks (ms)=97885
+		Total time spent by all reduce tasks (ms)=34010
+		Total vcore-milliseconds taken by all map tasks=97885
+		Total vcore-milliseconds taken by all reduce tasks=34010
+		Total megabyte-milliseconds taken by all map tasks=100234240
+		Total megabyte-milliseconds taken by all reduce tasks=34826240
+	Map-Reduce Framework
+		Map input records=10000000
+		Map output records=10000000
+		Map output bytes=1020000000
+		Map output materialized bytes=1040000048
+		Input split bytes=1016
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10000000
+		Reduce shuffle bytes=1040000048
+		Reduce input records=10000000
+		Reduce output records=10000000
+		Spilled Records=30000000
+		Shuffled Maps =8
+		Failed Shuffles=0
+		Merged Map outputs=8
+		GC time elapsed (ms)=4246
+		CPU time spent (ms)=137010
+		Physical memory (bytes) snapshot=2692984832
+		Virtual memory (bytes) snapshot=18055319552
+		Total committed heap usage (bytes)=1726480384
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1000000000
+	File Output Format Counters 
+		Bytes Written=1000000000
+20/04/02 11:41:38 INFO terasort.TeraSort: done
+bdb_test_2.sh: line 66: kill: (42832) - No such process
+bdb_test_2.sh: line 68: kill: (42847) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42846 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/wd/1GB-wordcountHP': No such file or directory
+bdb_test_2.sh: line 66: kill: (42847) - No such process
+bdb_test_2.sh: line 68: kill: (42865) - No such process
+sar: no process found
+bdb_test_2.sh: line 21: 42864 Terminated              virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay
+
+ Usage: perf stat [<options>] [<command>]
+
+    -a, --all-cpus        system-wide collection from all CPUs
+    -A, --no-aggr         disable CPU count aggregation
+    -B, --big-num         print large numbers with thousands' separators
+    -C, --cpu <cpu>       list of cpus to monitor in system-wide
+    -c, --scale           scale/normalize counters
+    -D, --delay <n>       ms to wait before starting measurement after program start
+    -d, --detailed        detailed run - start a lot of events
+    -e, --event <event>   event selector. use 'perf list' to list available events
+    -G, --cgroup <name>   monitor event in cgroup name only
+    -g, --group           put the counters into a counter group
+    -I, --interval-print <n>
+                          print counts at regular interval in ms (>= 10)
+    -i, --no-inherit      child tasks do not inherit counters
+    -n, --null            null run - dont start any counters
+    -o, --output <file>   output file name
+    -p, --pid <pid>       stat events on existing process id
+    -r, --repeat <n>      repeat command and print average + stddev (max: 100, forever: 0)
+    -S, --sync            call sync() before starting a run
+    -t, --tid <tid>       stat events on existing thread id
+    -T, --transaction     hardware transaction statistics
+    -v, --verbose         be more verbose (show counter open errors, etc)
+    -x, --field-separator <separator>
+                          print counts with custom separator
+        --append          append to the output file
+        --filter <filter>
+                          event filter
+        --log-fd <n>      log output to fd, instead of stderr
+        --per-core        aggregate counts per physical processor core
+        --per-socket      aggregate counts per processor socket
+        --per-thread      aggregate counts per thread
+        --post <command>  command to run after to the measured command
+        --pre <command>   command to run prior to the measured command
+
+/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/wordcount/run-wordcount.sh: line 12: cd: ./externals/shell/industryPack/hadoop/workloads/wordcount: No such file or directory
+rmr: DEPRECATED: Please use '-rm -r' instead.
+rmr: `/hadoop/wd/wordcountHP-result': No such file or directory
+20/04/02 11:42:28 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/04/02 11:42:31 INFO input.FileInputFormat: Total input files to process : 2
+20/04/02 11:42:32 INFO mapreduce.JobSubmitter: number of splits:8
+20/04/02 11:42:32 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/04/02 11:42:33 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1585804685385_0122
+20/04/02 11:42:34 INFO conf.Configuration: resource-types.xml not found
+20/04/02 11:42:34 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/04/02 11:42:34 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/04/02 11:42:34 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/04/02 11:42:34 INFO impl.YarnClientImpl: Submitted application application_1585804685385_0122
+20/04/02 11:42:34 INFO mapreduce.Job: The url to track the job: http://pesvm-hibench:8088/proxy/application_1585804685385_0122/
+20/04/02 11:42:34 INFO mapreduce.Job: Running job: job_1585804685385_0122
+20/04/02 11:42:46 INFO mapreduce.Job: Job job_1585804685385_0122 running in uber mode : false
+20/04/02 11:42:46 INFO mapreduce.Job:  map 0% reduce 0%
+20/04/02 11:43:04 INFO mapreduce.Job:  map 6% reduce 0%
+20/04/02 11:43:05 INFO mapreduce.Job:  map 18% reduce 0%
+20/04/02 11:43:10 INFO mapreduce.Job:  map 22% reduce 0%
+20/04/02 11:43:11 INFO mapreduce.Job:  map 29% reduce 0%
+20/04/02 11:43:16 INFO mapreduce.Job:  map 34% reduce 0%
+20/04/02 11:43:18 INFO mapreduce.Job:  map 39% reduce 0%
+20/04/02 11:43:23 INFO mapreduce.Job:  map 44% reduce 0%
+20/04/02 11:43:24 INFO mapreduce.Job:  map 47% reduce 0%
+20/04/02 11:43:26 INFO mapreduce.Job:  map 51% reduce 0%
+20/04/02 11:43:27 INFO mapreduce.Job:  map 56% reduce 0%
+20/04/02 11:43:28 INFO mapreduce.Job:  map 69% reduce 0%
+20/04/02 11:43:29 INFO mapreduce.Job:  map 71% reduce 0%
+20/04/02 11:43:31 INFO mapreduce.Job:  map 75% reduce 0%
+20/04/02 11:43:42 INFO mapreduce.Job:  map 78% reduce 0%
+20/04/02 11:43:43 INFO mapreduce.Job:  map 82% reduce 0%
+20/04/02 11:43:44 INFO mapreduce.Job:  map 82% reduce 25%
+20/04/02 11:43:48 INFO mapreduce.Job:  map 84% reduce 25%
+20/04/02 11:43:49 INFO mapreduce.Job:  map 86% reduce 25%
+20/04/02 11:43:54 INFO mapreduce.Job:  map 88% reduce 25%
+20/04/02 11:43:55 INFO mapreduce.Job:  map 89% reduce 25%
+20/04/02 11:44:00 INFO mapreduce.Job:  map 91% reduce 25%
+20/04/02 11:44:01 INFO mapreduce.Job:  map 96% reduce 25%
+20/04/02 11:44:02 INFO mapreduce.Job:  map 100% reduce 29%
+20/04/02 11:44:03 INFO mapreduce.Job:  map 100% reduce 100%
+20/04/02 11:44:04 INFO mapreduce.Job: Job job_1585804685385_0122 completed successfully
+20/04/02 11:44:04 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=6511680
+		FILE: Number of bytes written=9202516
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1051061494
+		HDFS: Number of bytes written=100364
+		HDFS: Number of read operations=27
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=9
+		Launched reduce tasks=1
+		Data-local map tasks=9
+		Total time spent by all maps in occupied slots (ms)=319770
+		Total time spent by all reduces in occupied slots (ms)=33986
+		Total time spent by all map tasks (ms)=319770
+		Total time spent by all reduce tasks (ms)=33986
+		Total vcore-milliseconds taken by all map tasks=319770
+		Total vcore-milliseconds taken by all reduce tasks=33986
+		Total megabyte-milliseconds taken by all map tasks=327444480
+		Total megabyte-milliseconds taken by all reduce tasks=34801664
+	Map-Reduce Framework
+		Map input records=16016
+		Map output records=160017212
+		Map output bytes=1690838910
+		Map output materialized bytes=840608
+		Input split bytes=1000
+		Combine input records=160436388
+		Combine output records=481300
+		Reduce input groups=7776
+		Reduce shuffle bytes=840608
+		Reduce input records=62124
+		Reduce output records=7776
+		Spilled Records=543424
+		Shuffled Maps =8
+		Failed Shuffles=0
+		Merged Map outputs=8
+		GC time elapsed (ms)=10686
+		CPU time spent (ms)=391720
+		Physical memory (bytes) snapshot=2718539776
+		Virtual memory (bytes) snapshot=18067918848
+		Total committed heap usage (bytes)=1808269312
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1051060494
+	File Output Format Counters 
+		Bytes Written=100364
+bdb_test_2.sh: line 66: kill: (42865) - No such process
+bdb_test_2.sh: line 68: kill: (42879) - No such process
+mv: cannot stat '*.perf': No such file or directory

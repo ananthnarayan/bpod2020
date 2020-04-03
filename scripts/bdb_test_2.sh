@@ -49,7 +49,8 @@ run_remote_workload_bdb() {
 	   perf stat -e r3f24 -e ref24 -e r0151 -e r0480 -e context-switches -e page-faults -p $vmpid -x "," -o $file -I $delay & 
 	    ;;
     "set3")
-           perf stat -e cpu/event=0xa3,umask=10,cmask=16,name=Cycle_Activity.Cycles_Mem_Any/ -e cpu/event=0xa3,umask=14,cmask=20,name=Cycle_Activity.Stalls_MemAny/  -e r81d0 -e r82d0 
+
+       perf stat -e cpu/event=0xa3,umask=10,cmask=16,name=Cycle_Activity.Cycles_Mem_Any/ -e cpu/event=0xa3,umask=14,cmask=20,name=Cycle_Activity.Stalls_MemAny/  -e r81d0 -e r82d0 
 	    ;;
     esac		
     perfprocess=$!
@@ -84,6 +85,7 @@ time_log='benchmarks_time.log'
 rm $time_log
 
 profile="small" 
+
 hadoop="2.10.0"
 set="set1"
 
@@ -171,10 +173,11 @@ cleanup_bdb "wd"
 date >> "timings.txt"
 expunge
 
-mkdir -p bdb/$hadoop/$profile/$set
-mv *.perf bdb/$hadoop/$profile/$set
-mv $time_log bdb/$hadoop/$profile/$set
-mv *.csv bdb/$hadoop/$profile/$set
+
+mkdir -p bdb/$hadoop/$profile
+mv *.perf bdb/$hadoop/$profile
+mv $time_log bdb/$hadoop/$profile
+mv *.csv bdb/$hadoop/$profile
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
 
