@@ -7,7 +7,10 @@ cleanup_bdb ()
 {
     ssh user@192.168.122.23 -C $HADOOP_HOME/bin/hdfs dfs -rm -r /hadoop/$1
 }
-
+cleanup_bdb_cc ()
+{
+    ssh user@192.168.122.23 -C $HADOOP_HOME/bin/hdfs dfs -rm -r /user/user/*
+}
 check_bdb_conf()
 {
 	echo ""
@@ -30,7 +33,8 @@ run_remote_workload_bdb() {
     file=${bench}_${action}_$6.perf
     virt_file=virt_${bench}_${action}.csv
     sar_file=sar_out
-    sar_csv=sar_${bench}_${action}.csv
+    rm $sar_file
+     sar_csv=sar_${bench}_${action}.csv
     
     remote_command=$4
     time_log=$5
@@ -44,22 +48,29 @@ run_remote_workload_bdb() {
     case $6 in
     "set1")
     	   perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5  -e r4f2e -e r412e -e r003C -p $vmpid -x "," -o $file -I $delay &
-	    ;;
+	   perfprocess=$!
+	   sar -r -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
+	   sar_process=$!
+	   ;;
     "set2")
 	   perf stat -e r3f24 -e ref24 -e r0151 -e r0480 -e context-switches -e page-faults -p $vmpid -x "," -o $file -I $delay & 
-	    ;;
+	   perfprocess=$!
+	   sar -b -u -o $sar_file $sar_delay > /dev/null 2>&1 & 
+	   sar_process=$!
+	   ;;
     "set3")
-
-       perf stat -e cpu/event=0xa3,umask=10,cmask=16,name=Cycle_Activity.Cycles_Mem_Any/ -e cpu/event=0xa3,umask=14,cmask=20,name=Cycle_Activity.Stalls_MemAny/  -e r81d0 -e r82d0 
-	    ;;
-    esac		
-    perfprocess=$!
+          #perf stat -e cpu/event=0xa3,umask=10,cmask=16,name=Cycle_Activity.Cycles_Mem_Any/ -e cpu/event=0xa3,umask=14,cmask=20,name=Cycle_Activity.Stalls_MemAny/  -e r81d0 -e r82d0  -p $vmpid -x "," -o $file -I $delay &
+          perf stat  -e r81d0 -e r82d0  -p $vmpid -x "," -o $file -I $delay &
+	  perfprocess=$!
+	  sar -r -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
+	  sar_process=$!
+	  ;;
+    esac
     virt-top --script --csv $virt_file --block-in-bytes -d $virt_delay &
     virt_top_process=$!    
 
-    sar -r -B -W -o $sar_file $sar_delay > /dev/null 2&>1 & 
-    sar_process=$!
     
+    echo "$sar_process $virt_top_process $perfprocess"
     command="/usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout ssh user@192.168.122.23 -i id_rsa -C bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/$remote_command"
     
     eval $command
@@ -67,7 +78,18 @@ run_remote_workload_bdb() {
     kill -s SIGINT $perfprocess
     kill -s SIGINT $virt_top_process
     kill -s SIGINT $sar_process
-    sadf -dh $sar_file -- -r -W -B > $sar_csv
+
+    case $6 in
+    	"set1")
+	    sadf -dh $sar_file -- -r -W -B > $sar_csv
+	    ;;
+	"set2")
+		sadf -dh $sar_file -- -b -u  > $sar_csv
+		;;
+	"set3")
+		sadf -dh $sar_file -- -r -W -B > $sar_csv
+		;;
+    esac 
     
     bench=$bench
     action=$action
@@ -87,7 +109,7 @@ rm $time_log
 profile="small" 
 
 hadoop="2.10.0"
-set="set1"
+set="set3"
 
 case $profile in 
     "tiny")
@@ -138,6 +160,7 @@ set_remote_hadoop_home  $hadoop
 
 date >> "timings.txt"
 
+cleanup_bdb_cc
 run_remote_workload_bdb $vmpid "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
 run_remote_workload_bdb $vmpid "cc" "run" "CC/run-cc.sh $cc" $time_log $set
 cleanup_bdb "cc"
@@ -174,10 +197,11 @@ date >> "timings.txt"
 expunge
 
 
-mkdir -p bdb/$hadoop/$profile
-mv *.perf bdb/$hadoop/$profile
-mv $time_log bdb/$hadoop/$profile
-mv *.csv bdb/$hadoop/$profile
+mkdir -p bdb/$hadoop/$profile/$set
+mv *.perf bdb/$hadoop/$profile/$set
+mv $time_log bdb/$hadoop/$profile/$set
+mv *.csv bdb/$hadoop/$profile/$set
+rm $sar_file
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
 
