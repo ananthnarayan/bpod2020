@@ -30,7 +30,7 @@ prepareMetrics<-function(base_workspace, path, files, header)
     }
 }
 
-base_workspace="~/Ananth/Ananth-Research/research_code/results_workspace/HiBench-24March/march-24"
+base_workspace="~/Ananth/Research/research_code/results_workspace/HiBench-24March/march-24"
 setwd(base_workspace)
 header=c("IPC", "CacheMPKI", "BranchInstructionsRatio","BrancMispredictRatio","DTLBMPKI","ITLBMPKI","LLCocc","TotalBytes","LocalBytes")
 

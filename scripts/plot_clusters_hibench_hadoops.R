@@ -1,6 +1,6 @@
 #hibench with 3 versions of hadoop
 currentDir=getwd()
-setwd("~/Ananth/Ananth-Research/research_code/scripts")
+setwd("~/Ananth/Research/research_code/scripts")
 source("filenames2.R")
 source("functions.R")
 setwd(currentDir)
@@ -9,7 +9,7 @@ library('tidyverse')
 library('ggplot2')
 
 
-    base_workspace="/home/meena/Ananth/Ananth-Research/research_code/results_workspace/HiBench-21March"
+    base_workspace="/home/meena/Ananth/Research/research_code/results_workspace/HiBench-21March"
     setwd(base_workspace)
     
     all_files = c(
