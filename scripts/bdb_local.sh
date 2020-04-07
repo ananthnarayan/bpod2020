@@ -68,8 +68,6 @@ run_remote_workload_bdb() {
     
     eval $command
     time=`cat timeout` 
-    kill -s SIGINT $perfprocess
-
     kill -s SIGINT $sar_process
 
     case $6 in
