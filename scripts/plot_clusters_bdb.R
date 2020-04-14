@@ -20,41 +20,7 @@ saveAsPNG2<-function(data1, data2)
     dev.off()
 
 }
-createDF<-function(files, separator)
-{
-    #First take a look at the perf data - microarchitectural.
-    count = 1;
-    vlines = array(0, length(files))
-    fullData = data.frame()
-    for(i in 1:length(files))
-    {
-        inputfile = files[i]
-        #print(inputfile)
-        newDataWithNA = read.csv(inputfile, sep=separator)
-        newDataWithNA[newDataWithNA < 0] <- NA
-        newDataWithNA[newDataWithNA == Inf] <- NA
-        
-        #newDataWithNA = newDataWithNA[, c(1:ncol(newDataWithNA))]
-        
-        newData <- na.omit(newDataWithNA)
-        if(nrow(fullData) == 0)
-        {
-            fullData <- newData
-        } else
-        {
-            fullData = rbind(fullData, newData)
-        }
-        rows = nrow(newData)
-        if (count == 1)
-        {
-            vlines[count] = rows 
-        } else {
-            vlines[count] = rows + vlines[count - 1]
-        }
-        count=count + 1
-    }
-    return (list("fullData"=fullData, "vlines"=vlines));
-}
+
 
 plotPerfData <-function(perffiles)
 {
@@ -185,7 +151,6 @@ plotSarData<-function(sar_files)
             main=paste("sar/kbcached", outbase, sep=" "), 
             xlab="Time", 
             ylab="Mem cached (MB)")
-            
  
          saveAsPNG1(pngfile=paste(outbase, "_", "dirty", ".png", sep=""), 
             data1=d[["kbdirty"]]/(1024), #convert to MB 
@@ -199,6 +164,8 @@ plotSarData<-function(sar_files)
             main=paste("sar/kbbuffers", outbase, sep=" "), 
             xlab="Time", 
             ylab="Buffer (MB)")
+            
+        print(paste(outbase, "kbbuffers", min(d[["kbbuffers"]]), max(d[["kbbuffers"]]), "kbcached", min(d[["kbcached"]]), max(d[["kbcached"]]), sep=","))
         
         saveAsPNG1(pngfile=paste(outbase, "_", "active", ".png", sep=""), 
             data1=d[["kbactive"]]/(1024), #convert to MB 
@@ -238,55 +205,32 @@ plotVirtData<-function(bdb_210_small_virt_files)
     }
 }
 
+analysis<-function()
+{
+
+}
+
+colors <- function(n, alpha = 1)
+{
+    rev(heat.colors(n, alpha))
+}
+
 currentDir=getwd()
 setwd("~/Ananth/Research/research_code/scripts")
 source("filenames_bdb.R")
 source("functions.R")
 
 base_workspace="/home/meena/Ananth/Research/research_code/results_workspace"
-#currentDir=  "bdb/guest/2.10.0/small"
-currentDir = "bdb/guest/3.2.1/small"
-
-setwd(paste(base_workspace, currentDir, sep="/"))
 perfHeader=c("IPC", "CacheMPKI", "BranchInstructionsRatio","BrancMispredictRatio","MemStores","MemLoads","LLCocc","TotalBytes","LocalBytes", "ContextSwitches", "PageFaults", "L1DReplacement", "L2Ref", "L2Miss")
 
+
+currentDir=  "bdb/host/2.10.0/small"
+setwd(paste(base_workspace, currentDir, sep="/"))
 plotPerfData(metrics_bdb_210_small_perf_files)
 plotSarData(bdb_210_small_sar_files)
-plotVirtData(bdb_210_small_virt_files)
-all_perf_files = metrics_bdb_210_small_perf_files
-all_sar_files = bdb_210_small_sar_files
-all_virt_files = bdb_210_small_virt_files
 
-#perf metrics, sar metrics, virt-top metrics
-ret = createDF(metrics_bdb_210_small_perf_files, ",")
-perfData = ret$fullData
-perfVlines = ret$vlines
-perfPCA=prcomp(perfData[ , c(1:14)], center=TRUE, scale=TRUE, retx=TRUE) 
+currentDir = "bdb/host/3.2.1/small"
+setwd(paste(base_workspace, currentDir, sep="/"))
+plotPerfData(metrics_bdb_321_small_perf_files)
+plotSarData(bdb_321_small_sar_files)
 
-ret = createDF(bdb_210_small_sar_files, ";") 
-sarData = ret$fullData
-sarVlines = ret$vlines
-sarPCA=prcomp(sarData[,c(4:24)], center=TRUE, scale=TRUE, retx=TRUE) 
-
-sarSOM<-som(scale(sarData[,c(4,5,6,7,8,9,16,18,19,22,24)]) )
-#plot(sarSOM)
-#summary(sarSOM)
-
-numclusters = 4
-sarKmeans = kmeans(sarData[,c(4,5,6,7,8,9,16,18,19,22,24)], numclusters, iter.max=100, nstart=1, algorithm="Lloyd")
-
-sarWithCluster = cbind(sarData, sarKmeans$cluster)
-toPlot=subset(sarWithCluster, sarWithCluster[["sarKmeans$cluster"]] == 4)
-
-
-ret = createDF(bdb_210_small_virt_files, ",") 
-virt_topData = ret$fullData
-virtVlines=ret$vlines
-virtPCA=prcomp(virt_topData[ , c(22,25,26)] , center=TRUE, scale=TRUE, retx=TRUE) 
-
-
-colors <- function(n, alpha = 1) {
-    rev(heat.colors(n, alpha))
-}
-
-#plot(sarSOM, type = "counts", palette.name = colors, heatkey = TRUE)
