@@ -36,6 +36,8 @@ run_remote_workload_bdb() {
     rm $sar_file
      sar_csv=sar_${bench}_${action}.csv
     
+    pidstat_file=${bench}_${action}.pidstat
+    
     remote_command=$4
     time_log=$5
     
@@ -47,38 +49,47 @@ run_remote_workload_bdb() {
     case $6 in
     "set1")
     	   perfcommand='perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5  -e r4f2e -e r412e -e r003C  -x "," -o $file -I $delay'
-           sar -r -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
+           sar -r ALL -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
            sar_process=$!
 	       ;;
     "set2")
             perfcommand='perf stat -e r3f24 -e ref24 -e r0151 -e r0480 -e context-switches -e page-faults  -x "," -o $file -I $delay'
-            sar -b -u -o $sar_file $sar_delay > /dev/null 2>&1 & 
+            sar -b -u ALL -o $sar_file $sar_delay > /dev/null 2>&1 & 
             sar_process=$!
             ;;
     "set3")
           #perf stat -e cpu/event=0xa3,umask=10,cmask=16,name=Cycle_Activity.Cycles_Mem_Any/ -e cpu/event=0xa3,umask=14,cmask=20,name=Cycle_Activity.Stalls_MemAny/  -e r81d0 -e r82d0  -p $vmpid -x "," -o $file -I $delay &
             perfcommand='perf stat  -e r81d0 -e r82d0  -x "," -o $file -I $delay '
-            sar -r -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
+            sar -r ALL -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
             sar_process=$!
             ;;
     esac
 
-    command="/usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout $perfcommand bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/$remote_command"
+    command="/usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout $perfcommand bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/$remote_command &"
     echo $command
     
     eval $command
+    perfpid=$!
+    bashpid=`ps -elf | grep $remote_command | tr -s " " | cut -d " " -f 4`
+    javapid=`ps -elf | grep "$bashpid" | grep -v "grep" | tail -n 1 | tr -s " " | cut -d ' ' -f 4`
+     
+    echo -e "Bash: $bashpid java: $javapid"
+    pidstat -h -r -s -T ALL -p $javapid $sar_delay > $pidstat_file &  
     time=`cat timeout` 
+    wait $perfpid
     kill -s SIGINT $sar_process
+    #Pidstat would have terminated already. this is just for cleanup from our side. 
+    kill -s SIGINT $pidstat 
 
     case $6 in
     	"set1")
-	    sadf -dh $sar_file -- -r -W -B > $sar_csv
+	    sadf -dh $sar_file -- -r ALL -B -W > $sar_csv
 	    ;;
 	"set2")
 		sadf -dh $sar_file -- -b -u  > $sar_csv
 		;;
 	"set3")
-		sadf -dh $sar_file -- -r -W -B > $sar_csv
+		sadf -dh $sar_file -- -r ALL -B -W > $sar_csv
 		;;
     esac 
     
