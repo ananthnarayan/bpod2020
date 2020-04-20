@@ -24,7 +24,7 @@ expunge () {
 }
 
 
-run_workload_toplev_bdb() {
+run_workload_perfrec_bdb() {
     vmpid=$1
     bench=$2
     action=$3
@@ -44,7 +44,7 @@ run_workload_toplev_bdb() {
     
     echo "===== $bench : $action ======"
     set_path
-    toplev.py -l3 -I 1000 -x, -o $file bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/$remote_command    
+    bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/$remote_command    
     
     bench=$bench
     action=$action
@@ -117,36 +117,36 @@ set_remote_hadoop_home  $hadoop
 date >> "timings.txt"
 vmpid=0
 cleanup_bdb_cc
-run_workload_toplev_bdb $vmpid "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
-run_workload_toplev_bdb $vmpid "cc" "run" "CC/run-cc.sh $cc" $time_log $set
+run_workload_perfrec_bdb $vmpid "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
+run_workload_perfrec_bdb $vmpid "cc" "run" "CC/run-cc-prof.sh $cc" $time_log $set
 cleanup_bdb "cc"
 
-run_workload_toplev_bdb $vmpid "fft0_5" "prep" "FFT/genData-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
-run_workload_toplev_bdb $vmpid "fft0_5" "run" "FFT/run-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
+run_workload_perfrec_bdb $vmpid "fft0_5" "prep" "FFT/genData-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
+run_workload_perfrec_bdb $vmpid "fft0_5" "run" "FFT/run-fft-prof.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
 cleanup_bdb "fft"
 
-run_workload_toplev_bdb $vmpid "grep" "prep" "Grep/genData-grep.sh $grep" $time_log $set
-run_workload_toplev_bdb $vmpid "grep" "run" "Grep/run-grep.sh $grep" $time_log $set
+run_workload_perfrec_bdb $vmpid "grep" "prep" "Grep/genData-grep.sh $grep" $time_log $set
+run_workload_perfrec_bdb $vmpid "grep" "run" "Grep/run-grep-prof.sh $grep" $time_log $set
 cleanup_bdb "grep"
 
-run_workload_toplev_bdb $vmpid "matmult0_5" "prep" "MatrixMult/genData-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
-run_workload_toplev_bdb $vmpid "matmult0_5" "run" "MatrixMult/run-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
+run_workload_perfrec_bdb $vmpid "matmult0_5" "prep" "MatrixMult/genData-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
+run_workload_perfrec_bdb $vmpid "matmult0_5" "run" "MatrixMult/run-matMult-prof.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
 cleanup_bdb "matMult"
 
-run_workload_toplev_bdb $vmpid "md5" "prep" "MD5/genData-md5.sh $md5" $time_log $set
-run_workload_toplev_bdb $vmpid "md5" "run" "MD5/run-md5.sh $md5" $time_log $set
+run_workload_perfrec_bdb $vmpid "md5" "prep" "MD5/genData-md5.sh $md5" $time_log $set
+run_workload_perfrec_bdb $vmpid "md5" "run" "MD5/run-md5-prof.sh $md5" $time_log $set
 cleanup_bdb "md5"
  
-run_workload_toplev_bdb $vmpid "randsample" "prep" "randSample/genData-randSample.sh $randsample" $time_log $set
-run_workload_toplev_bdb $vmpid "randsample" "run" "randSample/run-randSample.sh $randsample 0.5" $time_log $set
+run_workload_perfrec_bdb $vmpid "randsample" "prep" "randSample/genData-randSample.sh $randsample" $time_log $set
+run_workload_perfrec_bdb $vmpid "randsample" "run" "randSample/run-randSample-prof.sh $randsample 0.5" $time_log $set
 cleanup_bdb "randsample" 
 
-run_workload_toplev_bdb $vmpid "sort" "prep" "Sort/genData-sort.sh $grep" $time_log $set
-run_workload_toplev_bdb $vmpid "sort" "run" "Sort/run-terasort.sh $grep" $time_log $set
+run_workload_perfrec_bdb $vmpid "sort" "prep" "Sort/genData-sort.sh $grep" $time_log $set
+run_workload_perfrec_bdb $vmpid "sort" "run" "Sort/run-terasort-prof.sh $grep" $time_log $set
 cleanup_bdb "terasort"
 
-run_workload_toplev_bdb $vmpid "wc" "prep" "wordcount/genData-wc.sh $grep" $time_log $set
-run_workload_toplev_bdb $vmpid "wc" "run" "wordcount/run-wordcount.sh $grep" $time_log $set
+run_workload_perfrec_bdb $vmpid "wc" "prep" "wordcount/genData-wc.sh $grep" $time_log $set
+run_workload_perfrec_bdb $vmpid "wc" "run" "wordcount/run-wordcount-prof.sh $grep" $time_log $set
 cleanup_bdb "wd"
 
 date >> "timings.txt"
