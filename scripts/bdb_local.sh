@@ -36,7 +36,6 @@ run_remote_workload_bdb() {
     rm $sar_file
      sar_csv=sar_${bench}_${action}.csv
     
-    pidstat_file=${bench}_${action}.pidstat
     
     remote_command=$4
     time_log=$5
@@ -66,24 +65,10 @@ run_remote_workload_bdb() {
     esac
     sync #flush all buffers. 
     sleep 1
-    command="/usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout $perfcommand bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/$remote_command  &"
-    echo "Executing: $command"
+    command="/usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout $perfcommand bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/$remote_command "
     eval $command
-    timepid=$!
-    perfpid=`ps -elf | grep "$remote_command" | grep -v "/usr/bin/time" | grep -v "grep" | tr -s " " | cut -d " " -f 4`
-    bashpid=`ps -elf | grep "$remote_command" | grep -v "/usr/bin/time" | grep -v "perf" | grep -v "grep" |   tr -s " " | cut -d " " -f 4`
-    sleep 3
-    javapid=`ps -elf | grep "$bashpid" | grep -v "grep" | tail -n 1 | tr -s " " | cut -d ' ' -f 4`
-     
-    echo -e "Perfpid: $perfpid Bash: $bashpid Java: $javapid"
-    pidstat -h -r -s -T ALL -p $javapid $sar_delay > $pidstat_file &  
     time=`cat timeout` 
-    wait $timepid
-    echo "killing sar"
     kill -s SIGINT $sar_process
-    #Pidstat would have terminated already. this is just for cleanup from our side. 
-    echo "killing pidstat"
-    kill -s SIGINT $pidstat 
 
     case $6 in
     	"set1")
@@ -113,8 +98,8 @@ rm $time_log
 
 profile="small" 
 
-#hadoop="2.10.0"
-hadoop="3.2.1"
+hadoop="2.10.0"
+#hadoop="3.2.1"
 set="set1"
 
 case $profile in 
@@ -207,7 +192,6 @@ mkdir -p bdb/$hadoop/$profile/$set
 mv *.perf bdb/$hadoop/$profile/$set
 mv $time_log bdb/$hadoop/$profile/$set
 mv *.csv bdb/$hadoop/$profile/$set
-mv *.pidstat bdb/$hadoop/$profile/$set
 rm $sar_file
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
