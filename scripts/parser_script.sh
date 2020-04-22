@@ -11,8 +11,9 @@ declare -a eventNamesString;
 #003c : cycles
 #0108 : DTLB misses
 #0185 : itlb miss
-events=('00C0' '00C4' '00c5' '4f2e' '412e' '003c' '0108' '0185' 'intel_cqm/llc_occupancy/' 'intel_cqm/total_bytes/' 'intel_cqm/local_bytes/' )
-eventNames=('Instructions' 'BranchInstructions' 'BranchMispredicts' 'LLCRef' 'LLCMiss' 'Cycles' 'DTLBMiss' 'ITLBMiss' 'LLCOcc' 'TotalBytes' 'LocalBytes')
+events=('00C0' '00C4' '00c5' '4f2e' '412e' '003c' 'intel_cqm/llc_occupancy/' 'intel_cqm/total_bytes/' 'intel_cqm/local_bytes/' )
+'3f24', 'ef24' 0151 0480 'context-switches' 'page-faults' '81d0' '82d0'
+eventNames=('Instructions' 'BranchInstructions' 'BranchMispredicts' 'LLCRef' 'LLCMiss' 'Cycles' 'LLCOcc' 'TotalBytes' 'LocalBytes')
 #Turns out we didn't use this string at all. :) 
 eventNamesString='Instructions,BranchInst,BranchMispredicts,LLCRef,LLCMiss,Cycles,DTLBMiss,ITLBMiss,LLCOcc,TotalBytes,LocalBytes'
 
@@ -32,8 +33,6 @@ intermediate_csv="intermediate.csv"
 final_out="final_out.csv" 
 
 eventsCount=${#events[@]}
-
-cd ~/Results/HiBench
 
 rm *.txt
 #Get the number of files that we need to process. 
