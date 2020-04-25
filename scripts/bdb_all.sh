@@ -246,32 +246,43 @@ run_workload_perfrec() {
 }
 
 run_workload(){
+    profiling_type=$1
     case $profiling_type in
-        "sar")
-        run_workload_toplev
+        "basic")
+        run_workload_sar $@ 
         ;;
         "pidstat")
-        run_workload_sar_pidstat
+        run_workload_sar_pidstat $@
         ;;
-        "toplev")
-        run_workload_toplev
+        "toplev") 
+        run_workload_toplev $@
         ;;
         "perfrecord")
-        run_workload_perfrec
+        remote_command=$4
+        new_remote_command=`echo $remote_command | sed 's/.sh/-prof.sh/'`
+        echo "$new_remote_command"
+        run_workload_perfrec $1 $2 $3 $new_remote_command $5 $6
         ;;
+        *)
+        echo "Unknown profiling type"
+        exit
     esac
 }
 
-check_bdb_conf
-time_log='benchmarks_time.log'
-rm $time_log
 
-profiling_type=""
+
 profile="small"
-
 hadoop="2.10.0"
 #hadoop="3.2.1"
 set="set1"
+profiling_type=$1
+if [ $# -eq 0 ]; then
+    echo "Missing args : profiling type";
+    exit
+fi
+
+set_hadoop_home  $hadoop 
+check_bdb_conf
 
 case $profile in 
     "tiny")
@@ -317,43 +328,40 @@ case $profile in
 esac 
 
 
-set_remote_hadoop_home  $hadoop 
-
 
 
 date >> "timings.txt"
-vmpid=0
 cleanup_bdb_cc
-run_workload $vmpid "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
-run_workload $vmpid "cc" "run" "CC/run-cc.sh $cc" $time_log $set
+run_workload $profiling_type "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
+run_workload $profiling_type "cc" "run" "CC/run-cc.sh $cc" $time_log $set
 cleanup_bdb "cc"
 
-run_workload $vmpid "fft0_5" "prep" "FFT/genData-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
-run_workload $vmpid "fft0_5" "run" "FFT/run-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
+run_workload $profiling_type "fft0_5" "prep" "FFT/genData-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
+run_workload $profiling_type "fft0_5" "run" "FFT/run-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
 cleanup_bdb "fft"
 
-run_workload $vmpid "grep" "prep" "Grep/genData-grep.sh $grep" $time_log $set
-run_workload $vmpid "grep" "run" "Grep/run-grep.sh $grep" $time_log $set
+run_workload $profiling_type "grep" "prep" "Grep/genData-grep.sh $grep" $time_log $set
+run_workload $profiling_type "grep" "run" "Grep/run-grep.sh $grep" $time_log $set
 cleanup_bdb "grep"
 
-run_workload $vmpid "matmult0_5" "prep" "MatrixMult/genData-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
-run_workload $vmpid "matmult0_5" "run" "MatrixMult/run-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
+run_workload $profiling_type "matmult0_5" "prep" "MatrixMult/genData-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
+run_workload $profiling_type "matmult0_5" "run" "MatrixMult/run-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
 cleanup_bdb "matMult"
 
-run_workload $vmpid "md5" "prep" "MD5/genData-md5.sh $md5" $time_log $set
-run_workload $vmpid "md5" "run" "MD5/run-md5.sh $md5" $time_log $set
+run_workload $profiling_type "md5" "prep" "MD5/genData-md5.sh $md5" $time_log $set
+run_workload $profiling_type "md5" "run" "MD5/run-md5.sh $md5" $time_log $set
 cleanup_bdb "md5"
  
-run_workload $vmpid "randsample" "prep" "randSample/genData-randSample.sh $randsample" $time_log $set
-run_workload $vmpid "randsample" "run" "randSample/run-randSample.sh $randsample 0.5" $time_log $set
+run_workload $profiling_type "randsample" "prep" "randSample/genData-randSample.sh $randsample" $time_log $set
+run_workload $profiling_type "randsample" "run" "randSample/run-randSample.sh $randsample 0.5" $time_log $set
 cleanup_bdb "randsample" 
 
-run_workload $vmpid "sort" "prep" "Sort/genData-sort.sh $grep" $time_log $set
-run_workload $vmpid "sort" "run" "Sort/run-terasort.sh $grep" $time_log $set
+run_workload $profiling_type "sort" "prep" "Sort/genData-sort.sh $grep" $time_log $set
+run_workload $profiling_type "sort" "run" "Sort/run-terasort.sh $grep" $time_log $set
 cleanup_bdb "terasort"
 
-run_workload $vmpid "wc" "prep" "wordcount/genData-wc.sh $grep" $time_log $set
-run_workload $vmpid "wc" "run" "wordcount/run-wordcount.sh $grep" $time_log $set
+run_workload $profiling_type "wc" "prep" "wordcount/genData-wc.sh $grep" $time_log $set
+run_workload $profiling_type "wc" "run" "wordcount/run-wordcount.sh $grep" $time_log $set
 cleanup_bdb "wc"
 
 expunge
