@@ -4,23 +4,6 @@ library('tidyverse')
 library('ggplot2')
 library("kohonen")
 
-saveAsPNG1<-function(pngfile, data1, main, xlab, ylab )
-{
-    png(pngfile)
-    plot.new()
-    data1 = na.omit(data1)
-    plot(data1, type="l", main=main, xlab=xlab, ylab=ylab, ylim=c(0, max(data1)), na.rm=TRUE)
-    dev.off()
-}
-saveAsPNG2<-function(data1, data2)
-{
-    png(pngfile)
-    plot.new()
-    plot(data1, type="l", main=main, xlab=xlab, ylab=ylab, ylim=c(0, max(data1)))
-    dev.off()
-
-}
-
 
 plotPerfData <-function(perffiles)
 {
@@ -204,12 +187,6 @@ plotVirtData<-function(bdb_210_small_virt_files)
 
     }
 }
-
-analysis<-function()
-{
-
-}
-
 colors <- function(n, alpha = 1)
 {
     rev(heat.colors(n, alpha))
