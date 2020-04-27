@@ -1,4 +1,4 @@
-set_remote_hadoop_home()
+set_hadoop_home()
 {
     HADOOP_HOME=/disk2/user/hadoops/hadoop-$1
 }
@@ -21,7 +21,7 @@ expunge () {
 }
 
 
-run_remote_workload_bdb() {
+run_basic_bdb() {
     vmpid=$1
     bench=$2
     action=$3
@@ -62,6 +62,22 @@ run_remote_workload_bdb() {
             sar -r ALL -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
             sar_process=$!
             ;;
+            #TLB events follow
+    "set4") 
+        perfcommand='perf stat  -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay '
+    ;;
+    "set5")
+        perfcommand='perf stat  -e r0149 -e  r0249 -e r1049 -e r2049 -x "," -o $file -I $delay '
+    ;;
+    "set6")
+        perfcommand='perf stat  -e r014f -e  r01ae -er0185  -e r0285  -x "," -o $file -I $delay '
+    ;;
+    "set7")
+        perfcommand='perf stat  -e r1085   -e r2085    -e r11bc   -e r21bc -x "," -o $file -I $delay '
+    ;;
+    "set8")
+        perfcommand='perf stat  -e r12bc -e r22bc    -e  r14bc -e r24bc -e r18bc  -x "," -o $file -I $delay '
+    ;;
     esac
     sync #flush all buffers. 
     sleep 1
@@ -79,6 +95,9 @@ run_remote_workload_bdb() {
 		;;
 	"set3")
 		sadf -dh $sar_file -- -r ALL -B -W > $sar_csv
+		;;
+		*)
+		#do nothing for all other cases
 		;;
     esac 
     
@@ -146,52 +165,52 @@ case $profile in
 esac 
 
 
-set_remote_hadoop_home  $hadoop 
+set_hadoop_home  $hadoop 
 
 
 date >> "timings.txt"
 vmpid=0
 cleanup_bdb_cc
-run_remote_workload_bdb $vmpid "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
-run_remote_workload_bdb $vmpid "cc" "run" "CC/run-cc.sh $cc" $time_log $set
+run_basic_bdb $vmpid "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
+run_basic_bdb $vmpid "cc" "run" "CC/run-cc.sh $cc" $time_log $set
 cleanup_bdb "cc"
 
-run_remote_workload_bdb $vmpid "fft0_5" "prep" "FFT/genData-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
-run_remote_workload_bdb $vmpid "fft0_5" "run" "FFT/run-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
+run_basic_bdb $vmpid "fft0_5" "prep" "FFT/genData-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
+run_basic_bdb $vmpid "fft0_5" "run" "FFT/run-fft.sh $fft_dim $fft_dim $fft_sparsity" $time_log $set
 cleanup_bdb "fft"
 
-run_remote_workload_bdb $vmpid "grep" "prep" "Grep/genData-grep.sh $grep" $time_log $set
-run_remote_workload_bdb $vmpid "grep" "run" "Grep/run-grep.sh $grep" $time_log $set
+run_basic_bdb $vmpid "grep" "prep" "Grep/genData-grep.sh $grep" $time_log $set
+run_basic_bdb $vmpid "grep" "run" "Grep/run-grep.sh $grep" $time_log $set
 cleanup_bdb "grep"
 
-run_remote_workload_bdb $vmpid "matmult0_5" "prep" "MatrixMult/genData-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
-run_remote_workload_bdb $vmpid "matmult0_5" "run" "MatrixMult/run-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
+run_basic_bdb $vmpid "matmult0_5" "prep" "MatrixMult/genData-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
+run_basic_bdb $vmpid "matmult0_5" "run" "MatrixMult/run-matMult.sh $matmult_sparsity $matmult_dim $matmult_dim $matmult_dim" $time_log $set
 cleanup_bdb "matMult"
 
-run_remote_workload_bdb $vmpid "md5" "prep" "MD5/genData-md5.sh $md5" $time_log $set
-run_remote_workload_bdb $vmpid "md5" "run" "MD5/run-md5.sh $md5" $time_log $set
+run_basic_bdb $vmpid "md5" "prep" "MD5/genData-md5.sh $md5" $time_log $set
+run_basic_bdb $vmpid "md5" "run" "MD5/run-md5.sh $md5" $time_log $set
 cleanup_bdb "md5"
  
-run_remote_workload_bdb $vmpid "randsample" "prep" "randSample/genData-randSample.sh $randsample" $time_log $set
-run_remote_workload_bdb $vmpid "randsample" "run" "randSample/run-randSample.sh $randsample 0.5" $time_log $set
+run_basic_bdb $vmpid "randsample" "prep" "randSample/genData-randSample.sh $randsample" $time_log $set
+run_basic_bdb $vmpid "randsample" "run" "randSample/run-randSample.sh $randsample 0.5" $time_log $set
 cleanup_bdb "randsample" 
 
-run_remote_workload_bdb $vmpid "sort" "prep" "Sort/genData-sort.sh $grep" $time_log $set
-run_remote_workload_bdb $vmpid "sort" "run" "Sort/run-terasort.sh $grep" $time_log $set
+run_basic_bdb $vmpid "sort" "prep" "Sort/genData-sort.sh $grep" $time_log $set
+run_basic_bdb $vmpid "sort" "run" "Sort/run-terasort.sh $grep" $time_log $set
 cleanup_bdb "terasort"
 
-run_remote_workload_bdb $vmpid "wc" "prep" "wordcount/genData-wc.sh $grep" $time_log $set
-run_remote_workload_bdb $vmpid "wc" "run" "wordcount/run-wordcount.sh $grep" $time_log $set
+run_basic_bdb $vmpid "wc" "prep" "wordcount/genData-wc.sh $grep" $time_log $set
+run_basic_bdb $vmpid "wc" "run" "wordcount/run-wordcount.sh $grep" $time_log $set
 cleanup_bdb "wd"
 
 date >> "timings.txt"
 expunge
 
-
-mkdir -p bdb/$hadoop/$profile/$set
-mv *.perf bdb/$hadoop/$profile/$set
-mv $time_log bdb/$hadoop/$profile/$set
-mv *.csv bdb/$hadoop/$profile/$set
+dir="bdb_basic"
+mkdir -p $dir
+mv *.perf $dir/$hadoop/$profile/$set
+mv $time_log $dir/$hadoop/$profile/$set
+mv *.csv $dir/$hadoop/$profile/$set
 rm $sar_file
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
