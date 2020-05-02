@@ -117,9 +117,13 @@ rm $time_log
 
 profile="small" 
 
-hadoop="2.10.0"
-#hadoop="3.2.1"
-set="set1"
+#hadoop="2.10.0"
+hadoop="3.2.1"
+if [ $# -eq 0 ]; then
+	echo "Please provide set number"
+	exit
+fi
+set=$1
 
 case $profile in 
     "tiny")
@@ -207,7 +211,7 @@ date >> "timings.txt"
 expunge
 
 dir="bdb_basic"
-mkdir -p $dir
+mkdir -p $dir/$hadoop/$profile/$set
 mv *.perf $dir/$hadoop/$profile/$set
 mv $time_log $dir/$hadoop/$profile/$set
 mv *.csv $dir/$hadoop/$profile/$set
