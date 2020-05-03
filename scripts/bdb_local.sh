@@ -64,7 +64,7 @@ run_basic_bdb() {
             ;;
             #TLB events follow
     "set4") 
-        perfcommand='perf stat  -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay '
+        perfcommand='perf stat -e r00c0 -e r003c -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay '
     ;;
     "set5")
         perfcommand='perf stat  -e r0149 -e  r0249 -e r1049 -e r2049 -x "," -o $file -I $delay '
@@ -117,8 +117,8 @@ rm $time_log
 
 profile="small" 
 
-#hadoop="2.10.0"
-hadoop="3.2.1"
+hadoop="2.10.0"
+#hadoop="3.2.1"
 if [ $# -eq 0 ]; then
 	echo "Please provide set number"
 	exit
@@ -210,7 +210,7 @@ cleanup_bdb "wd"
 date >> "timings.txt"
 expunge
 
-dir="bdb_basic"
+dir="bdb_basic_tlb_repeat"
 mkdir -p $dir/$hadoop/$profile/$set
 mv *.perf $dir/$hadoop/$profile/$set
 mv $time_log $dir/$hadoop/$profile/$set
