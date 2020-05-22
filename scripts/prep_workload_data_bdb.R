@@ -3,8 +3,6 @@ currentDir=getwd()
 setwd("~/Ananth/Research/research_code/scripts")
 source("filenames_bdb.R")
 
-
-
 # eventNames['003c']='cycles'
 # eventNames['00C0']='instructions'
 # eventNames['00C4']='branch_instructions'
