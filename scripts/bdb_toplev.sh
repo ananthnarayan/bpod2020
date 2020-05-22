@@ -1,6 +1,8 @@
 set_remote_hadoop_home()
 {
     HADOOP_HOME=/disk2/user/hadoops/hadoop-$1
+    echo "HADOOP_BASE=$HADOOP_HOME" > ~/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/hadoophome.sh
+    
 }
 
 cleanup_bdb () 
@@ -10,6 +12,7 @@ cleanup_bdb ()
 cleanup_bdb_cc ()
 {
     $HADOOP_HOME/bin/hdfs dfs -rm -r /user/user/*
+    $HADOOP_HOME/bin/hdfs dfs -rm -r /user/ananth/*
 }
 check_bdb_conf()
 {
@@ -34,8 +37,6 @@ run_workload_toplev_bdb() {
     sar_delay=1
     
     file=${bench}_${action}_$6.perf
-    
-
     remote_command=$4
     time_log=$5
     
@@ -58,13 +59,14 @@ run_workload_toplev_bdb() {
 
 ### == end function definitions == ###
 check_bdb_conf
-vmpid=`ps -elf | grep BUS_2 | grep qemu | tr -s " " | cut -d " " -f 4`
 time_log='benchmarks_time.log'
 rm $time_log
 
 profile="small" 
-
+killall perf
+killall toplev
 hadoop="2.10.0"
+#hadoop="3.2.1"
 set="set1"
 
 case $profile in 
@@ -152,11 +154,11 @@ cleanup_bdb "wd"
 date >> "timings.txt"
 expunge
 
-
-mkdir -p bdb_toplev/$hadoop/$profile/$set
-mv *.perf bdb_toplev/$hadoop/$profile/$set
-mv $time_log bdb_toplev/$hadoop/$profile/$set
-mv *.csv bdb_toplev/$hadoop/$profile/$set
+bdb_toplev="bdb_toplev_may22"
+mkdir -p $bdb_toplev/$hadoop/$profile/$set
+mv *.perf $bdb_toplev/$hadoop/$profile/$set
+mv $time_log $bdb_toplev/$hadoop/$profile/$set
+mv *.csv $bdb_toplev/$hadoop/$profile/$set
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
 
@@ -165,4 +167,4 @@ mv *.csv bdb_toplev/$hadoop/$profile/$set
 # for matrix: 100, 1k, 10k 
 # for FFT, 16kx16k, 32kx32k, 64kx64k
 # for sparsity dependency for fft, 2 16384×16384 matrices, with 0.1 and 0.9 sparsity.
-##
+#

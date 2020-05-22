@@ -1,6 +1,7 @@
 set_hadoop_home()
 {
     HADOOP_HOME=/disk2/user/hadoops/hadoop-$1
+    echo "HADOOP_BASE=$HADOOP_HOME" > ~/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/hadoophome.sh
 }
 
 cleanup_bdb () 
@@ -10,6 +11,7 @@ cleanup_bdb ()
 cleanup_bdb_cc ()
 {
     $HADOOP_HOME/bin/hdfs dfs -rm -r /user/user/*
+    $HADOOP_HOME/bin/hdfs dfs -rm -r /user/ananth/*
 }
 check_bdb_conf()
 {
@@ -53,7 +55,8 @@ run_basic_bdb() {
 	       ;;
     "set2")
             perfcommand='perf stat -e r3f24 -e ref24 -e r0151 -e r0480 -e context-switches -e page-faults  -x "," -o $file -I $delay'
-            sar -b -u ALL -o $sar_file $sar_delay > /dev/null 2>&1 & 
+            sar -r ALL -B -W -o $sar_file $sar_delay > /dev/null 2>&1 & 
+            #sar -b -u ALL -o $sar_file $sar_delay > /dev/null 2>&1 & 
             sar_process=$!
             ;;
     "set3")
@@ -91,7 +94,8 @@ run_basic_bdb() {
 	    sadf -dh $sar_file -- -r ALL -B -W > $sar_csv
 	    ;;
 	"set2")
-		sadf -dh $sar_file -- -b -u  > $sar_csv
+	#	sadf -dh $sar_file -- -b -u  > $sar_csv
+	    sadf -dh $sar_file -- -r ALL -B -W > $sar_csv
 		;;
 	"set3")
 		sadf -dh $sar_file -- -r ALL -B -W > $sar_csv
@@ -210,12 +214,14 @@ cleanup_bdb "wd"
 date >> "timings.txt"
 expunge
 
-dir="bdb_basic_tlb_repeat"
+dir="bdb_basic_all_sets_may19"
 mkdir -p $dir/$hadoop/$profile/$set
 mv *.perf $dir/$hadoop/$profile/$set
 mv $time_log $dir/$hadoop/$profile/$set
 mv *.csv $dir/$hadoop/$profile/$set
 rm $sar_file
+mv bdb*.out bdb*.err $dir/$hadoop/$profile
+
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
 
