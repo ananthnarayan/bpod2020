@@ -53,15 +53,22 @@ saveAsPNG1<-function(pngfile, data1, main, xlab, ylab )
 }
 saveAsPNG2<-function(pngfile, data1, data2, main, xlab, ylab, legendT)
 {
+
+    ylimtop = max(data1, data2, na.rm=T)
+    if(is.nan(ylimtop) | is.infinite(ylimtop))
+    {
+        print(pngfile)
+        return()
+    }
     png(pngfile)
     plot.new()
-    ylimtop = max(data1, data2)
+  
     if(length(data1) > length(data2))
     {
-        plot(data1, type="l", main=main, xlab=xlab, ylab=ylab, ylim=c(0, max(ylimtop)), col=1)
+        plot(data1, type="l", main=main, xlab=xlab, ylab=ylab, ylim=c(0, ylimtop), col=1)
         lines(data2, col=2)
     }else{
-        plot(data2, type="l", main=main, xlab=xlab, ylab=ylab, ylim=c(0, max(ylimtop)), col=2)
+        plot(data2, type="l", main=main, xlab=xlab, ylab=ylab, ylim=c(0, ylimtop), col=2)
         lines(data1, col=1)
     }
     legend("bottomright", legend=legendT, col=c(1, 2), fill=c(1,2))
