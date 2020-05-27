@@ -4,6 +4,7 @@ library('tidyverse')
 library('ggplot2')
 library("kohonen")
 
+#plot sardata : -r ALL
 plotSarData2<-function(sar_files, path1, path2)
 {
     colNames=unlist(strsplit("pswpin/s;pswpout/s;pgpgin/s;pgpgout/s;fault/s;majflt/s;pgfree/s;pgscank/s;pgscand/s;pgsteal/s;%vmeff;kbmemfree;kbmemused;%memused;kbbuffers;kbcached;kbcommit;%commit;kbactive;kbinact;kbdirty;kbanonpg;kbslab;kbkstack;kbpgtbl;kbvmused", ";"))
@@ -52,7 +53,7 @@ plotSarData2<-function(sar_files, path1, path2)
 
 }
 
-
+#plot  sar data: -r 
 plotSarData<-function(sar_files, path1, path2)
 {
     for( i in 1:length(sar_files))
@@ -141,8 +142,8 @@ setwd("~/Ananth/Research/research_code/scripts")
 source("filenames_bdb.R")
 source("functions.R")
 
-base_workspace="/home/meena/Ananth/Research/research_code/results_workspace/bdb/host/bdb_pidstat/iteration3"
-#base_workspace="/home/meena/Ananth/Research/research_code/results_workspace/bdb/host/bdb_pidstat/iteration3"
+base_workspace="/home/meena/Ananth/Research/research_code/results_workspace/bdb/host/bdb_sar_pidstat/iteration3"
+#base_workspace="/home/meena/Ananth/Research/research_code/results_workspace/bdb/bdb_basic_all_sets_may19/"
 
 #base_workspace="/home/meena/Ananth/Research/research_code/results_workspace/bdb/host/"
 path1=  "2.10.0/small/set1"
@@ -163,11 +164,7 @@ sar_files=c(
 setwd(base_workspace)
 plotSarData2(sar_files, path1, path2)
 
-
-#=============\
- colNames=c("BLANK", "Time",  "UID",       "PID",  "minflt/s",  "majflt/s",     "VSZ",     "RSS",   "%MEM", "StkSize"  , "StkRef",  "Command")
-# c1names <-colNames[c(7,8,10,11)]; 
-# c2names <-colNames[c(7,8,10,11)];
+colNames=c("BLANK", "Time",  "UID",       "PID",  "minflt/s",  "majflt/s",     "VSZ",     "RSS",   "%MEM", "StkSize"  , "StkRef",  "Command")
 plotPIDStatData2<-function(pidstat_files, path1, path2)
 {
     colNames=c("BLANK", "Time",  "UID",       "PID",  "minflt/s",  "majflt/s",     "VSZ",     "RSS",   "%MEM", "StkSize"  , "StkRef",  "Command")

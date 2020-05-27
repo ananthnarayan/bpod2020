@@ -41,7 +41,6 @@ paths<- hash()
 #paths['bdb_210_small'] = "bdb/guest/2.10.0/small" 
 #paths['bdb_321_small'] = "bdb/guest/3.2.1/small"
 #host 
-#meena@localhost:~/Ananth/Research/research_code/results_workspace/bdb/host/3.2.1/small 
 paths['bdb_210_small'] = "bdb/host/2.10.0/small" 
 paths['bdb_321_small'] = "bdb/host/3.2.1/small"
 

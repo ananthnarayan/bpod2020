@@ -7,7 +7,7 @@
 #events_set3=('81d0' '82d0')
 
 
-events_set4=('0108' '0208' '1008' '2008')
+events_set4=('003c' '00c0' '0108' '0208' '1008' '2008')
 events_set5=('0149' '0249' '1049' '2049')
 events_set6=('014f' '01ae' '0185' '0285')
 events_set7=('1085' '2085' '11bc' '21bc')
@@ -16,18 +16,20 @@ events_set8=('12bc' '22bc' '14bc' '24bc' '18bc')
 declare -A eventNames
 
 eventNames['0108']='0801'
+eventNames['003c']='3c00' #cycles
+eventNames['00c0']='c000' #instructions
 eventNames['0208']='0802'
 eventNames['1008']='0810'
 eventNames['2008']='0820'
 eventNames['0149']='4901'
-eventNames['0249']='4902' #do not use preferably
-eventNames['1049']='4910' #do not use preferably
+eventNames['0249']='4902' #
+eventNames['1049']='4910' #
 eventNames['2049']='4920'
 eventNames['014f']='4f01'
 eventNames['01ae']='ae01'
 eventNames['0185']='8501'
 eventNames['0285']='8502'
-eventNames['1085']='8510' #do not use preferably
+eventNames['1085']='8510' #
 eventNames['2085']='8520'
 eventNames['11bc']='bc11'
 eventNames['21bc']='bc21'
@@ -133,17 +135,16 @@ parse_events_for_workload()
         paste -d "," intermediate.csv ${txtFiles[$jj]} > tmp.csv 
         mv tmp.csv intermediate.csv
     done
-    mv intermediate.csv ${file_base}.csv
+    mv intermediate.csv ${file_base}_tlb.csv
     #echo "" > ${file_base}.csv
     #cat intermediate.csv >> ${file_base}.csv
     #rm intermediate.csv
     echo "Done"
 }
 
-cd set1
+cd set4
 files=(`ls *.perf`)
 cd ..
-echo "AAA"
 filesCount=${#files[@]}
 echo -e "Total files to parse: $filesCount"
 
@@ -151,6 +152,7 @@ for((i=0;i<$filesCount;i++))
 do
     file=${files[$i]}
     file_base=${file::-10}
+
     echo "File base is: $file_base, i=$i"
     parse_events_for_workload  $file_base
 done
