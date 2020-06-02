@@ -116,7 +116,7 @@ run_remote_workload_bdb() {
 ### == end function definitions == ###
 check_bdb_conf
 time_log='benchmarks_time.log'
-rm $time_log
+sudo rm $time_log
 
 profile="small" 
 
@@ -210,11 +210,11 @@ date >> "timings.txt"
 expunge
 
 
-mkdir -p bdb/$hadoop/$profile/$set
-mv *.perf bdb/$hadoop/$profile/$set
-mv $time_log bdb/$hadoop/$profile/$set
-mv *.csv bdb/$hadoop/$profile/$set
-mv *.pidstat bdb/$hadoop/$profile/$set
+mkdir -p ~/ishaan/data/bdb-hadoop/$hadoop/$profile/$set
+mv *.perf ~/ishaan/data/bdb-hadoop/$hadoop/$profile/$set
+mv $time_log ~/ishaan/data/bdb-hadoop/$hadoop/$profile/$set
+mv *.csv ~/ishaan/data/bdb-hadoop/$hadoop/$profile/$set
+mv *.pidstat ~/ishaan/data/bdb-hadoop/$hadoop/$profile/$set
 rm $sar_file
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
