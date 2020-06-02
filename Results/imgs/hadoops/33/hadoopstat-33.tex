@@ -146,7 +146,7 @@
     \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
     % Document parameters
     % Document title
-    \title{hadoopstat-23}
+    \title{hadoopstat-33}
     
     
     
@@ -390,7 +390,7 @@
 \PY{c+c1}{\PYZsh{} In[88]:}
 
 
-\PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZti{}/Desktop/research\PYZhy{}data/csvs/hadooprun23.csv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZti{}/Desktop/research\PYZhy{}data/csvs/hadooprun33.csv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
 \PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}x86\PYZus{}64\PYZus{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{inplace} \PY{o}{=} \PY{n+nb+bp}{True}\PY{p}{)} 
 \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{astype}\PY{p}{(}\PY{n+nb}{float}\PY{p}{)}
 
@@ -408,23 +408,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{sort\PYZus{}run} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}Sort\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}Sort\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}Sort\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}Sort\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{sort\PYZus{}run} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}Sort\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}Sort\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}Sort\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}Sort\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{sort\PYZus{}run} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}Sort\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}Sort\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}Sort\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}Sort\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{sort\PYZus{}run} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}Sort\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}Sort\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}Sort\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}Sort\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[90]:}
@@ -440,23 +440,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{wc} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}wc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}wc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}wc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}wc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{wc} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}wc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}wc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}wc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}wc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{wc} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}wc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}wc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}wc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}wc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{wc} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}wc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}wc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}wc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}wc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[91]:}
@@ -472,23 +472,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{grep} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}grep\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}grep\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}grep\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}grep\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{grep} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}grep\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}grep\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}grep\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}grep\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{grep} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}grep\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}grep\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}grep\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}grep\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{grep} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}grep\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}grep\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}grep\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}grep\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[92]:}
@@ -504,23 +504,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{md} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}md\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}md\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}md\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}md\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{md} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}md\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}md\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}md\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}md\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{md} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}md\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}md\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}md\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}md\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{md} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}md\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}md\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}md\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}md\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[93]:}
@@ -536,23 +536,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{rs} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}rs\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}rs\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}rs\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}rs\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{rs} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}rs\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}rs\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}rs\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}rs\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{rs} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}rs\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}rs\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}rs\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}rs\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{rs} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}rs\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}rs\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}rs\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}rs\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[94]:}
@@ -568,23 +568,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{mm} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}mm\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}mm\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}mm\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}mm\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{mm} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}mm\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}mm\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}mm\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}mm\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{mm} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}mm\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}mm\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}mm\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}mm\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{mm} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}mm\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}mm\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}mm\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}mm\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[95]:}
@@ -600,23 +600,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{fft} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}fft\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}fft\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}fft\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}fft\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{fft} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}fft\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}fft\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}fft\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}fft\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{fft} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}fft\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}fft\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}fft\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}fft\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{fft} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}fft\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}fft\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}fft\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}fft\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[96]:}
@@ -632,23 +632,23 @@
 
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{cc} \PY{o}{\PYZam{}} \PY{n}{namenode}\PY{p}{]}
 \PY{n}{namenode\PYZus{}sort} \PY{o}{=} \PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}cc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}cc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}cc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{namenode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Namenode\PYZhy{}cc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{cc} \PY{o}{\PYZam{}} \PY{n}{datanode}\PY{p}{]}
 \PY{n}{datanode\PYZus{}sort} \PY{o}{=} \PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}cc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}cc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}cc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{datanode\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Datanode\PYZhy{}cc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{cc} \PY{o}{\PYZam{}} \PY{n}{nodemanager}\PY{p}{]}
 \PY{n}{nodemanager\PYZus{}sort} \PY{o}{=} \PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}cc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}cc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}cc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{nodemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{nodemanager\PYZhy{}cc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{cc} \PY{o}{\PYZam{}} \PY{n}{resourcemanager}\PY{p}{]}
 \PY{n}{resourcemanager\PYZus{}sort} \PY{o}{=} \PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{reset\PYZus{}index}\PY{p}{(}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}cc\PYZhy{}23\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}cc\PYZhy{}23\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}cc\PYZhy{}33\PYZhy{}Mem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{resourcemanager\PYZus{}sort}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{resourcemanager\PYZhy{}cc\PYZhy{}33\PYZhy{}RSS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 
 
 \PY{c+c1}{\PYZsh{} In[ ]:}
@@ -656,6 +656,10 @@
 \end{tcolorbox}
 
     \begin{Verbatim}[commandchars=\\\{\}]
+/home/shaanzie/.local/lib/python2.7/site-
+packages/IPython/core/interactiveshell.py:2714: DtypeWarning: Columns (1,3) have
+mixed types. Specify dtype option on import or set low\_memory=False.
+  interactivity=interactivity, compiler=compiler, result=result)
 /home/shaanzie/.local/lib/python2.7/site-packages/matplotlib/pyplot.py:522:
 RuntimeWarning: More than 20 figures have been opened. Figures created through
 the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly
@@ -667,7 +671,7 @@ rcParam `figure.max\_open\_warning`).
             \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
 \prompt{Out}{outcolor}{2}{\boxspacing}
 \begin{Verbatim}[commandchars=\\\{\}]
-<matplotlib.axes.\_subplots.AxesSubplot at 0x7fd9e081c210>
+<matplotlib.axes.\_subplots.AxesSubplot at 0x7f9189fa5050>
 \end{Verbatim}
 \end{tcolorbox}
         
