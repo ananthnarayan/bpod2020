@@ -1,0 +1,181 @@
+
+Deleted /user/ananth/concmpt_curbm
+Deleted /user/ananth/concmpt_summaryout
+===== cc : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/CC/genData-cc.sh 11  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+Perfpid: 133495 Bash: 133501 Java: 133582
+killing sar
+killing pidstat
+Start sleep after prep
+===== cc : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/CC/run-cc.sh 11  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+
+-----===[PEGASUS: A Peta-Scale Graph Mining System]===-----
+
+[PEGASUS] Computing connected component. Edge path = /hadoop/cc/Google_genGraph_11.txt, Newbm = new, Reducers = 24
+Generating initial component vector for 11 nodes creating bitmask generation cmd for node 0 ~ 11
+.....
+Perfpid: 133781 Bash: 133788 Java: 133868
+ done
+Hop 1 : changed = 208, unchanged = 1629
+Hop 2 : changed = 647, unchanged = 1190
+Hop 3 : changed = 1064, unchanged = 773
+Hop 4 : changed = 805, unchanged = 1032
+Hop 5 : changed = 214, unchanged = 1623
+Hop 6 : changed = 32, unchanged = 1805
+Hop 7 : changed = 11, unchanged = 1826
+Hop 8 : changed = 2, unchanged = 1835
+Hop 9 : changed = 0, unchanged = 1837
+All the component ids converged. Finishing...
+Summarizing connected components information...
+
+[PEGASUS] Connected component computed.
+[PEGASUS] Total Iteration = 9
+[PEGASUS] Connected component information is saved in the HDFS concmpt_curbm as
+"node_id	'msf'component_id" format
+[PEGASUS] Connected component distribution is saved in the HDFS concmpt_summaryout as
+"component_id	number_of_nodes" format.
+
+hadoop cc end
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/cc
+===== fft0_5 : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/FFT/genData-fft.sh 2048 2048 0.5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+2048
+Perfpid: 46263 Bash: 46270 Java: 46350
+killing sar
+killing pidstat
+Start sleep after prep
+===== fft0_5 : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/FFT/run-fft.sh 2048 2048 0.5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+11
+running fft
+Perfpid: 46514 Bash: 46520 Java: 46603
+hadoop fft end
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/fft
+===== grep : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/Grep/genData-grep.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
+Perfpid:  Bash:  Java: 189718
+killing sar
+killing pidstat
+Start sleep after prep
+===== grep : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/Grep/run-grep.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+running hadoop grep
+Perfpid:  Bash:  Java: 189718
+hadop grep end
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/grep
+===== matmult0_5 : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/MatrixMult/genData-matMult.sh 0.5 1000 1000 1000  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+Perfpid: 52490 Bash: 52497 Java: 52578
+killing sar
+killing pidstat
+Start sleep after prep
+===== matmult0_5 : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/MatrixMult/run-matMult.sh 0.5 1000 1000 1000  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+running matMult
+Running on hadoop, using /disk2/user/hadoops/hadoop-2.10.0/bin/hadoop and HADOOP_CONF_DIR=
+MAHOUT-JOB: /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/apache-mahout-0.10.2-compile/examples/target/mahout-examples-0.10.2-job.jar
+Perfpid: 52755 Bash: 52762 Java: 52841
+Running on hadoop, using /disk2/user/hadoops/hadoop-2.10.0/bin/hadoop and HADOOP_CONF_DIR=
+MAHOUT-JOB: /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/apache-mahout-0.10.2-compile/examples/target/mahout-examples-0.10.2-job.jar
+Running on hadoop, using /disk2/user/hadoops/hadoop-2.10.0/bin/hadoop and HADOOP_CONF_DIR=
+MAHOUT-JOB: /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/apache-mahout-0.10.2-compile/examples/target/mahout-examples-0.10.2-job.jar
+hadoop matrix mulitiply end
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/matMult
+===== md5 : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/MD5/genData-md5.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+Mon May 25 16:50:21 IST 2020
+Perfpid: 54284 Bash: 54291 Java: 54292
+Mon May 25 16:52:02 IST 2020
+killing sar
+killing pidstat
+Start sleep after prep
+===== md5 : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/MD5/run-md5.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+Perfpid: 54708 Bash: 54715 Java: 54794
+hadoop md5 end
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/md5
+===== randsample : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/randSample/genData-randSample.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
+Perfpid: 58796 Bash: 58803 Java: 58883
+killing sar
+killing pidstat
+Start sleep after prep
+===== randsample : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/randSample/run-randSample.sh 5 0.5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+running randsample
+Perfpid: 59189 Bash: 59195 Java: 59277
+hadoop rand sampling end
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/randsample
+===== sort : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/Sort/genData-sort.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+Perfpid: 63276 Bash: 63282 Java: 63379
+killing sar
+killing pidstat
+Start sleep after prep
+===== sort : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/Sort/run-terasort.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+Spent 168ms computing base-splits.
+Spent 4ms computing TeraScheduler splits.
+Computing input splits took 174ms
+Sampling 10 splits of 38
+Making 1 from 100000 sampled records
+Computing parititions took 547ms
+Spent 727ms computing partitions.
+Perfpid: 63784 Bash: 63790 Java: 63791
+terasort end, kill monitor script
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/terasort
+===== wc : prep ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/wordcount/genData-wc.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+Perfpid: 67939 Bash: 67945 Java: 68025
+killing sar
+killing pidstat
+Start sleep after prep
+===== wc : run ======
+Executing: /usr/bin/time -f %e,%S,%U,%W,%c,%w -o timeout perf stat -e instructions -e cycles -e r0108 -e  r0208 -e r1008 -e r2008 -x "," -o $file -I $delay  bash /disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/Hadoop/wordcount/run-wordcount.sh 5  &
+HADOOP_HOME is set to: /disk2/user/hadoops/hadoop-2.10.0
+running wordcount
+Perfpid: 68320 Bash: 68327 Java: 68406
+hadoop wordcount end
+killing sar
+killing pidstat
+Start sleep after run
+Deleted /hadoop/wd

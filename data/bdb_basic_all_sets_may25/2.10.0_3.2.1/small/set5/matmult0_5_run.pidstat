@@ -1,0 +1,149 @@
+Linux 4.4.0-174-generic (pes) 	Tuesday 26 May 2020 	_x86_64_	(32 CPU)
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467211  1002    133347  338.00   59.00    0.00  397.00    14  40858.00      0.00 2253148  225152   0.34     136      48      0.00  39316.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467211  1002    133347      3380       590         0     40858         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467212  1002    133347  124.00   44.00    0.00  168.00    14  18706.00      0.00 2253148  271048   0.41     136      48      0.00  69740.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467212  1002    133347      1240       440         0     18706         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467213  1002    133347  110.00   39.00    0.00  149.00    14  11688.00      0.00 2253148  317016   0.48     136      48      0.00  74612.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467213  1002    133347      1100       390         0     11688         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467214  1002    133347  212.00   24.00    0.00  236.00    14   9004.00      0.00 2269812  335968   0.51     136      48      0.00  21208.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467214  1002    133347      2120       240         0      9175         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467215  1002    133347  297.00   23.00    0.00  320.00    14  33337.00      0.00 2294092  362800   0.55     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467215  1002    133347      2970       230         0     33337         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467216  1002    133347  338.00   29.00    0.00  367.00    14  23199.00      0.00 2301368  408328   0.62     136      48      0.00      4.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467216  1002    133347      3380       290         0     23199         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467217  1002    133347  105.00    2.00    0.00  107.00    14   5971.00      0.00 2301368  427372   0.65     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467217  1002    133347      1050        20         0      5971         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467218  1002    133347    0.99    0.00    0.00    0.99    14      6.93      0.00 2301368  427372   0.65     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467218  1002    133347        10         0         0         7         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467219  1002    133347    0.00    0.00    0.00    0.00    14      0.00      0.00 2301368  427372   0.65     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467219  1002    133347         0         0         0         0         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467220  1002    133347    1.00    1.00    0.00    2.00    14      6.00      0.00 2301368  416092   0.63     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467220  1002    133347        10        10         0         6         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467221  1002    133347    0.00    0.00    0.00    0.00    14      1.00      0.00 2301368  416092   0.63     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467221  1002    133347         0         0         0         1         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467222  1002    133347    1.00    0.00    0.00    1.00    14      0.00      0.00 2301368  416092   0.63     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467222  1002    133347        10         0         0         0         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467223  1002    133347    1.00    0.00    0.00    1.00    14    224.00      0.00 2301368  416232   0.63     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467223  1002    133347        10         0         0       224         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467224  1002    133347    1.00    0.00    0.00    1.00    14     77.00      0.00 2301368  416232   0.63     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467224  1002    133347        10         0         0        77         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467225  1002    133347    2.00    1.00    0.00    3.00    14    525.00      0.00 2301368  405280   0.62     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467225  1002    133347        20        10         0       525         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467227  1002    133347    3.00    0.00    0.00    3.00    14    581.00      0.00 2301368  405292   0.62     136      48      0.00     12.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467227  1002    133347        30         0         0       581         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467227  1002    133347    0.00    0.00    0.00    0.00    14      7.00      0.00 2301368  405292   0.62     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467227  1002    133347         0         0         0         7         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467228  1002    133347    2.00    0.00    0.00    2.00    14     25.00      0.00 2301368  405292   0.62     136      48      0.00      4.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467228  1002    133347        20         0         0        25         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467229  1002    133347    1.00    0.00    0.00    1.00    14      8.00      0.00 2301368  405292   0.62     136      48      0.00      4.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467229  1002    133347        10         0         0         8         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467230  1002    133347    0.00    0.00    0.00    0.00    14      7.00      0.00 2301368  405292   0.62     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467230  1002    133347         0         0         0         7         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467231  1002    133347    3.00    1.00    0.00    4.00    14    511.00      0.00 2301368  405352   0.62     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467231  1002    133347        30        10         0       511         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467232  1002    133347    0.00    0.00    0.00    0.00    14     11.00      0.00 2301368  405360   0.62     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467232  1002    133347         0         0         0        11         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467233  1002    133347   40.00   18.00    0.00   58.00    14   7873.00      0.00 2303416  405968   0.62     136      48      0.00      8.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467233  1002    133347       400       180         0      7873         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+ 1590467234  1002    133347    2.00    8.00    0.00   10.00    14    906.00      0.00 2303416  405968   0.62     136      48      0.00      0.00      0.00       0  java
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command
+ 1590467234  1002    133347        20        80         0       906         0  java
+
+#      Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ     RSS   %MEM StkSize  StkRef   kB_rd/s   kB_wr/s kB_ccwr/s iodelay  Command
+
+#      Time   UID       PID    usr-ms system-ms  guest-ms minflt-nr majflt-nr  Command

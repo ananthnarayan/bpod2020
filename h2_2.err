@@ -1,0 +1,87 @@
+20/05/22 20:50:55 INFO terasort.TeraSort: starting
+20/05/22 20:50:56 INFO input.FileInputFormat: Total input files to process : 2
+20/05/22 20:50:57 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+20/05/22 20:50:58 INFO mapreduce.JobSubmitter: number of splits:8
+20/05/22 20:50:59 INFO Configuration.deprecation: yarn.resourcemanager.system-metrics-publisher.enabled is deprecated. Instead, use yarn.system-metrics-publisher.enabled
+20/05/22 20:50:59 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1590160738910_0001
+20/05/22 20:50:59 INFO conf.Configuration: resource-types.xml not found
+20/05/22 20:50:59 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+20/05/22 20:50:59 INFO resource.ResourceUtils: Adding resource type - name = memory-mb, units = Mi, type = COUNTABLE
+20/05/22 20:50:59 INFO resource.ResourceUtils: Adding resource type - name = vcores, units = , type = COUNTABLE
+20/05/22 20:51:00 INFO impl.YarnClientImpl: Submitted application application_1590160738910_0001
+20/05/22 20:51:00 INFO mapreduce.Job: The url to track the job: http://pes:8088/proxy/application_1590160738910_0001/
+20/05/22 20:51:00 INFO mapreduce.Job: Running job: job_1590160738910_0001
+20/05/22 20:51:08 INFO mapreduce.Job: Job job_1590160738910_0001 running in uber mode : false
+20/05/22 20:51:08 INFO mapreduce.Job:  map 0% reduce 0%
+20/05/22 20:51:19 INFO mapreduce.Job:  map 50% reduce 0%
+20/05/22 20:51:20 INFO mapreduce.Job:  map 75% reduce 0%
+20/05/22 20:51:27 INFO mapreduce.Job:  map 88% reduce 0%
+20/05/22 20:51:28 INFO mapreduce.Job:  map 100% reduce 0%
+20/05/22 20:51:36 INFO mapreduce.Job:  map 100% reduce 67%
+20/05/22 20:51:42 INFO mapreduce.Job:  map 100% reduce 81%
+20/05/22 20:51:49 INFO mapreduce.Job:  map 100% reduce 97%
+20/05/22 20:51:51 INFO mapreduce.Job:  map 100% reduce 100%
+20/05/22 20:51:53 INFO mapreduce.Job: Job job_1590160738910_0001 completed successfully
+20/05/22 20:51:53 INFO mapreduce.Job: Counters: 50
+	File System Counters
+		FILE: Number of bytes read=2080000144
+		FILE: Number of bytes written=3121859636
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1000001016
+		HDFS: Number of bytes written=1000000000
+		HDFS: Number of read operations=27
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=9
+		Launched reduce tasks=1
+		Data-local map tasks=9
+		Total time spent by all maps in occupied slots (ms)=69769
+		Total time spent by all reduces in occupied slots (ms)=28093
+		Total time spent by all map tasks (ms)=69769
+		Total time spent by all reduce tasks (ms)=28093
+		Total vcore-milliseconds taken by all map tasks=69769
+		Total vcore-milliseconds taken by all reduce tasks=28093
+		Total megabyte-milliseconds taken by all map tasks=71443456
+		Total megabyte-milliseconds taken by all reduce tasks=28767232
+	Map-Reduce Framework
+		Map input records=10000000
+		Map output records=10000000
+		Map output bytes=1020000000
+		Map output materialized bytes=1040000048
+		Input split bytes=1016
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10000000
+		Reduce shuffle bytes=1040000048
+		Reduce input records=10000000
+		Reduce output records=10000000
+		Spilled Records=30000000
+		Shuffled Maps =8
+		Failed Shuffles=0
+		Merged Map outputs=8
+		GC time elapsed (ms)=2556
+		CPU time spent (ms)=112150
+		Physical memory (bytes) snapshot=2789826560
+		Virtual memory (bytes) snapshot=18226294784
+		Total committed heap usage (bytes)=1724907520
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1000000000
+	File Output Format Counters 
+		Bytes Written=1000000000
+20/05/22 20:51:53 INFO terasort.TeraSort: done
+1590160913220 Running java agent shutdown
+1590160913220 Running periodic profiler (last run): com.uber.profiling.profilers.CpuAndMemoryProfiler@7f416310
+1590160913226 Ran periodic profiler (last run): com.uber.profiling.profilers.CpuAndMemoryProfiler@7f416310
+1590160913226 Closing reporter com.uber.profiling.reporters.FileOutputReporter@317b3c5c
+1590160913227 Closed reporter com.uber.profiling.reporters.FileOutputReporter@317b3c5c
