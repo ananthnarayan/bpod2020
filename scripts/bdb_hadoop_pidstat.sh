@@ -45,14 +45,12 @@ run_remote_workload_bdb() {
     
     #Clean up any old instances
     killall sar 
-    killall pidstat
     
     echo "===== $bench : $action ======"
-    echo "$6" 
     case $6 in
     "set1")
     	   perfcommand='perf stat -e intel_cqm/llc_occupancy/ -e intel_cqm/local_bytes/ -e intel_cqm/total_bytes/ -e r00C0 -e r00c4  -e r00c5  -e r4f2e -e r412e -e r003C  -x "," -o $file -I $delay'
-           sar -r ALL -R -B -W -S -u ALL -H -b -o $sar_file $sar_delay > /dev/null 2>&1 & 
+           sar -r ALL -R -B -W -S -u ALL -H -h -o $sar_file $sar_delay > /dev/null 2>&1 & 
            sar_process=$!
 	       ;;
     "set2")
@@ -85,34 +83,33 @@ run_remote_workload_bdb() {
     javapid=`ps -elf | grep "$bashpid" | grep -v "grep" | tail -n 1 | tr -s " " | cut -d ' ' -f 4`
     namenode=`jps | grep -i -w  "NameNode" | cut -d " " -f 1`
     datanode=`jps | grep -i -w  "DataNode" | cut -d " " -f 1`
-    nodemanager=`jps | grep -i -w  "NodeManager" | cut -d " " -f 1`
+    nodemanager= `jps | grep -i -w  "NodeManager" | cut -d " " -f 1`
     resourcemanager=`jps | grep -i -w  "ResourceManager" | cut -d " " -f 1`
     secondarynamenode=`jps | grep -i -w  "SecondaryNameNode" | cut -d " " -f 1`
      
-    echo -e "Sar:$sar_process Bash: $bashpid Java: $javapid Hadoop: $namenode,$datanode,$nodemanager,$resourcemanager,$secondarynamenode"
-    pidstat -h -d -r -s -u -T ALL -p $javapid,$namenode,$datanode,$nodemanager,$resourcemanager,$secondarynamenode $sar_delay > $pidstat_file  & 
-    pidstat=$!
-    wait $bashpid
-    echo "Terminating sar"
+    echo -e "Bash: $bashpid Java: $javapid Hadoop: $namenode,$datanode,$nodemanager,$resourcemanager,$secondarynamenode"
+    pidstat -h -d -r -s -u -T ALL -p $javapid,$namenode,$datanode,$nodemanager,$resourcemanager,$secondarynamenode $sar_delay > $pidstat_file &  
+    echo "killing sar"
     kill -s SIGINT $sar_process
     #Pidstat would have terminated already. this is just for cleanup from our side. 
-    echo "Terminating pidstat"
+    echo "killing pidstat"
     kill -s SIGINT $pidstat 
-#sar -r ALL -R -B -W -S -u ALL -H -b -o some_file 1
+
     case $6 in
     	"set1")
-            sadf -dh $sar_file -- -r ALL -R -B -W -S -u ALL -H -b > $sar_csv 
+            sadf -dh $sar_file -- -r ALL -R -B -W -S -u ALL -H -h > $sar_csv 
 	    ;;
 	"set2")
-            sadf -dh $sar_file -- -r ALL -R -B -W -S -u ALL -H -b > $sar_csv 
-	    ;;
+            sadf -dh $sar_file -- -r ALL -R -B -W -S -u ALL -H -h > $sar_csv 
+		;;
 	"set3")
-            sadf -dh $sar_file -- -r ALL -R -B -W -S -u ALL -H -b > $sar_csv 
-	    ;;
+            sadf -dh $sar_file -- -r ALL -R -B -W -S -u ALL -H -h > $sar_csv 
+		;;
     esac 
     
     bench=$bench
     action=$action
+    
     echo "Start sleep after $action"
     sleep 10
 
@@ -123,12 +120,8 @@ check_bdb_conf
 
 profile="tiny" 
 
-##benchmarks
-hadoop_bm="2.10.0"
-#hadoop_bm="3.2.1"
-
-hadoop_services="2.10.0"
-#hadoop_services="3.2.1"
+hadoop="2.10.0"
+#hadoop="3.2.1"
 set="set1"
 
 case $profile in 
@@ -175,9 +168,9 @@ case $profile in
 esac 
 
 
-set_remote_hadoop_home  $hadoop_bm 
+set_remote_hadoop_home  $hadoop 
 
-time_log=/dev/null
+
 vmpid=0
 cleanup_bdb_cc
 run_remote_workload_bdb $vmpid "cc" "prep" "CC/genData-cc.sh $cc" $time_log $set
@@ -214,10 +207,10 @@ cleanup_bdb "wd"
 
 expunge
 
-mkdir -p ~/ananth/hadoopfinal-data/bdb/${hadoop_bm}-${hadoop_services}/$profile/
-mv $time_log ~/ananth/hadoopfinal-data/bdb/${hadoop_bm}-${hadoop_services}/$profile/
-mv *.csv ~/ananth/hadoopfinal-data/bdb/${hadoop_bm}-${hadoop_services}/$profile/
-mv *.pidstat ~/ananth/hadoopfinal-data/bdb/${hadoop_bm}-${hadoop_services}/$profile/
+mkdir -p ~/ananth/hadoopfinal-data/bdb/$hadoop/$profile/
+mv $time_log ~/ananth/hadoopfinal-data/bdb/$hadoop/$profile/
+mv *.csv ~/ananth/hadoopfinal-data/bdb/$hadoop/$profile/
+mv *.pidstat ~/ananth/hadoopfinal-data/bdb/$hadoop/$profile/
 rm $sar_file
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/.libs/:disk2/user/BigDataBench_V5.0_BigData_MicroBenchmark/BigDataGeneratorSuite/Text_datagen/gsl-1.15/cblas/.libs/
 
