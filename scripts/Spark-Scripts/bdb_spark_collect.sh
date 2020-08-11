@@ -48,10 +48,6 @@ execute_workload() {
         rank=$4
         iter=$5
         command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $rank $iter"
-    elif [$bench == "KMeans"] then
-        k=$4
-        iter=$5
-        command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $k $iter"
     else
         command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input hdfs://localhost:9000/$output"
     fi
@@ -118,10 +114,6 @@ cleanup_out "pagerank"
 prepare_input "als" "als-$size.txt"
 execute_workload "ALS" "als" "als-out" 3 1
 cleanup_out "als"
-
-prepare_input "km" "km-$size.txt"
-execute_workload "KMeans" "km" "km-out" 5 10
-cleanup_out "km"
 
 mkdir -p ~/SparkData/bdb/$hadoop/$size/
 mv *.csv ~/SparkData/bdb/$hadoop/$size/
