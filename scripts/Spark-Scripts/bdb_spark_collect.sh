@@ -1,7 +1,8 @@
 set_remote_spark_home() {
     HADOOP_HOME=/home/shaanzie/hadoop-$1
-    SPARK_HOME=/home/shaanzie/spark-$1
+    SPARK_HOME=/home/shaanzie/spark-$2
     export SPARK_HOME=$SPARK_HOME
+    export HADOOP_HOME=$HADOOP_HOME
     export PATH=$PATH:$SPARK_HOME/bin
 }
 
@@ -86,6 +87,11 @@ execute_workload() {
 
     sleep 5
 }
+
+hadoop="2.10.0"
+spark="2.4.6"
+
+set_remote_spark_home $hadoop $spark
 
 size="tiny"
 
