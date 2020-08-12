@@ -1,9 +1,13 @@
+#! /bin/bash
+
 set_remote_spark_home() {
     HADOOP_HOME=/home/shaanzie/hadoop-$1
     SPARK_HOME=/home/shaanzie/spark-$2
     export SPARK_HOME=$SPARK_HOME
     export HADOOP_HOME=$HADOOP_HOME
     export PATH=$PATH:$SPARK_HOME/bin
+    $HADOOP_HOME/sbin/start-all.sh
+    $SPARK_HOME/sbin/start-all.sh
 }
 
 prepare_input() {
@@ -38,19 +42,33 @@ execute_workload() {
     sync
     sleep 1
 
-    if [$bench == "Grep"] then
-        keyword=$4
-        command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $keyword hdfs://localhost:9000/$output"
-    elif [$bench == "PageRank"] then
-        iter=$4
-        command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $iter hdfs://localhost:9000/$output"
-    elif [$bench == 'ALS'] then
-        rank=$4
-        iter=$5
-        command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $rank $iter"
-    else
-        command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input hdfs://localhost:9000/$output"
-    fi
+    case $bench in 
+
+        "Grep")
+            echo "Executing Grep"
+            keyword=$4
+            command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $keyword hdfs://localhost:9000/$output"
+            ;;
+        "PageRank")
+            echo "Executing PageRank"
+            iter=$4
+            command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $iter hdfs://localhost:9000/$output"
+            ;;
+        "ALS")
+            echo "Executing ALS"
+            rank=$4
+            iter=$5
+            command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input $rank $iter"
+            ;;
+        "ConnectedComponent")
+            echo "Executing $bench"
+            command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input"
+            ;;
+        *)
+            echo "Executing $bench"
+            command="spark-submit --class cn.ac.ict.bigdatabench.$bench $JAR_FILE hdfs://localhost:9000/$input hdfs://localhost:9000/$output"
+            ;;
+    esac
 
     echo "Executing $command"
     eval $command
@@ -87,9 +105,12 @@ execute_workload() {
 hadoop="2.10.0"
 spark="2.4.6"
 
-set_remote_spark_home $hadoop $spark
+# set_remote_spark_home $hadoop $spark
 
 size="tiny"
+
+python3 data-gen.py $size
+mv *.txt ~/research-input/
 
 prepare_input "sort" "sort-$size.txt"
 execute_workload "Sort" "sort" "sort-out"
@@ -107,15 +128,16 @@ prepare_input "cc" "cc-$size.txt"
 execute_workload "ConnectedComponent" "cc" "cc-out"
 cleanup_out "cc"
 
-prepare_input "pagerank" "pagerank-$size.txt"
-execute_workload "PageRank" "pagerank" "pagerank-out" 1
-cleanup_out "pagerank"
+prepare_input "pr" "pr-$size.txt"
+execute_workload "PageRank" "pr" "pr-out" 1
+cleanup_out "pr"
 
 prepare_input "als" "als-$size.txt"
 execute_workload "ALS" "als" "als-out" 3 1
 cleanup_out "als"
 
-mkdir -p ~/SparkData/bdb/$hadoop/$size/
-mv *.csv ~/SparkData/bdb/$hadoop/$size/
-mv *.pidstat ~/SparkData/bdb/$hadoop/$size/
+mkdir -p ~/SparkData/bdb/Hadoop:$hadoop-Spark:$spark/$size/
+mv *.csv ~/SparkData/bdb/Hadoop:$hadoop-Spark:$spark/$size/
+mv *.pidstat ~/SparkData/bdb/Hadoop:$hadoop-Spark:$spark/$size/
 rm $sar_file
+rm ~/research-input/*.txt
