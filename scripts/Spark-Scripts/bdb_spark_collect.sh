@@ -6,6 +6,8 @@ set_remote_spark_home() {
     export SPARK_HOME=$SPARK_HOME
     export HADOOP_HOME=$HADOOP_HOME
     export PATH=$PATH:$SPARK_HOME/bin
+    $HADOOP_HOME/sbin/stop-all.sh
+    $SPARK_HOME/sbin/stop-all.sh
     $HADOOP_HOME/sbin/start-all.sh
     $SPARK_HOME/sbin/start-all.sh
 }
@@ -103,9 +105,9 @@ execute_workload() {
 }
 
 hadoop="2.10.0"
-spark="2.4.6"
+spark="3.0.0"
 
-# set_remote_spark_home $hadoop $spark
+set_remote_spark_home $hadoop $spark
 
 size="tiny"
 
